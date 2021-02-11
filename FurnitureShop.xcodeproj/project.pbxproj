@@ -58,13 +58,37 @@
 			children = (
 				D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */,
 				D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */,
-				D1A4155125D52A5A005D2EF1 /* ViewController.swift */,
-				D1A4155325D52A5A005D2EF1 /* Main.storyboard */,
+				D1A4156425D52AB4005D2EF1 /* Model */,
+				D1A4156325D52AAB005D2EF1 /* View */,
+				D1A4156225D52A9C005D2EF1 /* Controller */,
 				D1A4155625D52A5F005D2EF1 /* Assets.xcassets */,
 				D1A4155825D52A5F005D2EF1 /* LaunchScreen.storyboard */,
 				D1A4155B25D52A5F005D2EF1 /* Info.plist */,
 			);
 			path = FurnitureShop;
+			sourceTree = "<group>";
+		};
+		D1A4156225D52A9C005D2EF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4155125D52A5A005D2EF1 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1A4156325D52AAB005D2EF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4155325D52A5A005D2EF1 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1A4156425D52AB4005D2EF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
