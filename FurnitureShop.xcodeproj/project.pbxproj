@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */; };
 		D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */; };
 		D1A4155025D52A5A005D2EF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */; };
 		D1A4155225D52A5A005D2EF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4155125D52A5A005D2EF1 /* ViewController.swift */; };
 		D1A4155525D52A5A005D2EF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A4155325D52A5A005D2EF1 /* Main.storyboard */; };
 		D1A4155725D52A5F005D2EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A4155625D52A5F005D2EF1 /* Assets.xcassets */; };
 		D1A4155A25D52A5F005D2EF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A4155825D52A5F005D2EF1 /* LaunchScreen.storyboard */; };
+		D1A4157625DA88D8005D2EF1 /* GreetingUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4157525DA88D8005D2EF1 /* GreetingUserView.swift */; };
+		D1A4157B25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1A4157A25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf */; };
+		D1A4158125DAA268005D2EF1 /* Hstack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4158025DAA268005D2EF1 /* Hstack.swift */; };
+		D1A4158325DABC69005D2EF1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4158225DABC69005D2EF1 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.debug.xcconfig"; sourceTree = "<group>"; };
 		D1A4154A25D52A5A005D2EF1 /* FurnitureShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,11 @@
 		D1A4155625D52A5F005D2EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A4155925D52A5F005D2EF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A4155B25D52A5F005D2EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A4157525DA88D8005D2EF1 /* GreetingUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingUserView.swift; sourceTree = "<group>"; };
+		D1A4157A25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Bold.ttf"; path = "Playfair_Display/static/PlayfairDisplay-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		D1A4158025DAA268005D2EF1 /* Hstack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hstack.swift; sourceTree = "<group>"; };
+		D1A4158225DABC69005D2EF1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E0FDDBCDE8C36A00058A2718 /* Pods-FurnitureShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.release.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D3FE91F872F7E5986CC74F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */,
+				E0FDDBCDE8C36A00058A2718 /* Pods-FurnitureShop.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		81A446E1582980FE8156DB05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D1A4154125D52A5A005D2EF1 = {
 			isa = PBXGroup;
 			children = (
 				D1A4154C25D52A5A005D2EF1 /* FurnitureShop */,
 				D1A4154B25D52A5A005D2EF1 /* Products */,
+				5D3FE91F872F7E5986CC74F3 /* Pods */,
+				81A446E1582980FE8156DB05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +93,7 @@
 				D1A4156425D52AB4005D2EF1 /* Model */,
 				D1A4156325D52AAB005D2EF1 /* View */,
 				D1A4156225D52A9C005D2EF1 /* Controller */,
+				D1A4157925DA8FC1005D2EF1 /* Fonts */,
 				D1A4155625D52A5F005D2EF1 /* Assets.xcassets */,
 				D1A4155825D52A5F005D2EF1 /* LaunchScreen.storyboard */,
 				D1A4155B25D52A5F005D2EF1 /* Info.plist */,
@@ -80,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				D1A4155325D52A5A005D2EF1 /* Main.storyboard */,
+				D1A4157525DA88D8005D2EF1 /* GreetingUserView.swift */,
+				D1A4158025DAA268005D2EF1 /* Hstack.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,8 +122,17 @@
 		D1A4156425D52AB4005D2EF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D1A4158225DABC69005D2EF1 /* Category.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D1A4157925DA8FC1005D2EF1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4157A25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1A4155E25D52A5F005D2EF1 /* Build configuration list for PBXNativeTarget "FurnitureShop" */;
 			buildPhases = (
+				5499BE066A92CA6258805520 /* [CP] Check Pods Manifest.lock */,
 				D1A4154625D52A5A005D2EF1 /* Sources */,
 				D1A4154725D52A5A005D2EF1 /* Frameworks */,
 				D1A4154825D52A5A005D2EF1 /* Resources */,
+				B077EFE1CB2CB8F510425D44 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A4157B25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf in Resources */,
 				D1A4155A25D52A5F005D2EF1 /* LaunchScreen.storyboard in Resources */,
 				D1A4155725D52A5F005D2EF1 /* Assets.xcassets in Resources */,
 				D1A4155525D52A5A005D2EF1 /* Main.storyboard in Resources */,
@@ -157,14 +204,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5499BE066A92CA6258805520 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FurnitureShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B077EFE1CB2CB8F510425D44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D1A4154625D52A5A005D2EF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A4157625DA88D8005D2EF1 /* GreetingUserView.swift in Sources */,
 				D1A4155225D52A5A005D2EF1 /* ViewController.swift in Sources */,
 				D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */,
 				D1A4155025D52A5A005D2EF1 /* SceneDelegate.swift in Sources */,
+				D1A4158125DAA268005D2EF1 /* Hstack.swift in Sources */,
+				D1A4158325DABC69005D2EF1 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +398,7 @@
 		};
 		D1A4155F25D52A5F005D2EF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -324,6 +417,7 @@
 		};
 		D1A4156025D52A5F005D2EF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0FDDBCDE8C36A00058A2718 /* Pods-FurnitureShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
