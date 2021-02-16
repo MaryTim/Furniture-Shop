@@ -10,7 +10,7 @@
 		279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */; };
 		D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */; };
 		D1A4155025D52A5A005D2EF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */; };
-		D1A4155225D52A5A005D2EF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4155125D52A5A005D2EF1 /* ViewController.swift */; };
+		D1A4155225D52A5A005D2EF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4155125D52A5A005D2EF1 /* HomeViewController.swift */; };
 		D1A4155525D52A5A005D2EF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A4155325D52A5A005D2EF1 /* Main.storyboard */; };
 		D1A4155725D52A5F005D2EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A4155625D52A5F005D2EF1 /* Assets.xcassets */; };
 		D1A4155A25D52A5F005D2EF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A4155825D52A5F005D2EF1 /* LaunchScreen.storyboard */; };
@@ -18,6 +18,12 @@
 		D1A4157B25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1A4157A25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf */; };
 		D1A4158125DAA268005D2EF1 /* Hstack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4158025DAA268005D2EF1 /* Hstack.swift */; };
 		D1A4158325DABC69005D2EF1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4158225DABC69005D2EF1 /* Category.swift */; };
+		D1A4158B25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4158A25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift */; };
+		D1A4158D25DBF154005D2EF1 /* Newsreader_10pt-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1A4158C25DBF154005D2EF1 /* Newsreader_10pt-ExtraLight.ttf */; };
+		D1A4158F25DBFD74005D2EF1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4158E25DBFD74005D2EF1 /* SearchViewController.swift */; };
+		D1A4159125DBFDB2005D2EF1 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159025DBFDB2005D2EF1 /* CartViewController.swift */; };
+		D1A4159325DBFDC2005D2EF1 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */; };
+		D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +32,7 @@
 		D1A4154A25D52A5A005D2EF1 /* FurnitureShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D1A4155125D52A5A005D2EF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1A4155125D52A5A005D2EF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D1A4155425D52A5A005D2EF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1A4155625D52A5F005D2EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A4155925D52A5F005D2EF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +41,12 @@
 		D1A4157A25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Bold.ttf"; path = "Playfair_Display/static/PlayfairDisplay-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		D1A4158025DAA268005D2EF1 /* Hstack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hstack.swift; sourceTree = "<group>"; };
 		D1A4158225DABC69005D2EF1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D1A4158A25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		D1A4158C25DBF154005D2EF1 /* Newsreader_10pt-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Newsreader_10pt-ExtraLight.ttf"; path = "Newsreader/static/Newsreader_10pt-ExtraLight.ttf"; sourceTree = SOURCE_ROOT; };
+		D1A4158E25DBFD74005D2EF1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D1A4159025DBFDB2005D2EF1 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		E0FDDBCDE8C36A00058A2718 /* Pods-FurnitureShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.release.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +116,11 @@
 		D1A4156225D52A9C005D2EF1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D1A4155125D52A5A005D2EF1 /* ViewController.swift */,
+				D1A4155125D52A5A005D2EF1 /* HomeViewController.swift */,
+				D1A4158E25DBFD74005D2EF1 /* SearchViewController.swift */,
+				D1A4159025DBFDB2005D2EF1 /* CartViewController.swift */,
+				D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */,
+				D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +131,7 @@
 				D1A4155325D52A5A005D2EF1 /* Main.storyboard */,
 				D1A4157525DA88D8005D2EF1 /* GreetingUserView.swift */,
 				D1A4158025DAA268005D2EF1 /* Hstack.swift */,
+				D1A4158A25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D1A4157A25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf */,
+				D1A4158C25DBF154005D2EF1 /* Newsreader_10pt-ExtraLight.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -195,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A4158D25DBF154005D2EF1 /* Newsreader_10pt-ExtraLight.ttf in Resources */,
 				D1A4157B25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf in Resources */,
 				D1A4155A25D52A5F005D2EF1 /* LaunchScreen.storyboard in Resources */,
 				D1A4155725D52A5F005D2EF1 /* Assets.xcassets in Resources */,
@@ -252,10 +271,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1A4157625DA88D8005D2EF1 /* GreetingUserView.swift in Sources */,
-				D1A4155225D52A5A005D2EF1 /* ViewController.swift in Sources */,
+				D1A4159325DBFDC2005D2EF1 /* UserViewController.swift in Sources */,
+				D1A4158B25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift in Sources */,
+				D1A4158F25DBFD74005D2EF1 /* SearchViewController.swift in Sources */,
+				D1A4155225D52A5A005D2EF1 /* HomeViewController.swift in Sources */,
+				D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */,
 				D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */,
 				D1A4155025D52A5A005D2EF1 /* SceneDelegate.swift in Sources */,
 				D1A4158125DAA268005D2EF1 /* Hstack.swift in Sources */,
+				D1A4159125DBFDB2005D2EF1 /* CartViewController.swift in Sources */,
 				D1A4158325DABC69005D2EF1 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

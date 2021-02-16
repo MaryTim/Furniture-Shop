@@ -21,14 +21,16 @@ class ScrollableHStack: UIView {
         Category(name: "Kitchen Set"),
         Category(name: "Carpet"),
         Category(name: "Bed"),
+        Category(name: "Dresser"),
+        Category(name: "Lamp"),
     ]
     
     var horizontalStack = UIStackView()
     let scrollView = UIScrollView()
+    let contentView = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupUI()
         setupConstraints()
     }
@@ -54,30 +56,29 @@ class ScrollableHStack: UIView {
         createButton()
         horizontalStack.axis = .horizontal
         horizontalStack.spacing = 15
-        horizontalStack.distribution = .fillProportionally
+        horizontalStack.distribution = .fill
         horizontalStack.alignment = .center
         
-        
-        //find a solution to the following feature
-        scrollView.alwaysBounceHorizontal = true
-        
+        scrollView.indicatorStyle = .white
         scrollView.isScrollEnabled = true
         scrollView.isUserInteractionEnabled = true
-        scrollView.addSubview(horizontalStack)
         addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(horizontalStack)
+        
     }
     
     func setupConstraints() {
         
         scrollView.snp.makeConstraints { (make) in
-            make.top.leading.equalToSuperview()
-            make.width.equalToSuperview()
-            make.height.equalTo(80)
+            make.top.leading.trailing.bottom.equalToSuperview()
+        }
+        contentView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
         }
         horizontalStack.snp.makeConstraints { (make) in
-            make.top.leading.equalToSuperview()
-            make.height.equalTo(80)
-            make.width.equalToSuperview()
+            make.top.leading.trailing.bottom.equalToSuperview()
+            make.width.greaterThanOrEqualToSuperview()
         }
     }
 }
