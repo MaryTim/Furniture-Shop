@@ -10,20 +10,60 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    let searchTextField = UITextField()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        searchTextField.delegate = self
+        setupUI()
+        setupConstraints()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupUI() {
+        searchTextField.borderStyle = .roundedRect
+        searchTextField.adjustsFontSizeToFitWidth = true
+        searchTextField.adjustsFontForContentSizeCategory = true
+        let centeredParagraphStyle = NSMutableParagraphStyle()
+        centeredParagraphStyle.alignment = .right
+        searchTextField.attributedPlaceholder = NSAttributedString(string: "I'm looking for...",
+                                                                   attributes: [.paragraphStyle: centeredParagraphStyle])
+        searchTextField.clearsOnBeginEditing = true
+        searchTextField.returnKeyType = .go
+        searchTextField.textAlignment = .right
+        view.addSubview(searchTextField)
     }
-    */
 
+    func setupConstraints() {
+        searchTextField.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(120)
+            make.leading.equalToSuperview().offset(30)
+            make.trailing.equalToSuperview().offset(-30)
+            make.height.equalTo(30)
+        }
+    }
+}
+
+extension SearchViewController: UITextFieldDelegate {
+  
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("The user is looking for \(searchTextField.text!)")
+        searchTextField.endEditing(true)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            return true
+        } else {
+            textField.placeholder = "Please enter an item you're looking for"
+            return false
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        //use searchtextfield.text and then reset
+        
+        textField.text = ""
+    }
 }
