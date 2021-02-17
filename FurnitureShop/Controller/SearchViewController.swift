@@ -12,7 +12,6 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Tab 2"
         view.backgroundColor = .red
     }
     
