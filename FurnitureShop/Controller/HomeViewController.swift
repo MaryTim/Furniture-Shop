@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class HomeViewController: UIViewController {
- 
+    
     let greeting = GreetingUserView()
     let scrollableView = ScrollableHStack()
     var collectionView: UICollectionView?
@@ -63,16 +63,18 @@ class HomeViewController: UIViewController {
     }
 }
 
+//MARK: - delegate, dataSource methods
+
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 50
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let reusableCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellIdentifier, for: indexPath)
         return reusableCell
     }
-
-
+    
+    
 }
 
