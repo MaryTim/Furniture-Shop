@@ -23,13 +23,10 @@ class SearchViewController: UIViewController {
         searchTextField.borderStyle = .roundedRect
         searchTextField.adjustsFontSizeToFitWidth = true
         searchTextField.adjustsFontForContentSizeCategory = true
-        let centeredParagraphStyle = NSMutableParagraphStyle()
-        centeredParagraphStyle.alignment = .right
-        searchTextField.attributedPlaceholder = NSAttributedString(string: "I'm looking for...",
-                                                                   attributes: [.paragraphStyle: centeredParagraphStyle])
+        searchTextField.attributedPlaceholder = NSAttributedString(string: "I'm looking for...")
         searchTextField.clearsOnBeginEditing = true
         searchTextField.returnKeyType = .go
-        searchTextField.textAlignment = .right
+        searchTextField.textAlignment = .left
         view.addSubview(searchTextField)
     }
 
@@ -47,7 +44,7 @@ extension SearchViewController: UITextFieldDelegate {
   
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("The user is looking for \(searchTextField.text!)")
-        searchTextField.endEditing(true)
+        textField.endEditing(true)
         return true
     }
     
