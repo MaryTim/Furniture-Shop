@@ -39,11 +39,10 @@ class CartViewController: UIViewController {
         
         tableV.snp.makeConstraints { (make) in
             make.top.equalTo(cartLabel.snp.bottom).offset(20)
-            make.leading.equalToSuperview().offset(30)
-            make.trailing.equalToSuperview().offset(-30)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
             make.bottom.equalToSuperview().offset(-30)
         }
-        
     }
 }
 
