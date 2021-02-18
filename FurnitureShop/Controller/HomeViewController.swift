@@ -17,7 +17,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Tab 1"
         setUPUI()
         setUpConstraints()
     }

@@ -8,30 +8,40 @@
 
 import UIKit
 
-class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
+class CustomTabBarController: UITabBarController {
 
-    
+    let homeVC = HomeViewController()
+    let searchVC = SearchViewController()
+    let cartVC = CartViewController()
+    let userVC = UserViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate = self
+        view.backgroundColor = .systemBackground
+        UITabBar.appearance().barTintColor = .systemBackground
+        tabBar.tintColor = .label
+        setupVCs()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let item1 = HomeViewController()
-        let houseIcon = UITabBarItem(title: "Tab 1", image: UIImage(named: "house"), selectedImage: UIImage(named: "house"))
-        item1.tabBarItem = houseIcon
+    func setupVCs() {
+        let homeTab = UITabBarItem(title: nil, image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house"))
+        homeVC.tabBarItem = homeTab
+        homeVC.tabBarItem.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: -10, right: 0)
         
-        let item2 = SearchViewController()
-        let magnifierIcon = UITabBarItem(title: "Tab 2", image: UIImage(named: "magnifyingglass"), selectedImage: UIImage(named: "magnifyingglass"))
-        item2.tabBarItem = magnifierIcon
-       
-        self.viewControllers =  [item1, item2]  //array of the root view controllers displayed by the tab bar interface
+        let searchTab = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), selectedImage: UIImage(systemName: "magnifyingglass"))
+        searchVC.tabBarItem = searchTab
+        searchVC.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        
+        let cartTab = UITabBarItem(title: nil, image: UIImage(systemName: "cart"), selectedImage: UIImage(systemName: "cart"))
+        cartVC.tabBarItem = cartTab
+        cartVC.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        
+        let userTab = UITabBarItem(title: nil, image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person"))
+        userVC.tabBarItem = userTab
+        userVC.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        
+        let controllers = [homeVC, searchVC, cartVC, userVC]
+        self.viewControllers = controllers
     }
-
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        print("Selected viewController: \(viewController.title ?? "") ?")
-        return true;
-    }
+    
 }
