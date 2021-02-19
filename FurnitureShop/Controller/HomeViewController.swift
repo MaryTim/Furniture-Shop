@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class HomeViewController: UIViewController {
- 
+    
     let greeting = GreetingUserView()
     let scrollableView = ScrollableHStack()
     var collectionView: UICollectionView?
@@ -19,16 +19,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setUPUI()
         setUpConstraints()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     func setUPUI() {
@@ -73,16 +63,18 @@ class HomeViewController: UIViewController {
     }
 }
 
+//MARK: - delegate, dataSource methods
+
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 50
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let reusableCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellIdentifier, for: indexPath)
         return reusableCell
     }
-
-
+    
+    
 }
 

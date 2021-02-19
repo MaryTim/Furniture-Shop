@@ -36,7 +36,7 @@ class GreetingUserView: UIView {
         mainLabel.textColor = .black
         mainLabel.font = UIFont(name: "PlayfairDisplay-Bold", size: 35)
         mainLabel.adjustsFontSizeToFitWidth = true
-          addSubview(mainLabel)
+        addSubview(mainLabel)
     }
     
     func setUPConstraints() {

@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    
     let searchTextField = UITextField()
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class SearchViewController: UIViewController {
         searchTextField.textAlignment = .left
         view.addSubview(searchTextField)
     }
-
+    
     func setupConstraints() {
         searchTextField.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(120)
@@ -40,8 +40,10 @@ class SearchViewController: UIViewController {
     }
 }
 
+//MARK: - delegate methods
+
 extension SearchViewController: UITextFieldDelegate {
-  
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("The user is looking for \(searchTextField.text!)")
         textField.endEditing(true)
