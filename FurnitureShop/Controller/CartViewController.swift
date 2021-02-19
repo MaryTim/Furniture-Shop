@@ -28,7 +28,7 @@ class CartViewController: UIViewController {
         cartLabel.text = "Cart"
         cartLabel.font = UIFont(name: "PlayfairDisplay-Bold", size: 30)
         cartLabel.textAlignment = .center
-        tableV.separatorStyle = .singleLine
+        tableV.separatorStyle = .none
         tableV.allowsSelection = false
         checkoutButton.tag = 0
         checkoutButton.setTitle("CHECKOUT", for: .normal)
