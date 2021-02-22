@@ -88,7 +88,7 @@ class PaymentView: UIView {
             make.height.equalTo(150)
         }
         cardNameLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(datePicker.snp.bottom).offset(10)
+            make.top.equalTo(datePicker.snp.bottom).offset(20)
             make.leading.width.equalToSuperview()
             make.height.equalTo(25)
         }

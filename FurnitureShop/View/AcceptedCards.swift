@@ -47,19 +47,19 @@ class AcceptedCards: UIView {
             make.top.equalTo(acceptLabel.snp.bottom).offset(10)
             make.leading.equalToSuperview()
             make.height.equalTo(20)
-            make.width.equalTo(40)
+            make.width.equalTo(35)
         }
         mastercard.snp.makeConstraints { (make) in
             make.top.equalTo(acceptLabel.snp.bottom).offset(10)
             make.leading.equalTo(visa.snp.trailing).offset(10)
             make.height.equalTo(20)
-            make.width.equalTo(40)
+            make.width.equalTo(30)
         }
         paypal.snp.makeConstraints { (make) in
             make.top.equalTo(acceptLabel.snp.bottom).offset(10)
             make.leading.equalTo(mastercard.snp.trailing).offset(10)
             make.height.equalTo(20)
-            make.width.equalTo(40)
+            make.width.equalTo(30)
         }
     }
 }

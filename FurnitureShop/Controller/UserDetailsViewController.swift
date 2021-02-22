@@ -22,9 +22,15 @@ class UserDetailsViewController: UIViewController {
         self.title = "My Details"
     }
     
+    @objc func savePressed(sender: UIButton!) {
+        print("User's info is saved")
+    }
+    
     func setupUI() {
         saveChangesButton.setTitle("SAVE CHANGES", for: .normal)
         saveChangesButton.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 1)
+        saveChangesButton.addTarget(self, action: #selector(savePressed), for: .touchUpInside)
+        saveChangesButton.setBackgroundColor(color: UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1), forState: .highlighted)
         view.addSubview(userDetails)
         view.addSubview(saveChangesButton)
     }

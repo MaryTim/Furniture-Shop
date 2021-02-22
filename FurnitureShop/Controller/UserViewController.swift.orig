@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 
 class UserViewController: UIViewController {
+<<<<<<< HEAD
     
     let accountView = AccountTopView()
     let tableView = UITableView()
@@ -23,7 +24,7 @@ class UserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.isScrollEnabled = true
+        tableView.isScrollEnabled = false
         tableView.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.cellID)
         tableView.delegate = self
         tableView.dataSource = self
@@ -74,4 +75,12 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
+=======
+    
+    override func viewDidLoad() {
+           super.viewDidLoad()
+
+       }
+   
+>>>>>>> 0887aa8a94582772525d306d41f890947c5f524e
 }

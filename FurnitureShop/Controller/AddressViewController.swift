@@ -24,8 +24,14 @@ class AddressViewController: UIViewController {
     func setupUI() {
         saveChangesButton.setTitle("SAVE CHANGES", for: .normal)
         saveChangesButton.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 1)
+        saveChangesButton.addTarget(self, action: #selector(savePressed), for: .touchUpInside)
+        saveChangesButton.setBackgroundColor(color: UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1), forState: .highlighted)
         view.addSubview(addressInfo)
         view.addSubview(saveChangesButton)
+    }
+    
+    @objc func savePressed(sender: UIButton!) {
+        print("user's address is saved")
     }
     
     func setupConstraints() {
