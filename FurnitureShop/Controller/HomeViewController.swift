@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         setUPUI()
         setUpConstraints()
     }
@@ -75,6 +76,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return reusableCell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+          let rootVC = ItemViewController()
+          let navVC = UINavigationController(rootViewController: rootVC)
+        navVC.modalPresentationStyle = .fullScreen
+        self.present(navVC, animated: true)
+    }
 }
 

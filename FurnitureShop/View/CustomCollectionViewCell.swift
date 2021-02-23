@@ -13,6 +13,11 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "CustomCollectionViewCell"
     
+//    let itemButton: UIButton = {
+//        let button = UIButton()
+//        return button
+//    }()
+//
     let furniturePic: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "sofa")
@@ -43,12 +48,26 @@ class CustomCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    @objc func itemTapped(sender: UIButton!) {
+//
+//        let rootVC = ItemViewController()
+//        let navVC = UINavigationController(rootViewController: rootVC)
+//
+//        print("Item (here its name goes) is tapped")
+//    }
+    
     func setupUI() {
+       // itemButton.setBackgroundColor(color: UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 0.2), forState: .highlighted)
+        //itemButton.addTarget(self, action: #selector(itemTapped), for: .touchUpInside)
+        //addSubview(itemButton)
         addSubview(furniturePic)
         addSubview(priceLabel)
     }
     
     func setupConstraints() {
+//        itemButton.snp.makeConstraints { (make) in
+//            make.edges.equalToSuperview()
+//        }
         furniturePic.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview().offset(-20)
@@ -59,3 +78,4 @@ class CustomCollectionViewCell: UICollectionViewCell {
         }
     }
 }
+ 
