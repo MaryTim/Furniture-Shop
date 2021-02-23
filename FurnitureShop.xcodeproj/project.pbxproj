@@ -21,6 +21,7 @@
 		D1956C4525E00E7000D51519 /* AcceptedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4425E00E7000D51519 /* AcceptedCards.swift */; };
 		D1956C4725E01A8700D51519 /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4625E01A8700D51519 /* SignOutViewController.swift */; };
 		D1956C4925E4E28F00D51519 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4825E4E28F00D51519 /* ItemViewController.swift */; };
+		D1956C4B25E53E4100D51519 /* MainInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4A25E53E4100D51519 /* MainInfo.swift */; };
 		D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */; };
 		D1A4155025D52A5A005D2EF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */; };
 		D1A4155225D52A5A005D2EF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4155125D52A5A005D2EF1 /* HomeViewController.swift */; };
@@ -36,6 +37,8 @@
 		D1A4159125DBFDB2005D2EF1 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159025DBFDB2005D2EF1 /* CartViewController.swift */; };
 		D1A4159325DBFDC2005D2EF1 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */; };
 		D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */; };
+		D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */; };
+		D1B58FB325E560E500C4D299 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB225E560E500C4D299 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,7 @@
 		D1956C4425E00E7000D51519 /* AcceptedCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedCards.swift; sourceTree = "<group>"; };
 		D1956C4625E01A8700D51519 /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
 		D1956C4825E4E28F00D51519 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		D1956C4A25E53E4100D51519 /* MainInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfo.swift; sourceTree = "<group>"; };
 		D1A4154A25D52A5A005D2EF1 /* FurnitureShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 		D1A4159025DBFDB2005D2EF1 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtons.swift; sourceTree = "<group>"; };
+		D1B58FB225E560E500C4D299 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E0FDDBCDE8C36A00058A2718 /* Pods-FurnitureShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.release.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,58 +132,22 @@
 			children = (
 				D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */,
 				D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */,
-				D1A4156425D52AB4005D2EF1 /* Model */,
-				D1A4156325D52AAB005D2EF1 /* View */,
-				D1A4156225D52A9C005D2EF1 /* Controller */,
+				D1B58F9625E55B9300C4D299 /* Home */,
+				D1B58F9725E55BCD00C4D299 /* Item */,
+				D1B58F9825E55C0D00C4D299 /* Search */,
+				D1B58F9925E55C3A00C4D299 /* Cart */,
+				D1B58F9A25E55C8000C4D299 /* Account */,
+				D1B58F9B25E55D4500C4D299 /* UserDetails */,
+				D1B58F9C25E55D6400C4D299 /* Address */,
+				D1B58F9D25E55D7B00C4D299 /* Payment */,
+				D1B58F9E25E55D8F00C4D299 /* Sign Out */,
+				D1B58F9F25E55DC300C4D299 /* Tab Bar Controller */,
 				D1A4157925DA8FC1005D2EF1 /* Fonts */,
 				D1A4155625D52A5F005D2EF1 /* Assets.xcassets */,
 				D1A4155825D52A5F005D2EF1 /* LaunchScreen.storyboard */,
 				D1A4155B25D52A5F005D2EF1 /* Info.plist */,
 			);
 			path = FurnitureShop;
-			sourceTree = "<group>";
-		};
-		D1A4156225D52A9C005D2EF1 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D1A4155125D52A5A005D2EF1 /* HomeViewController.swift */,
-				D1956C4825E4E28F00D51519 /* ItemViewController.swift */,
-				D1A4158E25DBFD74005D2EF1 /* SearchViewController.swift */,
-				D1A4159025DBFDB2005D2EF1 /* CartViewController.swift */,
-				D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */,
-				D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */,
-				D1956C3825DFB91C00D51519 /* UserDetailsViewController.swift */,
-				D1956C3C25DFF7AB00D51519 /* AddressViewController.swift */,
-				D1956C4025E009FF00D51519 /* PaymentViewController.swift */,
-				D1956C4625E01A8700D51519 /* SignOutViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		D1A4156325D52AAB005D2EF1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D1A4157525DA88D8005D2EF1 /* GreetingUserView.swift */,
-				D1A4158025DAA268005D2EF1 /* Hstack.swift */,
-				D1A4158A25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift */,
-				D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */,
-				D1956C3225DE9FD400D51519 /* AccountTopView.swift */,
-				D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */,
-				D1956C3A25DFBACD00D51519 /* UserDetailsView.swift */,
-				D1956C3E25DFF80600D51519 /* AddressView.swift */,
-				D1956C4225E00A1800D51519 /* PaymentView.swift */,
-				D1956C4425E00E7000D51519 /* AcceptedCards.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D1A4156425D52AB4005D2EF1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D1A4158225DABC69005D2EF1 /* Category.swift */,
-				D1956C3625DFA20700D51519 /* UserInfoCategory.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		D1A4157925DA8FC1005D2EF1 /* Fonts */ = {
@@ -187,6 +157,245 @@
 				D1A4158C25DBF154005D2EF1 /* Newsreader_10pt-ExtraLight.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D1B58F9625E55B9300C4D299 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D1B58FA025E55E3600C4D299 /* Model */,
+				D1B58FA125E55E3D00C4D299 /* View */,
+				D1B58FA225E55E4A00C4D299 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D1B58F9725E55BCD00C4D299 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				D1B58FA525E55E8D00C4D299 /* Model */,
+				D1B58FA425E55E8100C4D299 /* View */,
+				D1B58FA325E55E7A00C4D299 /* Controller */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		D1B58F9825E55C0D00C4D299 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4158E25DBFD74005D2EF1 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D1B58F9925E55C3A00C4D299 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				D1B58FA825E55ED100C4D299 /* Model */,
+				D1B58FA725E55ECB00C4D299 /* View */,
+				D1B58FA625E55EC200C4D299 /* Controller */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		D1B58F9A25E55C8000C4D299 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				D1B58FAB25E55EF900C4D299 /* Model */,
+				D1B58FAA25E55EF300C4D299 /* View */,
+				D1B58FA925E55EEB00C4D299 /* Controller */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		D1B58F9B25E55D4500C4D299 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D1B58FAD25E55F5400C4D299 /* View */,
+				D1B58FAC25E55F4E00C4D299 /* Controller */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		D1B58F9C25E55D6400C4D299 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				D1B58FAF25E55F7000C4D299 /* View */,
+				D1B58FAE25E55F6600C4D299 /* Controller */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		D1B58F9D25E55D7B00C4D299 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				D1B58FB125E55F8B00C4D299 /* View */,
+				D1B58FB025E55F8400C4D299 /* Controller */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		D1B58F9E25E55D8F00C4D299 /* Sign Out */ = {
+			isa = PBXGroup;
+			children = (
+				D1956C4625E01A8700D51519 /* SignOutViewController.swift */,
+			);
+			path = "Sign Out";
+			sourceTree = "<group>";
+		};
+		D1B58F9F25E55DC300C4D299 /* Tab Bar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */,
+			);
+			path = "Tab Bar Controller";
+			sourceTree = "<group>";
+		};
+		D1B58FA025E55E3600C4D299 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4158225DABC69005D2EF1 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1B58FA125E55E3D00C4D299 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4158A25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift */,
+				D1A4158025DAA268005D2EF1 /* Hstack.swift */,
+				D1A4157525DA88D8005D2EF1 /* GreetingUserView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1B58FA225E55E4A00C4D299 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4155125D52A5A005D2EF1 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1B58FA325E55E7A00C4D299 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1956C4825E4E28F00D51519 /* ItemViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1B58FA425E55E8100C4D299 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */,
+				D1956C4A25E53E4100D51519 /* MainInfo.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1B58FA525E55E8D00C4D299 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1B58FB225E560E500C4D299 /* Color.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1B58FA625E55EC200C4D299 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4159025DBFDB2005D2EF1 /* CartViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1B58FA725E55ECB00C4D299 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1B58FA825E55ED100C4D299 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1B58FA925E55EEB00C4D299 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1B58FAA25E55EF300C4D299 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1956C3225DE9FD400D51519 /* AccountTopView.swift */,
+				D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1B58FAB25E55EF900C4D299 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1956C3625DFA20700D51519 /* UserInfoCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1B58FAC25E55F4E00C4D299 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1956C3825DFB91C00D51519 /* UserDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1B58FAD25E55F5400C4D299 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1956C3A25DFBACD00D51519 /* UserDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1B58FAE25E55F6600C4D299 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1956C3C25DFF7AB00D51519 /* AddressViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1B58FAF25E55F7000C4D299 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1956C3E25DFF80600D51519 /* AddressView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1B58FB025E55F8400C4D299 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1956C4025E009FF00D51519 /* PaymentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1B58FB125E55F8B00C4D299 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1956C4425E00E7000D51519 /* AcceptedCards.swift */,
+				D1956C4225E00A1800D51519 /* PaymentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,16 +519,19 @@
 				D1956C3525DEB15D00D51519 /* UserTableViewCell.swift in Sources */,
 				D1A4158B25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift in Sources */,
 				D1A4158F25DBFD74005D2EF1 /* SearchViewController.swift in Sources */,
+				D1956C4B25E53E4100D51519 /* MainInfo.swift in Sources */,
 				D1956C3B25DFBACD00D51519 /* UserDetailsView.swift in Sources */,
 				D1A4155225D52A5A005D2EF1 /* HomeViewController.swift in Sources */,
 				D1956C4125E009FF00D51519 /* PaymentViewController.swift in Sources */,
 				D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */,
 				D1956C3F25DFF80600D51519 /* AddressView.swift in Sources */,
+				D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */,
 				D1956C4325E00A1800D51519 /* PaymentView.swift in Sources */,
 				D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */,
 				D1956C3D25DFF7AB00D51519 /* AddressViewController.swift in Sources */,
 				D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */,
 				D1956C4725E01A8700D51519 /* SignOutViewController.swift in Sources */,
+				D1B58FB325E560E500C4D299 /* Color.swift in Sources */,
 				D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */,
 				D1956C3725DFA20700D51519 /* UserInfoCategory.swift in Sources */,
 				D1956C4925E4E28F00D51519 /* ItemViewController.swift in Sources */,
