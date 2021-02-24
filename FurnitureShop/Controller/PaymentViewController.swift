@@ -9,24 +9,24 @@
 import UIKit
 
 class PaymentViewController: UIViewController {
-
+    
     let paymentV = PaymentView()
     let saveCard = UIButton()
     let cardsView = AcceptedCards()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupUI()
         setupConstraints()
-        self.title = "Credit Card"
     }
-
+    
     @objc func saveCardPressed(sender: UIButton!) {
         print("User's card is saved")
     }
     
     func setupUI() {
+        self.title = "Credit Card"
+        view.backgroundColor = .white
         saveCard.addTarget(self, action: #selector(saveCardPressed), for: .touchUpInside)
         saveCard.setTitle("SAVE CARD", for: .normal)
         saveCard.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 1)

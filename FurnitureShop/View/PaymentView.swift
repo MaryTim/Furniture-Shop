@@ -117,7 +117,7 @@ extension PaymentView: UITextFieldDelegate {
            }
        }
     
-    // use firebase to save data?
+    // use Realm to save data?
 }
 
 extension PaymentView: UIPickerViewDelegate, UIPickerViewDataSource {

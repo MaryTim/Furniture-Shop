@@ -131,6 +131,5 @@ extension AddressView: UITextFieldDelegate {
                return false
            }
        }
-    
-    // use firebase to save data?
+    // use realm to save data?
 }

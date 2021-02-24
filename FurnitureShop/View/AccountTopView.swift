@@ -30,7 +30,6 @@ class AccountTopView: UIView {
         userImage.layer.cornerRadius = 80
         userImage.clipsToBounds = true
         userImage.image = UIImage(named: "icon")
-        
         addSubview(furnitureImage)
         addSubview(userImage)
     }
@@ -44,7 +43,6 @@ class AccountTopView: UIView {
             make.top.equalToSuperview().offset(200)
             make.height.width.equalTo(160)
             make.centerX.equalToSuperview()
-           
         }
     }
 }

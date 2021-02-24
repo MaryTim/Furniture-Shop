@@ -17,13 +17,13 @@ class SignOutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        self.title = "Sign Out"
         setupUI()
         setupConstraints()
     }
     
     func setupUI() {
+        self.title = "Sign Out"
+        view.backgroundColor = .white
         questionLabel.text = "Are you sure you want to sign out?"
         questionLabel.font = questionLabel.font.withSize(23)
         questionLabel.textAlignment = .center
@@ -50,8 +50,6 @@ class SignOutViewController: UIViewController {
     
     
     @objc func yesPressed(sender: UIButton!) {
-
-        //dismiss(animated: true) {}
         print("User wants to sign out! Do smth with it")
     }
     
