@@ -52,7 +52,6 @@ class ScrollableHStack: UIView {
     }
     
     func setupUI() {
-        
         createButton()
         horizontalStack.axis = .horizontal
         horizontalStack.spacing = 15
@@ -69,7 +68,6 @@ class ScrollableHStack: UIView {
     }
     
     func setupConstraints() {
-        
         scrollView.snp.makeConstraints { (make) in
             make.top.leading.trailing.bottom.equalToSuperview()
         }

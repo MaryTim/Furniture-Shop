@@ -28,7 +28,7 @@ class CartViewController: UIViewController {
         cartLabel.text = "Cart"
         cartLabel.font = UIFont(name: "PlayfairDisplay-Bold", size: 30)
         cartLabel.textAlignment = .center
-        tableV.separatorStyle = .singleLine
+        tableV.separatorStyle = .none
         tableV.allowsSelection = false
         checkoutButton.tag = 0
         checkoutButton.setTitle("CHECKOUT", for: .normal)
@@ -51,7 +51,6 @@ class CartViewController: UIViewController {
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(70)
         }
-        
         tableV.snp.makeConstraints { (make) in
             make.top.equalTo(cartLabel.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)
@@ -70,18 +69,16 @@ class CartViewController: UIViewController {
             make.width.equalTo(120)
             make.height.equalTo(40)
         }
-        
     }
-    
-    //MARK: - buttom action
-    // Add actions to =/- buttons (update quantityLabel)
+// MARK: - buttom action
+// Add actions to =/- buttons (update quantityLabel)
     
     @objc func buttonAction(sender: UIButton!) {
-            print("Button \(sender.titleLabel?.text ?? "unknown") tapped")
+        print("Button \(sender.titleLabel?.text ?? "unknown") tapped")
     }
 }
 
-//MARK: - delegate, data source methods
+// MARK: - delegate, data source methods
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

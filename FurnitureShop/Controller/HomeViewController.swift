@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
     func setUPUI() {
         view.addSubview(greeting)
         view.addSubview(scrollableView)
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 15
@@ -74,7 +73,5 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let reusableCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellIdentifier, for: indexPath)
         return reusableCell
     }
-    
-    
 }
 
