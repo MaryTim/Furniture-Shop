@@ -25,7 +25,6 @@ class ScrollableHStack: UIView {
         Category(name: "Lamp"),
     ]
     
-    var arrayButtons = [UIButton]()
     var horizontalStack = UIStackView()
     let scrollView = UIScrollView()
     let contentView = UIView()
@@ -48,29 +47,9 @@ class ScrollableHStack: UIView {
             newButton.backgroundColor = .clear
             newButton.titleLabel?.textAlignment = .center
             newButton.titleLabel?.adjustsFontSizeToFitWidth = true
-            
-            newButton.setTitleColor(.black, for: .selected)
-            newButton.isSelected = false
-            arrayButtons.append(newButton)
             horizontalStack.addArrangedSubview(newButton)
-            newButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         }
-
     }
-    
-    @objc func buttonPressed(sender: UIButton!) {
-       // sender.isSelected.toggle()
-        
-        for b in arrayButtons {
-            if b == sender {
-                b.isSelected = true
-            } else {
-                b.isSelected = false
-            }
-        }
-        print("Button \(sender.currentTitle!) is pressed")
-    }
-
     
     func setupUI() {
         createButton()

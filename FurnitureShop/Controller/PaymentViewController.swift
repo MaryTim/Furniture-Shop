@@ -9,7 +9,7 @@
 import UIKit
 
 class PaymentViewController: UIViewController {
-
+    
     let paymentV = PaymentView()
     let saveCard = UIButton()
     let cardsView = AcceptedCards()
@@ -19,7 +19,7 @@ class PaymentViewController: UIViewController {
         setupUI()
         setupConstraints()
     }
-
+    
     @objc func saveCardPressed(sender: UIButton!) {
         print("User's card is saved")
     }

@@ -20,10 +20,10 @@
 		D1956C4325E00A1800D51519 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4225E00A1800D51519 /* PaymentView.swift */; };
 		D1956C4525E00E7000D51519 /* AcceptedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4425E00E7000D51519 /* AcceptedCards.swift */; };
 		D1956C4725E01A8700D51519 /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4625E01A8700D51519 /* SignOutViewController.swift */; };
-		D1956C4925E4E28F00D51519 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4825E4E28F00D51519 /* ItemViewController.swift */; };
 		D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */; };
 		D1A4155025D52A5A005D2EF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */; };
 		D1A4155225D52A5A005D2EF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4155125D52A5A005D2EF1 /* HomeViewController.swift */; };
+		D1A4155525D52A5A005D2EF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A4155325D52A5A005D2EF1 /* Main.storyboard */; };
 		D1A4155725D52A5F005D2EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A4155625D52A5F005D2EF1 /* Assets.xcassets */; };
 		D1A4155A25D52A5F005D2EF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A4155825D52A5F005D2EF1 /* LaunchScreen.storyboard */; };
 		D1A4157625DA88D8005D2EF1 /* GreetingUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4157525DA88D8005D2EF1 /* GreetingUserView.swift */; };
@@ -53,11 +53,11 @@
 		D1956C4225E00A1800D51519 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		D1956C4425E00E7000D51519 /* AcceptedCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedCards.swift; sourceTree = "<group>"; };
 		D1956C4625E01A8700D51519 /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
-		D1956C4825E4E28F00D51519 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		D1A4154A25D52A5A005D2EF1 /* FurnitureShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D1A4155125D52A5A005D2EF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D1A4155425D52A5A005D2EF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1A4155625D52A5F005D2EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A4155925D52A5F005D2EF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A4155B25D52A5F005D2EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				D1A4155125D52A5A005D2EF1 /* HomeViewController.swift */,
-				D1956C4825E4E28F00D51519 /* ItemViewController.swift */,
 				D1A4158E25DBFD74005D2EF1 /* SearchViewController.swift */,
 				D1A4159025DBFDB2005D2EF1 /* CartViewController.swift */,
 				D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */,
@@ -157,6 +156,7 @@
 		D1A4156325D52AAB005D2EF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D1A4155325D52A5A005D2EF1 /* Main.storyboard */,
 				D1A4157525DA88D8005D2EF1 /* GreetingUserView.swift */,
 				D1A4158025DAA268005D2EF1 /* Hstack.swift */,
 				D1A4158A25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift */,
@@ -253,6 +253,7 @@
 				D1A4157B25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf in Resources */,
 				D1A4155A25D52A5F005D2EF1 /* LaunchScreen.storyboard in Resources */,
 				D1A4155725D52A5F005D2EF1 /* Assets.xcassets in Resources */,
+				D1A4155525D52A5A005D2EF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +323,6 @@
 				D1956C4725E01A8700D51519 /* SignOutViewController.swift in Sources */,
 				D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */,
 				D1956C3725DFA20700D51519 /* UserInfoCategory.swift in Sources */,
-				D1956C4925E4E28F00D51519 /* ItemViewController.swift in Sources */,
 				D1A4155025D52A5A005D2EF1 /* SceneDelegate.swift in Sources */,
 				D1A4158125DAA268005D2EF1 /* Hstack.swift in Sources */,
 				D1A4159125DBFDB2005D2EF1 /* CartViewController.swift in Sources */,
@@ -335,6 +335,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D1A4155325D52A5A005D2EF1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1A4155425D52A5A005D2EF1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		D1A4155825D52A5F005D2EF1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
