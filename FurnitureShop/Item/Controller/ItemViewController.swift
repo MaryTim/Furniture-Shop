@@ -37,9 +37,7 @@ class ItemViewController: UIViewController {
         cartButton.layer.cornerRadius = 4.0
         cartButton.layer.borderWidth = 1
         cartButton.layer.borderColor = UIColor.black.cgColor
-        cartButton.backgroundColor = UIColor.red
-        cartButton.addTarget(self, action: #selector(goToCart), for: .touchUpInside)
-        //cartButton.addTarget(self, action: #selector(touchdown), for: .touchDown)
+        cartButton.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
         view.addSubview(backgroundImage)
         view.addSubview(itemPic)
         view.addSubview(info)
@@ -47,16 +45,11 @@ class ItemViewController: UIViewController {
         view.addSubview(colors)
     }
     
-    @objc func goToCart(sender: UIButton!) {
-        // ????
-        
+    @objc func addToCart(sender: UIButton!) {
+        sender.setBackgroundColor(color: .gray, forState: .highlighted)
         print("Add the item to a cart")
     }
-    
-//    @objc func touchdown(sender: UIButton!) {
-//        cartButton.backgroundColor = .green
-//    }
-    
+
     func setupConstraints() {
         backgroundImage.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
