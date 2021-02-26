@@ -30,7 +30,7 @@ class MainInfo: UIView {
         itemPrice.text = "$1234"
         itemPrice.font = UIFont(name: "Al Nile", size: 28)
         itemPrice.textColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1)
-        itemDescription.text = "Classic yet modern, the sumptuous upholstery and glamorous metal legs are what make this mid-century modern sofa shine — no one will be able to keep their eyes off of the velvet-covered beauty. In addition to its good looks, this couch also convinces with its stability. A solid wood frame, 4 durable metal legs, and refined details work together to offer your family years of support, comfort, and relaxation."
+        itemDescription.text = "Classic yet modern."
         itemDescription.textAlignment = .justified
         itemDescription.adjustsFontSizeToFitWidth = true
         itemDescription.numberOfLines = 0
