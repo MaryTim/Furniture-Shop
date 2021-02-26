@@ -50,23 +50,19 @@ extension SearchViewController: UITextFieldDelegate {
         return true
     }
     
-//    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-//        if textField.text != ""  {
-//            return true
-//        } else {
-//            textField.placeholder = "Please enter an item you're looking for"
-//            return true
-//        }
-//    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            return true
+        } else {
+            textField.placeholder = "Please enter an item you're looking for"
+            return false
+        }
+    }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         //use searchtextfield.text and then reset
         
         textField.text = ""
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
 }

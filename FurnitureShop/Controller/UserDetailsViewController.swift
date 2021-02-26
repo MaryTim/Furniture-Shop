@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class UserDetailsViewController: UIViewController {
-
+    
     let userDetails = UserDetailView()
     let saveChangesButton = UIButton()
     
@@ -34,7 +34,7 @@ class UserDetailsViewController: UIViewController {
         view.addSubview(userDetails)
         view.addSubview(saveChangesButton)
     }
-
+    
     func setupConstraints() {
         userDetails.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(68)
