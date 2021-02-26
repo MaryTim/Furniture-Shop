@@ -119,6 +119,5 @@ extension UserDetailView: UITextFieldDelegate {
                return false
            }
        }
-    
-    // use firebase to save data?
+    // use Realm to save data?
 }

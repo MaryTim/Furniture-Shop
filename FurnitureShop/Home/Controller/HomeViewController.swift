@@ -17,7 +17,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         setUPUI()
         setUpConstraints()
     }
@@ -25,7 +24,6 @@ class HomeViewController: UIViewController {
     func setUPUI() {
         view.addSubview(greeting)
         view.addSubview(scrollableView)
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 15
@@ -74,14 +72,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let reusableCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellIdentifier, for: indexPath)
         return reusableCell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
-          let rootVC = ItemViewController()
-          let navVC = UINavigationController(rootViewController: rootVC)
-        navVC.modalPresentationStyle = .fullScreen
-        self.present(navVC, animated: true)
     }
 }
 

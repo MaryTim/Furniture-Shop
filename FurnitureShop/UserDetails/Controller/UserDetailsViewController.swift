@@ -10,16 +10,14 @@ import UIKit
 import SnapKit
 
 class UserDetailsViewController: UIViewController {
-
+    
     let userDetails = UserDetailView()
     let saveChangesButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupUI()
         setupConstraints()
-        self.title = "My Details"
     }
     
     @objc func savePressed(sender: UIButton!) {
@@ -27,6 +25,8 @@ class UserDetailsViewController: UIViewController {
     }
     
     func setupUI() {
+        view.backgroundColor = .white
+        self.title = "My Details"
         saveChangesButton.setTitle("SAVE CHANGES", for: .normal)
         saveChangesButton.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 1)
         saveChangesButton.addTarget(self, action: #selector(savePressed), for: .touchUpInside)
@@ -34,7 +34,7 @@ class UserDetailsViewController: UIViewController {
         view.addSubview(userDetails)
         view.addSubview(saveChangesButton)
     }
-
+    
     func setupConstraints() {
         userDetails.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(68)

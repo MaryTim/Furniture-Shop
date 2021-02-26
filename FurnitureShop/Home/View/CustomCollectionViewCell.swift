@@ -59,4 +59,3 @@ class CustomCollectionViewCell: UICollectionViewCell {
         }
     }
 }
- 

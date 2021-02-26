@@ -23,7 +23,6 @@ class UserTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-   
     var icon: UIImageView = {
         let image = UIImageView()
         image.tintColor = .black
@@ -55,5 +54,4 @@ class UserTableViewCell: UITableViewCell {
             make.trailing.equalToSuperview()
         }
     }
-    
 }

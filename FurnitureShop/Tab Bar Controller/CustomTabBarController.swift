@@ -43,5 +43,4 @@ class CustomTabBarController: UITabBarController {
         let controllers = [homeVC, searchVC, cartVC, userVC]
         self.viewControllers = controllers
     }
-    
 }

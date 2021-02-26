@@ -57,7 +57,6 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.cellID, for: indexPath) as! UserTableViewCell
-        
         cell.icon.image = categoriesArray[indexPath.row].categoryIcon
         cell.section.text = categoriesArray[indexPath.row].name
         return cell
@@ -71,7 +70,6 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
         let rootVC = vcArray[indexPath.row]
         let navVC = UINavigationController(rootViewController: rootVC)
         present(navVC, animated: true)
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -15,13 +15,13 @@ class AddressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupUI()
         setupConstraints()
-        self.title = "My Address"
     }
     
     func setupUI() {
+        self.title = "My Address"
+        view.backgroundColor = .white
         saveChangesButton.setTitle("SAVE CHANGES", for: .normal)
         saveChangesButton.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 1)
         saveChangesButton.addTarget(self, action: #selector(savePressed), for: .touchUpInside)
