@@ -10,6 +10,7 @@ import UIKit
 
 class ItemViewController: UIViewController {
     
+    var backgroundImage = UIImageView()
     let itemPic = UIImageView()
     let info = MainInfo()
     let cartButton = UIButton()
@@ -26,7 +27,8 @@ class ItemViewController: UIViewController {
     }
     
     func setupUI() {
-        view.backgroundColor = .white
+        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "background"), for: .default)
+        backgroundImage.image = UIImage(named: "background")
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back", style: .plain, target: self, action: #selector(back))
         navigationItem.leftBarButtonItem?.tintColor = .black
         itemPic.image = UIImage(named: "accountPic1")
@@ -35,7 +37,10 @@ class ItemViewController: UIViewController {
         cartButton.layer.cornerRadius = 4.0
         cartButton.layer.borderWidth = 1
         cartButton.layer.borderColor = UIColor.black.cgColor
+        cartButton.backgroundColor = UIColor.red
         cartButton.addTarget(self, action: #selector(goToCart), for: .touchUpInside)
+        //cartButton.addTarget(self, action: #selector(touchdown), for: .touchDown)
+        view.addSubview(backgroundImage)
         view.addSubview(itemPic)
         view.addSubview(info)
         view.addSubview(cartButton)
@@ -44,14 +49,21 @@ class ItemViewController: UIViewController {
     
     @objc func goToCart(sender: UIButton!) {
         // ????
-        cartButton.backgroundColor = .darkGray
+        
         print("Add the item to a cart")
     }
     
+//    @objc func touchdown(sender: UIButton!) {
+//        cartButton.backgroundColor = .green
+//    }
+    
     func setupConstraints() {
+        backgroundImage.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
         itemPic.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
-            make.height.equalTo(400)
+            make.height.equalTo(300)
         }
         info.snp.makeConstraints { (make) in
             make.top.equalTo(itemPic.snp.bottom).offset(10)

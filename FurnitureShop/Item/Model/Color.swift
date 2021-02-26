@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class Color {
-    let name: UIColor
+    let name: UIImage
     
-    init(name: UIColor) {
+    init(name: UIImage) {
         self.name = name
     }
 }

@@ -39,6 +39,7 @@
 		D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */; };
 		D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */; };
 		D1B58FB325E560E500C4D299 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB225E560E500C4D299 /* Color.swift */; };
+		D1B58FB625E67DC500C4D299 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtons.swift; sourceTree = "<group>"; };
 		D1B58FB225E560E500C4D299 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		E0FDDBCDE8C36A00058A2718 /* Pods-FurnitureShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.release.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 				D1B58F9D25E55D7B00C4D299 /* Payment */,
 				D1B58F9E25E55D8F00C4D299 /* Sign Out */,
 				D1B58F9F25E55DC300C4D299 /* Tab Bar Controller */,
+				D1B58FB425E67D9A00C4D299 /* Extensions */,
 				D1A4157925DA8FC1005D2EF1 /* Fonts */,
 				D1A4155625D52A5F005D2EF1 /* Assets.xcassets */,
 				D1A4155825D52A5F005D2EF1 /* LaunchScreen.storyboard */,
@@ -398,6 +401,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D1B58FB425E67D9A00C4D299 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -539,6 +550,7 @@
 				D1A4158125DAA268005D2EF1 /* Hstack.swift in Sources */,
 				D1A4159125DBFDB2005D2EF1 /* CartViewController.swift in Sources */,
 				D1956C3925DFB91C00D51519 /* UserDetailsViewController.swift in Sources */,
+				D1B58FB625E67DC500C4D299 /* UIButtonExtension.swift in Sources */,
 				D1956C4525E00E7000D51519 /* AcceptedCards.swift in Sources */,
 				D1A4158325DABC69005D2EF1 /* Category.swift in Sources */,
 			);
