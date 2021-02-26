@@ -102,7 +102,6 @@ class UserDetailView: UIView {
     }
 }
 
-
 extension UserDetailView: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

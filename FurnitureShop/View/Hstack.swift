@@ -22,7 +22,7 @@ class ScrollableHStack: UIView {
         Category(name: "Carpet"),
         Category(name: "Bed"),
         Category(name: "Dresser"),
-        Category(name: "Lamp"),
+        Category(name: "Lamp")
     ]
     
     var horizontalStack = UIStackView()
