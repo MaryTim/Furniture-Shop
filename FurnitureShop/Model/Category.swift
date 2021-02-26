@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Category{
+class Category {
     let name: String
     
     init(name: String) {

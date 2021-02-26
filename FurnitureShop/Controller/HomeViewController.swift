@@ -62,7 +62,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-//MARK: - delegate, dataSource methods
+// MARK: - delegate, dataSource methods
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -74,4 +74,3 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return reusableCell
     }
 }
-
