@@ -562,7 +562,6 @@
 				D1956C3D25DFF7AB00D51519 /* AddressViewController.swift in Sources */,
 				D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */,
 				D1956C4725E01A8700D51519 /* SignOutViewController.swift in Sources */,
-				D18912E725E981B800AF1CFC /* Model.swift in Sources */,
 				D1B58FB325E560E500C4D299 /* Color.swift in Sources */,
 				D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */,
 				D1956C3725DFA20700D51519 /* UserInfoCategory.swift in Sources */,
