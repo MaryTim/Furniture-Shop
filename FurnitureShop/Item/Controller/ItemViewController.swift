@@ -10,6 +10,8 @@ import UIKit
 
 class ItemViewController: UIViewController {
     
+    let furnitureManager = FurnitureManager()
+    
     var backgroundImage = UIImageView()
     let itemPic = UIImageView()
     let info = MainInfo()
@@ -48,6 +50,8 @@ class ItemViewController: UIViewController {
     @objc func addToCart(sender: UIButton!) {
         sender.setBackgroundColor(color: .gray, forState: .highlighted)
         print("Add the item to a cart")
+        furnitureManager.
+        
     }
 
     func setupConstraints() {
