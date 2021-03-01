@@ -17,7 +17,7 @@ class ColorButtons: UIView {
         Color(name: UIImage(named: "grey")!),
         Color(name: UIImage(named: "ivory")!),
         Color(name: UIImage(named: "sunny")!),
-        Color(name: UIImage(named: "teal")!),
+        Color(name: UIImage(named: "teal")!)
     ]
     var stack = UIStackView()
     var buttonsArray = [UIButton]()
@@ -90,5 +90,3 @@ class ColorButtons: UIView {
         }
     }
 }
-
-

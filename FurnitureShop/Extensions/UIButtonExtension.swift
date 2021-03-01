@@ -27,8 +27,7 @@ extension UIButton {
     func changeButtonAppearance() {
         if self.isSelected == true {
             self.layer.borderWidth = 3
-        }
-        else if self.isSelected == false {
+        } else if self.isSelected == false {
             self.layer.borderWidth = 1
         }
     }

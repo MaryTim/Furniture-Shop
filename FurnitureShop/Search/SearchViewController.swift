@@ -40,7 +40,7 @@ class SearchViewController: UIViewController {
     }
 }
 
-//MARK: - delegate methods
+// MARK: - delegate methods
 
 extension SearchViewController: UITextFieldDelegate {
     

@@ -48,7 +48,6 @@ class SignOutViewController: UIViewController {
         view.addSubview(cancelButton)
     }
     
-    
     @objc func yesPressed(sender: UIButton!) {
         print("User wants to sign out! Do smth with it")
     }
@@ -84,5 +83,3 @@ class SignOutViewController: UIViewController {
         }
     }
 }
-
-
