@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */; };
+		D18912E725E981B800AF1CFC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912E625E981B800AF1CFC /* Model.swift */; };
 		D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */; };
 		D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3225DE9FD400D51519 /* AccountTopView.swift */; };
 		D1956C3525DEB15D00D51519 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.debug.xcconfig"; sourceTree = "<group>"; };
+		D18912E625E981B800AF1CFC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		D1956C3225DE9FD400D51519 /* AccountTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTopView.swift; sourceTree = "<group>"; };
 		D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				D1A4158225DABC69005D2EF1 /* Category.swift */,
 				D1956C3625DFA20700D51519 /* UserInfoCategory.swift */,
+				D18912E625E981B800AF1CFC /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				D1956C3D25DFF7AB00D51519 /* AddressViewController.swift in Sources */,
 				D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */,
 				D1956C4725E01A8700D51519 /* SignOutViewController.swift in Sources */,
+				D18912E725E981B800AF1CFC /* Model.swift in Sources */,
 				D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */,
 				D1956C3725DFA20700D51519 /* UserInfoCategory.swift in Sources */,
 				D1A4155025D52A5A005D2EF1 /* SceneDelegate.swift in Sources */,
