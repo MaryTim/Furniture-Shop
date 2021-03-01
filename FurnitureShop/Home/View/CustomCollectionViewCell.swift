@@ -12,7 +12,7 @@ import SnapKit
 class CustomCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "CustomCollectionViewCell"
-    
+
     let furniturePic: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "sofa")
