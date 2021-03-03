@@ -9,5 +9,6 @@ target 'FurnitureShop' do
 pod 'SwipeCellKit', :git => 'https://github.com/SwipeCellKit/SwipeCellKit.git', :branch => 'develop'
 pod 'SnapKit'
 pod 'SwiftLint'
+pod 'ObjectMapper'
 
 end
