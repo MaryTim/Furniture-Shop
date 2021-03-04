@@ -44,7 +44,7 @@ class ScrollableHStack: UIView {
         for category in categories {
             let newButton = UIButton()
             newButton.setTitle(category.name, for: .normal)
-            newButton.setTitleColor(UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1), for: .normal)
+            newButton.setTitleColor(MyColor.categoryButton.value, for: .normal)
             newButton.backgroundColor = .clear
             newButton.titleLabel?.textAlignment = .center
             newButton.titleLabel?.adjustsFontSizeToFitWidth = true

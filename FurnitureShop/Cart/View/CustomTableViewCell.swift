@@ -29,7 +29,7 @@ class CustomTableViewCell: UITableViewCell {
         label.textAlignment = .center
         label.adjustsFontForContentSizeCategory = true
         label.adjustsFontSizeToFitWidth = true
-        label.textColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1)
+        label.textColor = MyColor.cartItemName.value
         label.backgroundColor = .clear
         label.textAlignment = .center
         return label
@@ -41,7 +41,7 @@ class CustomTableViewCell: UITableViewCell {
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 4.0
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1).cgColor
+        button.layer.borderColor = MyColor.cartPlusMinusButtons.value.cgColor
         return button
     }()
     
@@ -52,7 +52,7 @@ class CustomTableViewCell: UITableViewCell {
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 4.0
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1).cgColor
+        button.layer.borderColor = MyColor.cartPlusMinusButtons.value.cgColor
         return button
     }()
     

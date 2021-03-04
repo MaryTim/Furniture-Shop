@@ -46,7 +46,7 @@ class ItemViewController: UIViewController {
     }
     
     @objc func addToCart(sender: UIButton!) {
-        sender.setBackgroundColor(color: .gray, forState: .highlighted)
+        sender.setBackgroundColor(color: MyColor.cartButtonTappedBackground.value, forState: .highlighted)
         print("Add the item to a cart")
     }
 

@@ -23,9 +23,9 @@ class AddressViewController: UIViewController {
         self.title = "My Address"
         view.backgroundColor = .white
         saveChangesButton.setTitle("SAVE CHANGES", for: .normal)
-        saveChangesButton.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 1)
+        saveChangesButton.backgroundColor = MyColor.saveChangesButton.value
         saveChangesButton.addTarget(self, action: #selector(savePressed), for: .touchUpInside)
-        saveChangesButton.setBackgroundColor(color: UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1), forState: .highlighted)
+        saveChangesButton.setBackgroundColor(color: MyColor.saveChangesTapped.value, forState: .highlighted)
         view.addSubview(addressInfo)
         view.addSubview(saveChangesButton)
     }

@@ -29,8 +29,8 @@ class PaymentViewController: UIViewController {
         view.backgroundColor = .white
         saveCard.addTarget(self, action: #selector(saveCardPressed), for: .touchUpInside)
         saveCard.setTitle("SAVE CARD", for: .normal)
-        saveCard.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 1)
-        saveCard.setBackgroundColor(color: UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1), forState: .highlighted)
+        saveCard.backgroundColor = MyColor.saveChangesButton.value
+        saveCard.setBackgroundColor(color: MyColor.saveChangesTapped.value, forState: .highlighted)
         view.addSubview(paymentV)
         view.addSubview(saveCard)
         view.addSubview(cardsView)

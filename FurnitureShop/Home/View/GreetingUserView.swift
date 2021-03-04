@@ -29,11 +29,11 @@ class GreetingUserView: UIView {
     func setUpUI() {
         greetingLabel.text = "Hi, \(userName)"
         greetingLabel.adjustsFontSizeToFitWidth = true
-        greetingLabel.textColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 0.8)
+        greetingLabel.textColor = MyColor.greetingUser.value
         addSubview(greetingLabel)
         
         mainLabel.text = "For your house"
-        mainLabel.textColor = .black
+        mainLabel.textColor = MyColor.mainLabel.value
         mainLabel.font = UIFont(name: "PlayfairDisplay-Bold", size: 35)
         mainLabel.adjustsFontSizeToFitWidth = true
         addSubview(mainLabel)

@@ -33,12 +33,12 @@ class CartViewController: UIViewController {
         checkoutButton.tag = 0
         checkoutButton.setTitle("CHECKOUT", for: .normal)
         checkoutButton.setTitleColor(.black, for: .normal)
-        checkoutButton.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 0.9)
+        checkoutButton.backgroundColor = MyColor.checkoutButtonBackground.value
         checkoutButton.layer.cornerRadius = 4.0
         checkoutButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         totalLabel.text = "Total: $5347" //change this later (calculate sum of all items)
         totalLabel.backgroundColor = .clear
-        totalLabel.textColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1)
+        totalLabel.textColor = MyColor.totalPrice.value
         view.addSubview(cartLabel)
         view.addSubview(tableV)
         view.addSubview(checkoutButton)
