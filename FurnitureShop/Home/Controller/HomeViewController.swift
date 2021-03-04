@@ -9,17 +9,18 @@
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController{
+class HomeViewController: UIViewController {
+    
     
     let greeting = GreetingUserView()
     let scrollableView = ScrollableHStack()
     var collectionView: UICollectionView?
     
-    var furnitureManager = FurnitureManager()
+    //var furnitureManager = FurnitureManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.reloadData()
+        //collectionView?.reloadData()
         setUPUI()
         setUpConstraints()
     }
@@ -71,12 +72,12 @@ class HomeViewController: UIViewController{
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(furnitureManager)
-        return furnitureManager.furnitureData?.categories.count ?? 3
+       // print(furnitureManager.data)
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("Price is \(furnitureManager.furnitureData?.categories[indexPath.section].price) ")
+
         let reusableCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellIdentifier, for: indexPath)
         return reusableCell
     }

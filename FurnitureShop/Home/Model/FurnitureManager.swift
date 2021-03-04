@@ -5,18 +5,19 @@
 //  Created by Maria Budkevich on 3/1/21.
 //  Copyright © 2021 Mary Tim. All rights reserved.
 
-
 import Foundation
 import UIKit
+import ObjectMapper
 
-//protocol FurnitureManagerDelegate {
-//    func didUpdateFurniture(furniture: FurnitureModel)
-//}
+protocol ReturnDataDelegate {
+    var categories: [Categories] {get set}
+    //func returnData(data: FurnitureData)
+}
 
 class FurnitureManager {
     
     let urlString = "https://raw.githubusercontent.com/linadevray/furnitureAppJson/master/furnitureAPI.json"
-    var furnitureData: FurnitureData?
+    var delegate: ReturnDataDelegate?
     
     func performRequest() {
         if let url = URL(string: urlString) {
@@ -28,9 +29,10 @@ class FurnitureManager {
                 }
                 if let safeData = data {
                     do {
-                        self.furnitureData = try JSONDecoder().decode(FurnitureData.self, from: safeData)
-                        
-                        print(self.furnitureData?.categories.count)
+                        let dataString = String(data: safeData, encoding: .utf8)
+                        let furnitureData = try JSONDecoder().decode(FurnitureData.self, from: safeData)
+                        print(furnitureData)
+                        self.delegate?.categories = furnitureData.categories
                     } catch {
                         print(error)
                     }
@@ -39,17 +41,4 @@ class FurnitureManager {
             task.resume()
         }
     }
-    
-//    func parseJSON(furnitureData: Data) -> FurnitureData? {
-//        let decoder = JSONDecoder()
-//        do {
-//            let decodedData = try decoder.decode(FurnitureData.self, from: furnitureData)
-//            print(decodedData)
-//            return decodedData
-//        } catch {
-//            print(error)
-//            return nil
-//        }
-//    }
-    
 }

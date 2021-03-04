@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ItemViewController: UIViewController {
+class ItemViewController: UIViewController, ReturnDataDelegate {
     
-    
+    var categories = [Categories]()
     let manager = FurnitureManager()
+    
     var backgroundImage = UIImageView()
     let itemPic = UIImageView()
     let info = MainInfo()
@@ -20,6 +21,8 @@ class ItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        manager.delegate? = self
+        manager.performRequest()
         setupUI()
         setupConstraints()
     }
@@ -50,7 +53,7 @@ class ItemViewController: UIViewController {
     @objc func addToCart(sender: UIButton!) {
         sender.setBackgroundColor(color: .gray, forState: .highlighted)
         print("Add the item to a cart")
-        manager.performRequest()
+       print(categories)
     }
 
     func setupConstraints() {
@@ -80,4 +83,10 @@ class ItemViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
     }
+    
+//    func returnData(data: FurnitureData) {
+//        categories = data.categories
+//        print(categories)
+//    }
+    
 }

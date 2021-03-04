@@ -7,54 +7,20 @@
 //
 
 import Foundation
-import ObjectMapper
 
-struct FurnitureData: Codable, Mappable {
- 
-    
-    
+struct FurnitureData: Codable {
     var categories: [Categories]
-    
-    init?(map: Map) {
-         
-     }
-     
-     mutating func mapping(map: Map) {
-         categories    <- map["categories"]
-     }
 }
-    struct Categories: Codable, Mappable {
-        var type: String
-        var name: String
-        var price: Int
-        var colors: [Colors]
-        var description: String
-        
-        init?(map: Map) {
-            
-        }
-        
-        mutating func mapping(map: Map) {
-            type   <- map["type"]
-            name   <- map["name"]
-            price   <- map["price"]
-            colors   <- map["colors"]
-            description   <- map["description"]
-        }
-    }
 
-    struct Colors: Codable {
-        var buttonColor: String?
-        var itemPic: String
-        
-        init?(map: Map) {
-            
-        }
-        
-        mutating func mapping(map: Map) {
-            itemPic <- map["itemPic"]
-        }
-    }
+struct Categories: Codable {
+    var type: String
+    var name: String
+    var price: Int
+    var colors: [Colors]
+    var description: String
+}
 
-let furnManager = FurnitureManager()
-let categories = Categories(JSONString: furnManager.furnitureData?.categories ?? "empty")
+struct Colors: Codable {
+    var buttonColor: String?
+    var itemPic: String
+}
