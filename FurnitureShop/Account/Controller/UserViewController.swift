@@ -23,6 +23,7 @@ class UserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        accountView.imagePicker.delegate = self
         tableView.isScrollEnabled = true
         tableView.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.cellID)
         tableView.delegate = self
@@ -32,6 +33,7 @@ class UserViewController: UIViewController {
     }
     
     func setupUI() {
+            self.accountView.imageButton.addTarget(self, action: #selector(self.chooseImage), for: .touchUpInside)
         view.addSubview(accountView)
         view.addSubview(tableView)
     }
@@ -46,6 +48,15 @@ class UserViewController: UIViewController {
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview().offset(-100)
+        }
+    }
+    
+    @objc func chooseImage(sender: UIButton) {
+        print("It's time to choose a nice picture :)")
+        accountView.imagePicker.sourceType = .photoLibrary
+        accountView.imagePicker.allowsEditing = true
+        DispatchQueue.main.async {
+            self.present(self.accountView.imagePicker, animated: true, completion: nil)
         }
     }
 }
@@ -71,5 +82,15 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
         let navVC = UINavigationController(rootViewController: rootVC)
         present(navVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension UserViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController,
+                                 didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            accountView.userImage.image = image
+        }
+        dismiss(animated: true, completion: nil)
     }
 }
