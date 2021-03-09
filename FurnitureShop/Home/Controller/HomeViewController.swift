@@ -9,25 +9,28 @@
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController {
-    
+class HomeViewController: UIViewController, ReturnDataDelegate {
     
     let greeting = GreetingUserView()
     let scrollableView = ScrollableHStack()
     var collectionView: UICollectionView?
-    
-    //var furnitureManager = FurnitureManager()
+    let manager = FurnitureManager()
+    var furnitureData: FurnitureData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //collectionView?.reloadData()
+        manager.delegate = self
+        manager.performRequest()
         setUPUI()
         setUpConstraints()
+        showSpinner()
     }
     
     func setUPUI() {
+        
         view.addSubview(greeting)
         view.addSubview(scrollableView)
+        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 15
@@ -45,6 +48,7 @@ class HomeViewController: UIViewController {
     }
     
     func setUpConstraints() {
+        
         greeting.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(90)
             make.leading.equalToSuperview().offset(30)
@@ -65,27 +69,37 @@ class HomeViewController: UIViewController {
         }
     }
     
-
+    func returnData(data: FurnitureData) {
+        DispatchQueue.main.async {
+            self.furnitureData = data
+            self.collectionView?.reloadData()
+            self.hideSpinner()
+        }
+    }
 }
-
 // MARK: - delegate, dataSource methods
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       // print(furnitureManager.data)
-        return 10
+        return furnitureData?.categories.count ?? 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
-        let reusableCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellIdentifier, for: indexPath)
-        return reusableCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
+        
+        if furnitureData != nil {
+            cell.priceLabel.text = "$" + String(furnitureData!.categories[indexPath.row].price)
+            let url = URL(string: (furnitureData!.categories[indexPath.row].colors[0].itemPic))
+            let picture = try? Data(contentsOf: url!)
+            cell.furniturePic.image = UIImage(data: picture!)
+        }
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
-          let rootVC = ItemViewController()
-          let navVC = UINavigationController(rootViewController: rootVC)
+        let rootVC = ItemViewController()
+        let navVC = UINavigationController(rootViewController: rootVC)
         navVC.modalPresentationStyle = .fullScreen
         self.present(navVC, animated: true)
     }

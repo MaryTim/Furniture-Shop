@@ -7,20 +7,18 @@
 
 import Foundation
 import UIKit
-import ObjectMapper
 
 protocol ReturnDataDelegate {
-    var categories: [Categories] {get set}
-    //func returnData(data: FurnitureData)
+    func returnData(data: FurnitureData)
 }
 
 class FurnitureManager {
     
-    let urlString = "https://raw.githubusercontent.com/linadevray/furnitureAppJson/master/furnitureAPI.json"
     var delegate: ReturnDataDelegate?
+    let urlString = "https://raw.githubusercontent.com/linadevray/furnitureAppJson/master/furnitureAPI.json"
     
     func performRequest() {
-        if let url = URL(string: urlString) {
+        if let url = URL(string: self.urlString) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
@@ -29,10 +27,8 @@ class FurnitureManager {
                 }
                 if let safeData = data {
                     do {
-                        let dataString = String(data: safeData, encoding: .utf8)
                         let furnitureData = try JSONDecoder().decode(FurnitureData.self, from: safeData)
-                        print(furnitureData)
-                        self.delegate?.categories = furnitureData.categories
+                        self.delegate?.returnData(data: furnitureData)
                     } catch {
                         print(error)
                     }

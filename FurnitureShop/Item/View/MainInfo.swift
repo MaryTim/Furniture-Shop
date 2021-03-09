@@ -10,9 +10,9 @@ import UIKit
 
 class MainInfo: UIView {
     
-    let itemName = UILabel()
-    let itemPrice = UILabel()
-    let itemDescription = UILabel()
+    var itemName = UILabel()
+    var itemPrice = UILabel()
+    var itemDescription = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +25,7 @@ class MainInfo: UIView {
     }
     
     func setupUI() {
-        itemName.text = "VASAGLE Sofa"
+        //itemName.text = "VASAGLE Sofa"
         itemName.font = UIFont(name: "PlayfairDisplay-Bold", size: 25)
         itemPrice.text = "$1234"
         itemPrice.font = UIFont(name: "Al Nile", size: 28)
