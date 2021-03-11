@@ -11,20 +11,7 @@ import UIKit
 import SnapKit
 
 class ScrollableHStack: UIView {
-    
-    var categories = [
-        Category(name: "Sofa"),
-        Category(name: "Mirror"),
-        Category(name: "Table"),
-        Category(name: "Chair"),
-        Category(name: "Wardrobe"),
-        Category(name: "Kitchen Set"),
-        Category(name: "Carpet"),
-        Category(name: "Bed"),
-        Category(name: "Dresser"),
-        Category(name: "Lamp")
-    ]
-    
+
     var arrayButtons = [UIButton]()
     var horizontalStack = UIStackView()
     let scrollView = UIScrollView()
@@ -39,38 +26,9 @@ class ScrollableHStack: UIView {
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func createButton() {
-        for category in categories {
-            let newButton = UIButton()
-            newButton.setTitle(category.name, for: .normal)
-            newButton.setTitleColor(UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1), for: .normal)
-            newButton.backgroundColor = .clear
-            newButton.titleLabel?.textAlignment = .center
-            newButton.titleLabel?.adjustsFontSizeToFitWidth = true
-            
-            newButton.setTitleColor(.black, for: .selected)
-            newButton.isSelected = false
-            arrayButtons.append(newButton)
-            horizontalStack.addArrangedSubview(newButton)
-            newButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-        }
-    }
-    
-    @objc func buttonPressed(sender: UIButton!) {
-        
-        for b in arrayButtons {
-            if b == sender {
-                b.isSelected = true
-            } else {
-                b.isSelected = false
-            }
-        }
-        print("Button \(sender.currentTitle!) is pressed")
-    }
-  
+
     func setupUI() {
-        createButton()
+        
         horizontalStack.axis = .horizontal
         horizontalStack.spacing = 15
         horizontalStack.distribution = .fill
