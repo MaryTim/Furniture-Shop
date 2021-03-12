@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Photos
 
 class UserViewController: UIViewController {
     
@@ -21,9 +22,10 @@ class UserViewController: UIViewController {
        ]
     let vcArray = [UserDetailsViewController(), AddressViewController(), PaymentViewController(), SignOutViewController()]
     
+    let imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        accountView.imagePicker.delegate = self
         tableView.isScrollEnabled = true
         tableView.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.cellID)
         tableView.delegate = self
@@ -33,7 +35,7 @@ class UserViewController: UIViewController {
     }
     
     func setupUI() {
-            self.accountView.imageButton.addTarget(self, action: #selector(self.chooseImage), for: .touchUpInside)
+        self.accountView.userImage.addTapGesture(tapNumber: 1, target: self, action: #selector(handleTap))
         view.addSubview(accountView)
         view.addSubview(tableView)
     }
@@ -50,13 +52,26 @@ class UserViewController: UIViewController {
             make.bottom.equalToSuperview().offset(-100)
         }
     }
-    
-    @objc func chooseImage(sender: UIButton) {
-        print("It's time to choose a nice picture :)")
-        accountView.imagePicker.sourceType = .photoLibrary
-        accountView.imagePicker.allowsEditing = true
-        DispatchQueue.main.async {
-            self.present(self.accountView.imagePicker, animated: true, completion: nil)
+
+    @objc func handleTap(sender: UITapGestureRecognizer) {
+        let alert = UIAlertController(title: "Choose a nice picture of you :)", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Go To My Photo Library", style: .default, handler: { _ in
+            self.setPicture()
+        }))
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+      
+    func setPicture() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = true
+            present(imagePicker, animated: true, completion: nil)
+        } else {
+            let alert  = UIAlertController(title: "Warning", message: "You don't have permission to access gallery.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }
@@ -87,7 +102,7 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension UserViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,
-                                 didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+                               didFinishPickingMediaWithInfo info:  [UIImagePickerController.InfoKey: Any]) {
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             accountView.userImage.image = image
         }

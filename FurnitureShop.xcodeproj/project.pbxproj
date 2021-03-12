@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */; };
+		D1555ABD25FA4E8E008054DC /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1555ABC25FA4E8E008054DC /* TapGesture.swift */; };
 		D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */; };
 		D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3225DE9FD400D51519 /* AccountTopView.swift */; };
 		D1956C3525DEB15D00D51519 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.debug.xcconfig"; sourceTree = "<group>"; };
+		D1555ABC25FA4E8E008054DC /* TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesture.swift; sourceTree = "<group>"; };
 		D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		D1956C3225DE9FD400D51519 /* AccountTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTopView.swift; sourceTree = "<group>"; };
 		D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */,
+				D1555ABC25FA4E8E008054DC /* TapGesture.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				D1A4158B25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift in Sources */,
 				D1A4158F25DBFD74005D2EF1 /* SearchViewController.swift in Sources */,
 				D1956C4B25E53E4100D51519 /* MainInfo.swift in Sources */,
+				D1555ABD25FA4E8E008054DC /* TapGesture.swift in Sources */,
 				D1956C3B25DFBACD00D51519 /* UserDetailsView.swift in Sources */,
 				D1A4155225D52A5A005D2EF1 /* HomeViewController.swift in Sources */,
 				D1956C4125E009FF00D51519 /* PaymentViewController.swift in Sources */,

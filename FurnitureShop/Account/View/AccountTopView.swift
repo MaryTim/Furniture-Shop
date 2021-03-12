@@ -14,9 +14,7 @@ class AccountTopView: UIView {
     
     let furnitureImage = UIImageView()
     var userImage = UIImageView()
-    var imagePicker = UIImagePickerController()
-    let imageButton = UIButton()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -28,14 +26,11 @@ class AccountTopView: UIView {
     }
     
     func setupUI() {
-        imageButton.layer.cornerRadius = 80
-        imageButton.clipsToBounds = true
         furnitureImage.image = UIImage(named: "accountPic2")
         userImage.layer.cornerRadius = 80
         userImage.clipsToBounds = true
         userImage.image = UIImage(named: "icon")
         addSubview(furnitureImage)
-        addSubview(imageButton)
         addSubview(userImage)
     }
     
@@ -43,11 +38,6 @@ class AccountTopView: UIView {
         furnitureImage.snp.makeConstraints { (make) in
             make.top.leading.bottom.equalToSuperview()
             make.height.equalTo(200)
-        }
-        imageButton.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(200)
-            make.height.width.equalTo(160)
-            make.centerX.equalToSuperview()
         }
         userImage.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(200)
