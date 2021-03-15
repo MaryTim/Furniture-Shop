@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */; };
+		D1555B0225FF7632008054DC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1555B0125FF7632008054DC /* Category.swift */; };
 		D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */; };
 		D18912EF25ED364100AF1CFC /* FurnitureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912EE25ED364100AF1CFC /* FurnitureData.swift */; };
 		D18912F125ED370700AF1CFC /* FurnitureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912F025ED370700AF1CFC /* FurnitureManager.swift */; };
@@ -33,7 +34,6 @@
 		D1A4157625DA88D8005D2EF1 /* GreetingUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4157525DA88D8005D2EF1 /* GreetingUserView.swift */; };
 		D1A4157B25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1A4157A25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf */; };
 		D1A4158125DAA268005D2EF1 /* Hstack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4158025DAA268005D2EF1 /* Hstack.swift */; };
-		D1A4158325DABC69005D2EF1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4158225DABC69005D2EF1 /* Category.swift */; };
 		D1A4158B25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4158A25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift */; };
 		D1A4158D25DBF154005D2EF1 /* Newsreader_10pt-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1A4158C25DBF154005D2EF1 /* Newsreader_10pt-ExtraLight.ttf */; };
 		D1A4158F25DBFD74005D2EF1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4158E25DBFD74005D2EF1 /* SearchViewController.swift */; };
@@ -48,6 +48,7 @@
 /* Begin PBXFileReference section */
 		76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.debug.xcconfig"; sourceTree = "<group>"; };
+		D1555B0125FF7632008054DC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		D18912EE25ED364100AF1CFC /* FurnitureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureData.swift; sourceTree = "<group>"; };
 		D18912F025ED370700AF1CFC /* FurnitureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureManager.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		D1A4157525DA88D8005D2EF1 /* GreetingUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingUserView.swift; sourceTree = "<group>"; };
 		D1A4157A25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Bold.ttf"; path = "Playfair_Display/static/PlayfairDisplay-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		D1A4158025DAA268005D2EF1 /* Hstack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hstack.swift; sourceTree = "<group>"; };
-		D1A4158225DABC69005D2EF1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D1A4158A25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		D1A4158C25DBF154005D2EF1 /* Newsreader_10pt-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Newsreader_10pt-ExtraLight.ttf"; path = "Newsreader/static/Newsreader_10pt-ExtraLight.ttf"; sourceTree = SOURCE_ROOT; };
 		D1A4158E25DBFD74005D2EF1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 		D1B58FA025E55E3600C4D299 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D1A4158225DABC69005D2EF1 /* Category.swift */,
+				D1555B0125FF7632008054DC /* Category.swift */,
 				D18912EE25ED364100AF1CFC /* FurnitureData.swift */,
 				D18912F025ED370700AF1CFC /* FurnitureManager.swift */,
 			);
@@ -555,6 +555,7 @@
 				D1A4157625DA88D8005D2EF1 /* GreetingUserView.swift in Sources */,
 				D1A4159325DBFDC2005D2EF1 /* UserViewController.swift in Sources */,
 				D1956C3525DEB15D00D51519 /* UserTableViewCell.swift in Sources */,
+				D1555B0225FF7632008054DC /* Category.swift in Sources */,
 				D1A4158B25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift in Sources */,
 				D1A4158F25DBFD74005D2EF1 /* SearchViewController.swift in Sources */,
 				D1956C4B25E53E4100D51519 /* MainInfo.swift in Sources */,
@@ -582,7 +583,6 @@
 				D1956C3925DFB91C00D51519 /* UserDetailsViewController.swift in Sources */,
 				D1B58FB625E67DC500C4D299 /* UIButtonExtension.swift in Sources */,
 				D1956C4525E00E7000D51519 /* AcceptedCards.swift in Sources */,
-				D1A4158325DABC69005D2EF1 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

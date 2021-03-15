@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
     var collectionView: UICollectionView?
     let manager = FurnitureManager()
     var furnitureData: FurnitureData?
+    var categories = [Categories]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +73,7 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
     func returnData(data: FurnitureData) {
         DispatchQueue.main.async {
             self.furnitureData = data
+            self.categories = self.furnitureData?.categories ?? []
             self.collectionView?.reloadData()
             self.hideSpinner()
         }
@@ -81,17 +83,19 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return furnitureData?.categories.count ?? 1
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
         
         if furnitureData != nil {
-            cell.priceLabel.text = "$" + String(furnitureData!.categories[indexPath.row].price)
-            let url = URL(string: (furnitureData!.categories[indexPath.row].colors[0].itemPic))
-            let picture = try? Data(contentsOf: url!)
-            cell.furniturePic.image = UIImage(data: picture!)
+            cell.priceLabel.text = "$" + String(categories[indexPath.row].price)
+            if let url = URL(string: (categories[indexPath.row].colors[0].itemPic)) {
+                if let picture = try? Data(contentsOf: url) {
+                    cell.furniturePic.image = UIImage(data: picture)
+                }
+            } 
         }
         return cell
     }
