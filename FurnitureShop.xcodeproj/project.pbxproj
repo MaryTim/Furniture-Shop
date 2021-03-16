@@ -40,6 +40,7 @@
 		D1A4159325DBFDC2005D2EF1 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */; };
 		D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */; };
 		D1A6276B2600B3D3009C27C2 /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276A2600B3D3009C27C2 /* TapGesture.swift */; };
+		D1A6276D2600D1F4009C27C2 /* HexToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */; };
 		D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */; };
 		D1B58FB325E560E500C4D299 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB225E560E500C4D299 /* Color.swift */; };
 		D1B58FB625E67DC500C4D299 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */; };
@@ -82,6 +83,7 @@
 		D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		D1A6276A2600B3D3009C27C2 /* TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesture.swift; sourceTree = "<group>"; };
+		D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToUIColor.swift; sourceTree = "<group>"; };
 		D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtons.swift; sourceTree = "<group>"; };
 		D1B58FB225E560E500C4D299 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 				D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */,
 				D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */,
 				D1A6276A2600B3D3009C27C2 /* TapGesture.swift */,
+				D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */,
 				D1956C3D25DFF7AB00D51519 /* AddressViewController.swift in Sources */,
 				D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */,
+				D1A6276D2600D1F4009C27C2 /* HexToUIColor.swift in Sources */,
 				D1956C4725E01A8700D51519 /* SignOutViewController.swift in Sources */,
 				D1B58FB325E560E500C4D299 /* Color.swift in Sources */,
 				D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */,

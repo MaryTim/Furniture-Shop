@@ -17,8 +17,6 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
     let manager = FurnitureManager()
     var furnitureData: FurnitureData?
     var categories = [Categories]()
-    var set = Set<String>()
-    var array = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,15 +78,17 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
     }
     
     func makeButtons() {
+        var categoriesSet = Set<String>()
+        var arrayCategories = [String]()
         for category in categories {
-            set.insert(category.type)
+            categoriesSet.insert(category.type)
         }
-        for category in set {
+        for category in categoriesSet {
             let uppercased = category.uppercased()
-            array.append(uppercased)
+            arrayCategories.append(uppercased)
         }
-        array.sort()
-        for category in array {
+        arrayCategories.sort()
+        for category in arrayCategories {
             let newButton = UIButton()
             newButton.setTitle(category, for: .normal)
             newButton.setTitleColor(UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1), for: .normal)
@@ -142,7 +142,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let rootVC = ItemViewController()
         rootVC.info.itemName.text = categories[indexPath.row].name
         rootVC.info.itemDescription.text = categories[indexPath.row].description
-        rootVC.info.itemPrice.text = "$" + String(categories[indexPath.row].price)
+        rootVC.info.itemPrice.text = "$\(categories[indexPath.row].price)"
         DispatchQueue.main.async {
             if let buttonColor = self.categories[indexPath.row].colors[0].buttonColor {
                 for color in self.categories[indexPath.row].colors {

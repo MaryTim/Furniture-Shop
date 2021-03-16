@@ -17,7 +17,7 @@ class ItemViewController: UIViewController {
     var colors = ColorButtons()
     var rgbColors = [UIColor]()
     var picturesArray = [String]()
-    var tuples = [(UIColor, String)]()
+    var buttonColorPictureTuple = [(UIColor, String)]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,29 +32,11 @@ class ItemViewController: UIViewController {
     }
     
     func makeTuple() {
-        tuples = zip(rgbColors, picturesArray).map { ($0, $1) }
-    }
-    
-    func hexStringToUIColor (hex: String) -> UIColor {
-        var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-        if cString.hasPrefix("#") {
-            cString.remove(at: cString.startIndex)
-        }
-        if (cString.count) != 6 {
-            return UIColor.gray
-        }
-        var rgbValue: UInt64 = 0
-        Scanner(string: cString).scanHexInt64(&rgbValue)
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
+        buttonColorPictureTuple = zip(rgbColors, picturesArray).map { ($0, $1) }
     }
     
     func createButton() {
-        for pair in tuples {
+        for pair in buttonColorPictureTuple {
             let newButton = UIButton()
             newButton.backgroundColor = pair.0
             newButton.layer.cornerRadius = 15
@@ -76,12 +58,14 @@ class ItemViewController: UIViewController {
             if b == sender {
                 b.isSelected = true
                 b.changeButtonAppearance()
-                for pair in tuples {
+                for pair in buttonColorPictureTuple {
                     if b.backgroundColor! == pair.0 {
                         let pic = pair.1
-                        let url = URL(string: pic)
-                        let picture = try? Data(contentsOf: url!)
-                        itemPic.image = UIImage(data: picture!)
+                        if let url = URL(string: pic) {
+                            if let picture = try? Data(contentsOf: url) {
+                                itemPic.image = UIImage(data: picture)
+                            }
+                        }
                     }
                 }
             } else {
@@ -93,7 +77,8 @@ class ItemViewController: UIViewController {
     
     func setupUI() {
         for color in colors.colorsArray {
-            rgbColors.append(hexStringToUIColor(hex: color))
+            let colorUI = color.hexStringToUIColor(hex: color)
+            rgbColors.append(colorUI)
         }
         
         itemPic.contentMode = .scaleAspectFit
