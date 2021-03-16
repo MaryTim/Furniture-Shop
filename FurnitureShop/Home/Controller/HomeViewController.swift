@@ -21,12 +21,12 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         manager.delegate = self
-        self.showSpinner()
         manager.performRequest()
+        showSpinner()
         setUPUI()
         setUpConstraints()
     }
-    
+
     func setUPUI() {
         view.addSubview(greeting)
         view.addSubview(scrollableView)
@@ -70,9 +70,52 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
     func returnData(data: FurnitureData) {
         DispatchQueue.main.async {
             self.furnitureData = data
-            self.categories = self.furnitureData?.categories ?? []
+            self.categories = data.categories
             self.collectionView?.reloadData()
+            self.makeButtons()
             self.hideSpinner()
+        }
+    }
+    
+    func makeButtons() {
+        var categoriesSet = Set<String>()
+        var arrayCategories = [String]()
+        for category in categories {
+            categoriesSet.insert(category.type)
+        }
+        for category in categoriesSet {
+            let uppercased = category.uppercased()
+            arrayCategories.append(uppercased)
+        }
+        arrayCategories.sort()
+        for category in arrayCategories {
+            let newButton = UIButton()
+            newButton.setTitle(category, for: .normal)
+            newButton.setTitleColor(UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1), for: .normal)
+            newButton.backgroundColor = .clear
+            newButton.titleLabel?.textAlignment = .center
+            newButton.titleLabel?.adjustsFontSizeToFitWidth = true
+            
+            newButton.setTitleColor(.black, for: .selected)
+            newButton.isSelected = false
+            scrollableView.arrayButtons.append(newButton)
+            scrollableView.horizontalStack.addArrangedSubview(newButton)
+            newButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        }
+    }
+    
+    @objc func buttonPressed(sender: UIButton!) {
+        DispatchQueue.main.async {
+            for b in self.scrollableView.arrayButtons {
+                if b == sender {
+                    b.isSelected = true
+                    self.categories = self.furnitureData!.categories
+                    self.categories = self.categories.filter {$0.type == sender.currentTitle?.lowercased()}
+                    self.collectionView?.reloadData()
+                } else {
+                    b.isSelected = false
+                }
+            }
         }
     }
 }
@@ -86,20 +129,33 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
         
-        if furnitureData != nil {
             cell.priceLabel.text = "$\(categories[indexPath.row].price)"
             if let url = URL(string: (categories[indexPath.row].colors[0].itemPic)) {
                 if let picture = try? Data(contentsOf: url) {
                     cell.furniturePic.image = UIImage(data: picture)
                 }
-            } 
-        }
+            }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
         let rootVC = ItemViewController()
+        rootVC.info.itemName.text = categories[indexPath.row].name
+        rootVC.info.itemDescription.text = categories[indexPath.row].description
+        rootVC.info.itemPrice.text = "$\(categories[indexPath.row].price)"
+        DispatchQueue.main.async {
+            if let buttonColor = self.categories[indexPath.row].colors[0].buttonColor {
+                for color in self.categories[indexPath.row].colors {
+                    rootVC.colors.colorsArray.append(color.buttonColor!)
+                }
+                for picture in self.categories[indexPath.row].colors {
+                    rootVC.picturesArray.append(picture.itemPic)
+                }
+            }
+        }
+        let url = URL(string: (categories[indexPath.row].colors[0].itemPic))
+        let picture = try? Data(contentsOf: url!)
+        rootVC.itemPic.image = UIImage(data: picture!)
         let navVC = UINavigationController(rootViewController: rootVC)
         navVC.modalPresentationStyle = .fullScreen
         self.present(navVC, animated: true)

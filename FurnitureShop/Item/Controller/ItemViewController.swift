@@ -9,31 +9,87 @@
 import UIKit
 
 class ItemViewController: UIViewController {
-
-    let manager = FurnitureManager()
     
     var backgroundImage = UIImageView()
     let itemPic = UIImageView()
     let info = MainInfo()
     let cartButton = UIButton()
-    let colors = ColorButtons()
-
+    var colors = ColorButtons()
+    var rgbColors = [UIColor]()
+    var picturesArray = [String]()
+    var buttonColorPictureTuple = [(UIColor, String)]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        manager.delegate = self
-        manager.performRequest()
         setupUI()
         setupConstraints()
+        makeTuple()
+        createButton()
     }
     
     @objc func back() {
         dismiss(animated: true, completion: nil)
     }
     
+    func makeTuple() {
+        buttonColorPictureTuple = zip(rgbColors, picturesArray).map { ($0, $1) }
+    }
+    
+    func createButton() {
+        for pair in buttonColorPictureTuple {
+            let newButton = UIButton()
+            newButton.backgroundColor = pair.0
+            newButton.layer.cornerRadius = 15
+            newButton.layer.borderWidth = 1
+            newButton.layer.borderColor = UIColor.black.cgColor
+            newButton.clipsToBounds = true
+            newButton.snp.makeConstraints { (make) in
+                make.height.width.equalTo(30)
+            }
+            newButton.isSelected = false
+            colors.buttonsArray.append(newButton)
+            colors.stack.addArrangedSubview(newButton)
+            newButton.addTarget(self, action: #selector(colorPressed), for: .touchUpInside)
+        }
+    }
+    
+    @objc func colorPressed(sender: UIButton!) {
+        for b in colors.buttonsArray {
+            if b == sender {
+                b.isSelected = true
+                b.changeButtonAppearance()
+                for pair in buttonColorPictureTuple {
+                    if b.backgroundColor! == pair.0 {
+                        let pic = pair.1
+                        if let url = URL(string: pic) {
+                            if let picture = try? Data(contentsOf: url) {
+                                itemPic.image = UIImage(data: picture)
+                            }
+                        }
+                    }
+                }
+            } else {
+                b.isSelected = false
+                b.changeButtonAppearance()
+            }
+        }
+    }
+    
     func setupUI() {
-        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "background"), for: .default)
-        backgroundImage.image = UIImage(named: "background")
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back", style: .plain, target: self, action: #selector(back))
+        for color in colors.colorsArray {
+            let colorUI = color.hexStringToUIColor(hex: color)
+            rgbColors.append(colorUI)
+        }
+        
+        itemPic.contentMode = .scaleAspectFit
+        if rgbColors.isEmpty {
+            colors.colorLabel.text = ""
+        }
+        backgroundImage.backgroundColor = .white
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back",
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(back))
         navigationItem.leftBarButtonItem?.tintColor = .black
         cartButton.setImage(UIImage(systemName: "cart"), for: .normal)
         cartButton.tintColor = .black
@@ -52,7 +108,6 @@ class ItemViewController: UIViewController {
     @objc func addToCart(sender: UIButton!) {
         sender.setBackgroundColor(color: .gray, forState: .highlighted)
         print("Add the item to a cart")
-
     }
 
     func setupConstraints() {
@@ -60,8 +115,9 @@ class ItemViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         itemPic.snp.makeConstraints { (make) in
-            make.top.leading.trailing.equalToSuperview()
-            make.height.equalTo(300)
+            make.top.equalToSuperview().offset(80)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(250)
         }
         info.snp.makeConstraints { (make) in
             make.top.equalTo(itemPic.snp.bottom).offset(10)

@@ -25,7 +25,9 @@ class MainInfo: UIView {
     }
     
     func setupUI() {
-        itemName.font = UIFont(name: "PlayfairDisplay-Bold", size: 25)
+        itemName.font = UIFont(name: "PlayfairDisplay-Bold", size: 20)
+        itemName.adjustsFontSizeToFitWidth = true
+        itemName.numberOfLines = 0
         itemPrice.font = UIFont(name: "Al Nile", size: 28)
         itemPrice.textColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1)
         itemDescription.textAlignment = .justified
@@ -39,7 +41,7 @@ class MainInfo: UIView {
     func setupConstraints() {
         itemName.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(30)
         }
         itemPrice.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview()

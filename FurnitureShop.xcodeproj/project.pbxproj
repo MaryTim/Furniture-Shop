@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */; };
-		D1555B0225FF7632008054DC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1555B0125FF7632008054DC /* Category.swift */; };
 		D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */; };
 		D18912EF25ED364100AF1CFC /* FurnitureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912EE25ED364100AF1CFC /* FurnitureData.swift */; };
 		D18912F125ED370700AF1CFC /* FurnitureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912F025ED370700AF1CFC /* FurnitureManager.swift */; };
-		D1555ABD25FA4E8E008054DC /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1555ABC25FA4E8E008054DC /* TapGesture.swift */; };
 		D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */; };
 		D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3225DE9FD400D51519 /* AccountTopView.swift */; };
 		D1956C3525DEB15D00D51519 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */; };
@@ -41,6 +39,8 @@
 		D1A4159125DBFDB2005D2EF1 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159025DBFDB2005D2EF1 /* CartViewController.swift */; };
 		D1A4159325DBFDC2005D2EF1 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */; };
 		D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */; };
+		D1A6276B2600B3D3009C27C2 /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276A2600B3D3009C27C2 /* TapGesture.swift */; };
+		D1A6276D2600D1F4009C27C2 /* HexToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */; };
 		D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */; };
 		D1B58FB325E560E500C4D299 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB225E560E500C4D299 /* Color.swift */; };
 		D1B58FB625E67DC500C4D299 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */; };
@@ -49,11 +49,9 @@
 /* Begin PBXFileReference section */
 		76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.debug.xcconfig"; sourceTree = "<group>"; };
-		D1555B0125FF7632008054DC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		D18912EE25ED364100AF1CFC /* FurnitureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureData.swift; sourceTree = "<group>"; };
 		D18912F025ED370700AF1CFC /* FurnitureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureManager.swift; sourceTree = "<group>"; };
-		D1555ABC25FA4E8E008054DC /* TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesture.swift; sourceTree = "<group>"; };
 		D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		D1956C3225DE9FD400D51519 /* AccountTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTopView.swift; sourceTree = "<group>"; };
 		D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -84,6 +82,8 @@
 		D1A4159025DBFDB2005D2EF1 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		D1A4159225DBFDC2005D2EF1 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		D1A6276A2600B3D3009C27C2 /* TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesture.swift; sourceTree = "<group>"; };
+		D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToUIColor.swift; sourceTree = "<group>"; };
 		D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtons.swift; sourceTree = "<group>"; };
 		D1B58FB225E560E500C4D299 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -264,7 +264,6 @@
 		D1B58FA025E55E3600C4D299 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D1555B0125FF7632008054DC /* Category.swift */,
 				D18912EE25ED364100AF1CFC /* FurnitureData.swift */,
 				D18912F025ED370700AF1CFC /* FurnitureManager.swift */,
 			);
@@ -416,7 +415,8 @@
 			children = (
 				D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */,
 				D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */,
-				D1555ABC25FA4E8E008054DC /* TapGesture.swift */,
+				D1A6276A2600B3D3009C27C2 /* TapGesture.swift */,
+				D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -556,13 +556,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1A4157625DA88D8005D2EF1 /* GreetingUserView.swift in Sources */,
+				D1A6276B2600B3D3009C27C2 /* TapGesture.swift in Sources */,
 				D1A4159325DBFDC2005D2EF1 /* UserViewController.swift in Sources */,
 				D1956C3525DEB15D00D51519 /* UserTableViewCell.swift in Sources */,
-				D1555B0225FF7632008054DC /* Category.swift in Sources */,
 				D1A4158B25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift in Sources */,
 				D1A4158F25DBFD74005D2EF1 /* SearchViewController.swift in Sources */,
 				D1956C4B25E53E4100D51519 /* MainInfo.swift in Sources */,
-				D1555ABD25FA4E8E008054DC /* TapGesture.swift in Sources */,
 				D1956C3B25DFBACD00D51519 /* UserDetailsView.swift in Sources */,
 				D1A4155225D52A5A005D2EF1 /* HomeViewController.swift in Sources */,
 				D18912F125ED370700AF1CFC /* FurnitureManager.swift in Sources */,
@@ -574,6 +573,7 @@
 				D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */,
 				D1956C3D25DFF7AB00D51519 /* AddressViewController.swift in Sources */,
 				D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */,
+				D1A6276D2600D1F4009C27C2 /* HexToUIColor.swift in Sources */,
 				D1956C4725E01A8700D51519 /* SignOutViewController.swift in Sources */,
 				D1B58FB325E560E500C4D299 /* Color.swift in Sources */,
 				D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */,
