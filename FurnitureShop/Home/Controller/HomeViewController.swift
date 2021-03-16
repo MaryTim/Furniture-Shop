@@ -21,17 +21,15 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         manager.delegate = self
+        self.showSpinner()
         manager.performRequest()
         setUPUI()
         setUpConstraints()
-        showSpinner()
     }
     
     func setUPUI() {
-        
         view.addSubview(greeting)
         view.addSubview(scrollableView)
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 15
@@ -49,7 +47,6 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
     }
     
     func setUpConstraints() {
-        
         greeting.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(90)
             make.leading.equalToSuperview().offset(30)
@@ -90,7 +87,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
         
         if furnitureData != nil {
-            cell.priceLabel.text = "$" + String(categories[indexPath.row].price)
+            cell.priceLabel.text = "$\(categories[indexPath.row].price)"
             if let url = URL(string: (categories[indexPath.row].colors[0].itemPic)) {
                 if let picture = try? Data(contentsOf: url) {
                     cell.furniturePic.image = UIImage(data: picture)

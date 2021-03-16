@@ -91,7 +91,7 @@ extension ItemViewController: ReturnDataDelegate {
         DispatchQueue.main.async {
             self.itemPic.image = UIImage(data: dataM!)
             self.info.itemName.text = data.categories[0].name
-            self.info.itemPrice.text = "$" + String(data.categories[0].price)
+            self.info.itemPrice.text = "$\(data.categories[0].price)"
             self.info.itemDescription.text = data.categories[0].description
         }
     }

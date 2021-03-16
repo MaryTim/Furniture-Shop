@@ -25,12 +25,9 @@ class MainInfo: UIView {
     }
     
     func setupUI() {
-        itemName.text = ""
         itemName.font = UIFont(name: "PlayfairDisplay-Bold", size: 25)
-        itemPrice.text = ""
         itemPrice.font = UIFont(name: "Al Nile", size: 28)
         itemPrice.textColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1)
-        itemDescription.text = ""
         itemDescription.textAlignment = .justified
         itemDescription.adjustsFontSizeToFitWidth = true
         itemDescription.numberOfLines = 0
