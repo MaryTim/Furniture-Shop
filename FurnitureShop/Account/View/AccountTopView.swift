@@ -13,8 +13,8 @@ import SnapKit
 class AccountTopView: UIView {
     
     let furnitureImage = UIImageView()
-    let userImage = UIImageView()
-    
+    var userImage = UIImageView()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -24,7 +24,7 @@ class AccountTopView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func setupUI() {
         furnitureImage.image = UIImage(named: "accountPic2")
         userImage.layer.cornerRadius = 80

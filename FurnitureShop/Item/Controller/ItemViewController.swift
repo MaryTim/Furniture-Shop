@@ -124,7 +124,7 @@ class ItemViewController: UIViewController {
         sender.setBackgroundColor(color: .gray, forState: .highlighted)
         print("Add the item to a cart")
     }
-    
+
     func setupConstraints() {
         backgroundImage.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
@@ -132,7 +132,7 @@ class ItemViewController: UIViewController {
         itemPic.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(80)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(300)
+            make.height.equalTo(250)
         }
         info.snp.makeConstraints { (make) in
             make.top.equalTo(itemPic.snp.bottom).offset(10)
@@ -151,6 +151,19 @@ class ItemViewController: UIViewController {
             make.height.equalTo(40)
             make.width.equalTo(50)
             make.centerX.equalToSuperview()
+        }
+    }
+}
+
+extension ItemViewController: ReturnDataDelegate {
+    func returnData(data: FurnitureData) {
+        let url = URL(string: data.categories[0].colors[0].itemPic)
+        let dataM = try? Data(contentsOf: url!)
+        DispatchQueue.main.async {
+            self.itemPic.image = UIImage(data: dataM!)
+            self.info.itemName.text = data.categories[0].name
+            self.info.itemPrice.text = "$\(data.categories[0].price)"
+            self.info.itemDescription.text = data.categories[0].description
         }
     }
 }

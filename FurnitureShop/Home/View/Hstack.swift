@@ -28,7 +28,6 @@ class ScrollableHStack: UIView {
     }
 
     func setupUI() {
-        
         horizontalStack.axis = .horizontal
         horizontalStack.spacing = 15
         horizontalStack.distribution = .fill
