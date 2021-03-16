@@ -9,15 +9,19 @@
 import UIKit
 
 class ItemViewController: UIViewController {
+
+    let manager = FurnitureManager()
     
     var backgroundImage = UIImageView()
     let itemPic = UIImageView()
     let info = MainInfo()
     let cartButton = UIButton()
     let colors = ColorButtons()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        manager.delegate = self
+        manager.performRequest()
         setupUI()
         setupConstraints()
     }
@@ -31,13 +35,13 @@ class ItemViewController: UIViewController {
         backgroundImage.image = UIImage(named: "background")
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back", style: .plain, target: self, action: #selector(back))
         navigationItem.leftBarButtonItem?.tintColor = .black
-        itemPic.image = UIImage(named: "accountPic1")
         cartButton.setImage(UIImage(systemName: "cart"), for: .normal)
         cartButton.tintColor = .black
         cartButton.layer.cornerRadius = 4.0
         cartButton.layer.borderWidth = 1
         cartButton.layer.borderColor = UIColor.black.cgColor
         cartButton.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
+        
         view.addSubview(backgroundImage)
         view.addSubview(itemPic)
         view.addSubview(info)
@@ -48,6 +52,7 @@ class ItemViewController: UIViewController {
     @objc func addToCart(sender: UIButton!) {
         sender.setBackgroundColor(color: .gray, forState: .highlighted)
         print("Add the item to a cart")
+
     }
 
     func setupConstraints() {
@@ -75,6 +80,19 @@ class ItemViewController: UIViewController {
             make.height.equalTo(40)
             make.width.equalTo(50)
             make.centerX.equalToSuperview()
+        }
+    }
+}
+
+extension ItemViewController: ReturnDataDelegate {
+    func returnData(data: FurnitureData) {
+        let url = URL(string: data.categories[0].colors[0].itemPic)
+        let dataM = try? Data(contentsOf: url!)
+        DispatchQueue.main.async {
+            self.itemPic.image = UIImage(data: dataM!)
+            self.info.itemName.text = data.categories[0].name
+            self.info.itemPrice.text = "$\(data.categories[0].price)"
+            self.info.itemDescription.text = data.categories[0].description
         }
     }
 }

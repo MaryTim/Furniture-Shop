@@ -12,19 +12,18 @@ import SnapKit
 class CustomCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "CustomCollectionViewCell"
-
-    let furniturePic: UIImageView = {
+    
+    var furniturePic: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "sofa")
         image.layer.cornerRadius = 10.0
         image.backgroundColor = .clear
         image.contentMode = .scaleAspectFit
         return image
     }()
     
-    let priceLabel: UILabel = {
+    var priceLabel: UILabel = {
         let label = UILabel()
-        label.text = "$1000"
+        label.text = ""
         label.font = UIFont(name: "Al Nile", size: 20)
         label.textColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 0.8)
         label.backgroundColor = .clear
