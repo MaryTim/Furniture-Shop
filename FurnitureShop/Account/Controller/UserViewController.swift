@@ -102,7 +102,7 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension UserViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info:  [UIImagePickerController.InfoKey: Any]) {
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             accountView.userImage.image = image
         }
