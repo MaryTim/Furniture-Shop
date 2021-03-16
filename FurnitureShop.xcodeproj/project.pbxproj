@@ -12,6 +12,7 @@
 		D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */; };
 		D18912EF25ED364100AF1CFC /* FurnitureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912EE25ED364100AF1CFC /* FurnitureData.swift */; };
 		D18912F125ED370700AF1CFC /* FurnitureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912F025ED370700AF1CFC /* FurnitureManager.swift */; };
+		D1555ABD25FA4E8E008054DC /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1555ABC25FA4E8E008054DC /* TapGesture.swift */; };
 		D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */; };
 		D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3225DE9FD400D51519 /* AccountTopView.swift */; };
 		D1956C3525DEB15D00D51519 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */; };
@@ -52,6 +53,7 @@
 		D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		D18912EE25ED364100AF1CFC /* FurnitureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureData.swift; sourceTree = "<group>"; };
 		D18912F025ED370700AF1CFC /* FurnitureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureManager.swift; sourceTree = "<group>"; };
+		D1555ABC25FA4E8E008054DC /* TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesture.swift; sourceTree = "<group>"; };
 		D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		D1956C3225DE9FD400D51519 /* AccountTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTopView.swift; sourceTree = "<group>"; };
 		D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 			children = (
 				D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */,
 				D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */,
+				D1555ABC25FA4E8E008054DC /* TapGesture.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				D1A4158B25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift in Sources */,
 				D1A4158F25DBFD74005D2EF1 /* SearchViewController.swift in Sources */,
 				D1956C4B25E53E4100D51519 /* MainInfo.swift in Sources */,
+				D1555ABD25FA4E8E008054DC /* TapGesture.swift in Sources */,
 				D1956C3B25DFBACD00D51519 /* UserDetailsView.swift in Sources */,
 				D1A4155225D52A5A005D2EF1 /* HomeViewController.swift in Sources */,
 				D18912F125ED370700AF1CFC /* FurnitureManager.swift in Sources */,

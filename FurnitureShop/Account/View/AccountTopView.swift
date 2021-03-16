@@ -13,8 +13,8 @@ import SnapKit
 class AccountTopView: UIView {
     
     let furnitureImage = UIImageView()
-    let userImage = UIImageView()
-    
+    var userImage = UIImageView()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
