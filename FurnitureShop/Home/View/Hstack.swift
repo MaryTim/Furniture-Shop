@@ -58,7 +58,6 @@ class ScrollableHStack: UIView {
     }
     
     @objc func buttonPressed(sender: UIButton!) {
-       // sender.isSelected.toggle()
         
         for b in arrayButtons {
             if b == sender {

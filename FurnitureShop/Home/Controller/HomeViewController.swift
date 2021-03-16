@@ -9,14 +9,20 @@
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, ReturnDataDelegate {
     
     let greeting = GreetingUserView()
     let scrollableView = ScrollableHStack()
     var collectionView: UICollectionView?
+    let manager = FurnitureManager()
+    var furnitureData: FurnitureData?
+    var categories = [Categories]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        manager.delegate = self
+        self.showSpinner()
+        manager.performRequest()
         setUPUI()
         setUpConstraints()
     }
@@ -60,24 +66,41 @@ class HomeViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-20)
         }
     }
+    
+    func returnData(data: FurnitureData) {
+        DispatchQueue.main.async {
+            self.furnitureData = data
+            self.categories = self.furnitureData?.categories ?? []
+            self.collectionView?.reloadData()
+            self.hideSpinner()
+        }
+    }
 }
-
 // MARK: - delegate, dataSource methods
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let reusableCell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellIdentifier, for: indexPath)
-        return reusableCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
+        
+        if furnitureData != nil {
+            cell.priceLabel.text = "$\(categories[indexPath.row].price)"
+            if let url = URL(string: (categories[indexPath.row].colors[0].itemPic)) {
+                if let picture = try? Data(contentsOf: url) {
+                    cell.furniturePic.image = UIImage(data: picture)
+                }
+            } 
+        }
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
-          let rootVC = ItemViewController()
-          let navVC = UINavigationController(rootViewController: rootVC)
+        let rootVC = ItemViewController()
+        let navVC = UINavigationController(rootViewController: rootVC)
         navVC.modalPresentationStyle = .fullScreen
         self.present(navVC, animated: true)
     }
