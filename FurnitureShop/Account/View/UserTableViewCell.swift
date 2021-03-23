@@ -44,12 +44,12 @@ class UserTableViewCell: UITableViewCell {
     func setupConstraints() {
         icon.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(40)
-            make.leading.equalToSuperview().offset(30)
+            make.leading.equalToSuperview().offset(Spaces.big.size)
             make.height.width.equalTo(25)
         }
         section.snp.makeConstraints { (make) in
             make.top.equalToSuperview()
-            make.leading.equalTo(icon.snp.trailing).offset(30)
+            make.leading.equalTo(icon.snp.trailing).offset(Spaces.big.size)
             make.bottom.equalToSuperview()
             make.trailing.equalToSuperview()
         }

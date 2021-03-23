@@ -43,9 +43,6 @@ public extension UIDevice {
                 return .iPhoneXR
             case 1920:
                 return .iPhone8Plus
-                // iphone 6plus 1920???
-            case 2208:
-                return .iPhone6Plus
             case 2436:
                 return .iPhoneX
             case 2688:
@@ -62,7 +59,7 @@ public extension UIDevice {
         switch UIDevice.currentDevice {
         case .iPhoneClassic, .iPhone4:
             return .extraSmall
-        case .iPhone5:
+        case .iPhone8, .iPhone8Plus:
             return .small
         default:
             return .big
@@ -71,7 +68,7 @@ public extension UIDevice {
 
     static var isFrameLess: Bool {
         switch UIDevice.currentDevice {
-        case .iPhoneClassic, .iPhone4, .iPhone5, .iPhone8, .iPhone6Plus:
+        case .iPhoneClassic, .iPhone4, .iPhone5, .iPhone8, .iPhone8Plus:
             return false
         default:
             return true

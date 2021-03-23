@@ -10,9 +10,9 @@ import UIKit
 
 class MainInfo: UIView {
     
-    let itemName = UILabel()
-    let itemPrice = UILabel()
-    let itemDescription = UILabel()
+    var itemName = UILabel()
+    var itemPrice = UILabel()
+    var itemDescription = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,13 +25,11 @@ class MainInfo: UIView {
     }
     
     func setupUI() {
-        itemName.text = "VASAGLE Sofa"
-        itemName.font = UIFont(name: "PlayfairDisplay-Bold", size: 25)
-        itemName.textColor = MyColor.itemLabelItemVC.value
-        itemPrice.text = "$1234"
+        itemName.font = UIFont(name: "PlayfairDisplay-Bold", size: 20)
+        itemName.adjustsFontSizeToFitWidth = true
+        itemName.numberOfLines = 0
         itemPrice.font = UIFont(name: "Al Nile", size: 28)
         itemPrice.textColor = MyColor.priceItemVC.value
-        itemDescription.text = "Classic yet modern."
         itemDescription.textColor = MyColor.description.value
         itemDescription.textAlignment = .justified
         itemDescription.adjustsFontSizeToFitWidth = true
@@ -44,12 +42,12 @@ class MainInfo: UIView {
     func setupConstraints() {
         itemName.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(30)
         }
         itemPrice.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview()
-            make.top.equalTo(itemName.snp.bottom).offset(15)
-            make.height.equalTo(20)
+            make.top.equalTo(itemName.snp.bottom).offset(Spaces.small.size)
+            make.bottom.equalTo(itemDescription.snp.top).offset(-3)
         }
         itemDescription.snp.makeConstraints { (make) in
             make.leading.trailing.bottom.equalToSuperview()

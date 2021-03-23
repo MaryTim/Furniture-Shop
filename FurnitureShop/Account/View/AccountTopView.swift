@@ -13,8 +13,8 @@ import SnapKit
 class AccountTopView: UIView {
     
     let furnitureImage = UIImageView()
-    let userImage = UIImageView()
-    
+    var userImage = UIImageView()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -24,9 +24,10 @@ class AccountTopView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func setupUI() {
         furnitureImage.image = UIImage(named: "accountPic2")
+        furnitureImage.contentMode = .scaleAspectFill
         userImage.layer.cornerRadius = 80
         userImage.clipsToBounds = true
         userImage.image = UIImage(named: "icon")
@@ -36,8 +37,7 @@ class AccountTopView: UIView {
     
     func setupConstraints() {
         furnitureImage.snp.makeConstraints { (make) in
-            make.top.leading.bottom.equalToSuperview()
-            make.height.equalTo(200)
+            make.top.leading.bottom.trailing.equalToSuperview()
         }
         userImage.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(200)

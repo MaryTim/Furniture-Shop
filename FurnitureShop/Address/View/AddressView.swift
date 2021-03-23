@@ -64,37 +64,37 @@ class AddressView: UIView {
             make.height.equalTo(25)
         }
         country.snp.makeConstraints { (make) in
-            make.top.equalTo(countryLabel.snp.bottom).offset(10)
+            make.top.equalTo(countryLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(150)
         }
         cityLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(country.snp.bottom).offset(10)
+            make.top.equalTo(country.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(25)
         }
         city.snp.makeConstraints { (make) in
-            make.top.equalTo(cityLabel.snp.bottom).offset(10)
+            make.top.equalTo(cityLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(30)
         }
         addressLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(city.snp.bottom).offset(10)
+            make.top.equalTo(city.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(25)
         }
         addressTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(addressLabel.snp.bottom).offset(10)
+            make.top.equalTo(addressLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(30)
         }
         postcodeLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(addressTextField.snp.bottom).offset(10)
+            make.top.equalTo(addressTextField.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(25)
         }
         postcodeTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(postcodeLabel.snp.bottom).offset(10)
+            make.top.equalTo(postcodeLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(30)
         }

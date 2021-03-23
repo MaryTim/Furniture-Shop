@@ -12,19 +12,17 @@ import SnapKit
 class CustomCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "CustomCollectionViewCell"
-
-    let furniturePic: UIImageView = {
+    
+    var furniturePic: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "sofa")
         image.layer.cornerRadius = 10.0
         image.backgroundColor = .clear
         image.contentMode = .scaleAspectFit
         return image
     }()
     
-    let priceLabel: UILabel = {
+    var priceLabel: UILabel = {
         let label = UILabel()
-        label.text = "$1000"
         label.font = UIFont(name: "Al Nile", size: 20)
         label.textColor = MyColor.priceHomeVC.value
         label.backgroundColor = .clear
@@ -51,7 +49,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     func setupConstraints() {
         furniturePic.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview().offset(Spaces.medium.size)
         }
         priceLabel.snp.makeConstraints { (make) in
             make.bottom.leading.trailing.equalToSuperview()

@@ -41,15 +41,13 @@ class GreetingUserView: UIView {
     
     func setUPConstraints() {
         greetingLabel.snp.makeConstraints { (make) in
-            make.top.leading.equalToSuperview()
-            make.width.equalTo(200)
-            make.height.equalTo(20)
+            make.top.leading.width.equalToSuperview()
+            make.height.equalTo(15)
         }
         mainLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(greetingLabel.snp.bottom).offset(10)
-            make.leading.equalToSuperview()
-            make.width.equalTo(200)
-            make.height.equalTo(40)
+            make.top.equalTo(greetingLabel.snp.bottom).offset(Spaces.tiny.size)
+            make.leading.width.equalToSuperview()
+            make.height.equalTo(45)
         }
     }
 }

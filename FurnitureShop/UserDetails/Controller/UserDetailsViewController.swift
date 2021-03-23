@@ -39,7 +39,7 @@ class UserDetailsViewController: UIViewController {
         userDetails.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(68)
             make.bottom.equalToSuperview().offset(-100)
-            make.leading.equalToSuperview().offset(10)
+            make.leading.equalToSuperview().offset(Spaces.tiny.size)
             make.trailing.equalToSuperview().offset(-20)
         }
         saveChangesButton.snp.makeConstraints { (make) in

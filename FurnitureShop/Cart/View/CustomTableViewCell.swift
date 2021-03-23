@@ -100,19 +100,19 @@ class CustomTableViewCell: UITableViewCell {
         }
         descriptionLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview()
-            make.leading.equalTo(itemPic.snp.trailing).offset(8)
-            make.height.equalTo(70)
-            make.width.equalTo(170)
+            make.leading.equalTo(itemPic.snp.trailing).offset(Spaces.tiny.size)
+            make.height.equalTo(Spaces.huge.size)
+            make.trailing.equalToSuperview().offset(-100)
         }
         sumLabel.snp.makeConstraints { (make) in
             make.top.equalTo(descriptionLabel.snp.bottom)
-            make.leading.equalTo(itemPic.snp.trailing).offset(8)
-            make.width.equalTo(150)
+            make.leading.equalTo(itemPic.snp.trailing).offset(Spaces.tiny.size)
+            make.width.equalTo(120)
             make.height.equalTo(35)
         }
         minusButton.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
-            make.leading.equalTo(descriptionLabel.snp.trailing).offset(8)
+            make.leading.equalTo(descriptionLabel.snp.trailing).offset(Spaces.tiny.size)
             make.height.equalTo(35)
             make.width.equalTo(25)
         }

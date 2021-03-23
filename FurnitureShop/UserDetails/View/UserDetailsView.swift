@@ -65,37 +65,37 @@ class UserDetailView: UIView {
             make.height.equalTo(25)
         }
         nameTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(nameLabel.snp.bottom).offset(10)
+            make.top.equalTo(nameLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(30)
         }
         surnameLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(nameTextField.snp.bottom).offset(10)
+            make.top.equalTo(nameTextField.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(25)
         }
         surnameTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(surnameLabel.snp.bottom).offset(10)
+            make.top.equalTo(surnameLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(30)
         }
         emailLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(surnameTextField.snp.bottom).offset(10)
+            make.top.equalTo(surnameTextField.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(25)
         }
         email.snp.makeConstraints { (make) in
-            make.top.equalTo(emailLabel.snp.bottom).offset(10)
+            make.top.equalTo(emailLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(30)
         }
         birthDateLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(email.snp.bottom).offset(10)
+            make.top.equalTo(email.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(25)
         }
         birthDate.snp.makeConstraints { (make) in
-            make.top.equalTo(birthDateLabel.snp.bottom).offset(10)
+            make.top.equalTo(birthDateLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(150)
         }

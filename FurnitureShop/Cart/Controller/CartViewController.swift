@@ -47,25 +47,25 @@ class CartViewController: UIViewController {
     
     func setupConstraints() {
         cartLabel.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(50)
+            make.top.equalToSuperview().offset(40)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(70)
+            make.height.equalTo(50)
         }
         tableV.snp.makeConstraints { (make) in
-            make.top.equalTo(cartLabel.snp.bottom).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-            make.bottom.equalToSuperview().offset(-140)
+            make.top.equalTo(cartLabel.snp.bottom).offset(Spaces.medium.size)
+            make.leading.equalToSuperview().offset(Spaces.medium.size)
+            make.trailing.equalToSuperview().offset(-Spaces.medium.size)
+            make.bottom.equalTo(checkoutButton.snp.top).offset(-Spaces.small.size)
         }
         totalLabel.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview().offset(80)
-            make.top.equalTo(tableV.snp.bottom).offset(15)
-            make.height.equalTo(30)
+            make.leading.equalToSuperview().offset(Spaces.huge.size)
+            make.top.equalTo(tableV.snp.bottom).offset(Spaces.small.size + 5)
+            make.height.equalTo(Spaces.big.size)
             make.width.equalTo(100)
         }
         checkoutButton.snp.makeConstraints { (make) in
             make.leading.equalTo(totalLabel.snp.trailing).offset(40)
-            make.bottom.equalToSuperview().offset(-93)
+            make.bottom.equalToSuperview().offset(-(Spaces.huge.size + 20))
             make.width.equalTo(120)
             make.height.equalTo(40)
         }
