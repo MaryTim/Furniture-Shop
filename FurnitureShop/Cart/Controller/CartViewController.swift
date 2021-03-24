@@ -8,20 +8,30 @@
 
 import UIKit
 
-class CartViewController: UIViewController {
+class CartViewController: UIViewController, ItemDelegate {
+    
+    func itemWasChosen(_ item: String) {
+        itemsInCart.append(item)
+    }
+ 
+    let itemVC = ItemViewController()
     
     let cartLabel = UILabel()
     let tableV = UITableView()
     let checkoutButton = UIButton()
     let totalLabel = UILabel()
+    var itemsInCart = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        itemVC.delegate = self
         tableV.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.cellID)
         tableV.dataSource = self
         tableV.delegate = self
+       
         setupUI()
         setupConstraints()
+        print(itemsInCart)
     }
     
     func setupUI() {
