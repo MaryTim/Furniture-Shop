@@ -41,10 +41,21 @@
 		D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */; };
 		D1A6276B2600B3D3009C27C2 /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276A2600B3D3009C27C2 /* TapGesture.swift */; };
 		D1A6276D2600D1F4009C27C2 /* HexToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */; };
+		D1A627E9260B874B009C27C2 /* FurnitureShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A627E8260B874B009C27C2 /* FurnitureShopTests.swift */; };
 		D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */; };
 		D1B58FB325E560E500C4D299 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB225E560E500C4D299 /* Color.swift */; };
 		D1B58FB625E67DC500C4D299 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1A627EB260B874B009C27C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1A4154225D52A5A005D2EF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1A4154925D52A5A005D2EF1;
+			remoteInfo = FurnitureShop;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +95,9 @@
 		D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		D1A6276A2600B3D3009C27C2 /* TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesture.swift; sourceTree = "<group>"; };
 		D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToUIColor.swift; sourceTree = "<group>"; };
+		D1A627E6260B874B009C27C2 /* FurnitureShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FurnitureShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A627E8260B874B009C27C2 /* FurnitureShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureShopTests.swift; sourceTree = "<group>"; };
+		D1A627EA260B874B009C27C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtons.swift; sourceTree = "<group>"; };
 		D1B58FB225E560E500C4D299 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -96,6 +110,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A627E3260B874B009C27C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				D1A4154C25D52A5A005D2EF1 /* FurnitureShop */,
+				D1A627E7260B874B009C27C2 /* FurnitureShopTests */,
 				D1A4154B25D52A5A005D2EF1 /* Products */,
 				5D3FE91F872F7E5986CC74F3 /* Pods */,
 				81A446E1582980FE8156DB05 /* Frameworks */,
@@ -133,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				D1A4154A25D52A5A005D2EF1 /* FurnitureShop.app */,
+				D1A627E6260B874B009C27C2 /* FurnitureShopTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +191,15 @@
 				D1A4158C25DBF154005D2EF1 /* Newsreader_10pt-ExtraLight.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D1A627E7260B874B009C27C2 /* FurnitureShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1A627E8260B874B009C27C2 /* FurnitureShopTests.swift */,
+				D1A627EA260B874B009C27C2 /* Info.plist */,
+			);
+			path = FurnitureShopTests;
 			sourceTree = "<group>";
 		};
 		D1B58F9625E55B9300C4D299 /* Home */ = {
@@ -444,6 +476,24 @@
 			productReference = D1A4154A25D52A5A005D2EF1 /* FurnitureShop.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D1A627E5260B874B009C27C2 /* FurnitureShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1A627EF260B874B009C27C2 /* Build configuration list for PBXNativeTarget "FurnitureShopTests" */;
+			buildPhases = (
+				D1A627E2260B874B009C27C2 /* Sources */,
+				D1A627E3260B874B009C27C2 /* Frameworks */,
+				D1A627E4260B874B009C27C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1A627EC260B874B009C27C2 /* PBXTargetDependency */,
+			);
+			name = FurnitureShopTests;
+			productName = FurnitureShopTests;
+			productReference = D1A627E6260B874B009C27C2 /* FurnitureShopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -456,6 +506,10 @@
 				TargetAttributes = {
 					D1A4154925D52A5A005D2EF1 = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					D1A627E5260B874B009C27C2 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = D1A4154925D52A5A005D2EF1;
 					};
 				};
 			};
@@ -473,6 +527,7 @@
 			projectRoot = "";
 			targets = (
 				D1A4154925D52A5A005D2EF1 /* FurnitureShop */,
+				D1A627E5260B874B009C27C2 /* FurnitureShopTests */,
 			);
 		};
 /* End PBXProject section */
@@ -486,6 +541,13 @@
 				D1A4157B25DA904D005D2EF1 /* PlayfairDisplay-Bold.ttf in Resources */,
 				D1A4155A25D52A5F005D2EF1 /* LaunchScreen.storyboard in Resources */,
 				D1A4155725D52A5F005D2EF1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A627E4260B874B009C27C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +652,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1A627E2260B874B009C27C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A627E9260B874B009C27C2 /* FurnitureShopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1A627EC260B874B009C27C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1A4154925D52A5A005D2EF1 /* FurnitureShop */;
+			targetProxy = D1A627EB260B874B009C27C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D1A4155825D52A5F005D2EF1 /* LaunchScreen.storyboard */ = {
@@ -756,6 +834,46 @@
 			};
 			name = Release;
 		};
+		D1A627ED260B874B009C27C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZDL74J7P7;
+				INFOPLIST_FILE = FurnitureShopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marytim.FurnitureShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FurnitureShop.app/FurnitureShop";
+			};
+			name = Debug;
+		};
+		D1A627EE260B874B009C27C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZDL74J7P7;
+				INFOPLIST_FILE = FurnitureShopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marytim.FurnitureShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FurnitureShop.app/FurnitureShop";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -773,6 +891,15 @@
 			buildConfigurations = (
 				D1A4155F25D52A5F005D2EF1 /* Debug */,
 				D1A4156025D52A5F005D2EF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1A627EF260B874B009C27C2 /* Build configuration list for PBXNativeTarget "FurnitureShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A627ED260B874B009C27C2 /* Debug */,
+				D1A627EE260B874B009C27C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
