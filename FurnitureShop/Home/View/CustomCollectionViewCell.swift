@@ -23,7 +23,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     var priceLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Al Nile", size: 20)
+        label.font = UIFont(name: "Al Nile", size: 22)
         label.textColor = MyColor.fedora08.value
         label.backgroundColor = .clear
         label.textAlignment = .center
@@ -49,7 +49,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     func setupConstraints() {
         furniturePic.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().offset(Spaces.medium.size)
+            make.bottom.equalToSuperview().offset(-30)
         }
         priceLabel.snp.makeConstraints { (make) in
             make.bottom.leading.trailing.equalToSuperview()

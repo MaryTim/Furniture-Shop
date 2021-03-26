@@ -14,7 +14,6 @@ public enum Elements {
     case big
     case small
     
-    
     public var size: CGFloat {
         switch self {
         case .big:
