@@ -44,13 +44,13 @@ class UserViewController: UIViewController {
     func setupConstraints() {
         accountView.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(tableView.snp.top).offset(-Spaces.huge.size)
+            make.bottom.equalTo(tableView.snp.top).offset(-Elements.medium.size)
         }
         tableView.snp.makeConstraints { (make) in
             make.top.equalTo(accountView.snp.bottom).offset(130)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-(Spaces.huge.size + 30))
+            make.bottom.equalToSuperview().offset(-(Elements.medium.size + 30))
         }
     }
 

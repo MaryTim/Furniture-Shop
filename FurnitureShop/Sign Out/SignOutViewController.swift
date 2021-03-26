@@ -32,16 +32,16 @@ class SignOutViewController: UIViewController {
         yesButton.setTitleColor(.black, for: .normal)
         yesButton.layer.cornerRadius = 10.0
         yesButton.layer.borderWidth = 2
-        yesButton.layer.borderColor = MyColor.cancelSignoutBorders.value.cgColor
+        yesButton.layer.borderColor = MyColor.fedora1.value.cgColor
         cancelButton.setTitle("Cancel", for: .normal)
         cancelButton.setTitleColor(.black, for: .normal)
         cancelButton.layer.cornerRadius = 10.0
         cancelButton.layer.borderWidth = 2
-        cancelButton.layer.borderColor = MyColor.cancelSignoutBorders.value.cgColor
+        cancelButton.layer.borderColor = MyColor.fedora1.value.cgColor
         cancelButton.titleLabel?.font = cancelButton.titleLabel?.font.withSize(22)
         yesButton.addTarget(self, action: #selector (yesPressed), for: .touchUpInside)
-        yesButton.setBackgroundColor(color: MyColor.signoutCancelTapped.value, forState: .highlighted)
-        cancelButton.setBackgroundColor(color: MyColor.signoutCancelTapped.value, forState: .highlighted)
+        yesButton.setBackgroundColor(color: MyColor.fedora02.value, forState: .highlighted)
+        cancelButton.setBackgroundColor(color: MyColor.fedora02.value, forState: .highlighted)
         cancelButton.addTarget(self, action: #selector(cancelPressed), for: .touchUpInside)
         view.addSubview(questionLabel)
         view.addSubview(yesButton)
@@ -71,7 +71,7 @@ class SignOutViewController: UIViewController {
         }
         yesButton.snp.makeConstraints { (make) in
             make.top.equalTo(questionLabel.snp.bottom).offset(50)
-            make.leading.equalToSuperview().offset(Spaces.huge.size + 10)
+            make.leading.equalToSuperview().offset(Elements.medium.size + 10)
             make.height.equalTo(50)
             make.width.equalTo(120)
         }

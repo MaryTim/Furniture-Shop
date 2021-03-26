@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */; };
-		D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */; };
-		D18912EF25ED364100AF1CFC /* FurnitureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912EE25ED364100AF1CFC /* FurnitureData.swift */; };
-		D18912F125ED370700AF1CFC /* FurnitureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912F025ED370700AF1CFC /* FurnitureManager.swift */; };
 		D17BF97725EFC46100CDC9A5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97625EFC46100CDC9A5 /* Colors.swift */; };
 		D17BF97925EFD26800CDC9A5 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97825EFD26800CDC9A5 /* UIDevice.swift */; };
 		D17BF97B25F0CF1700CDC9A5 /* Spaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97A25F0CF1700CDC9A5 /* Spaces.swift */; };
+		D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */; };
+		D18912EF25ED364100AF1CFC /* FurnitureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912EE25ED364100AF1CFC /* FurnitureData.swift */; };
+		D18912F125ED370700AF1CFC /* FurnitureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912F025ED370700AF1CFC /* FurnitureManager.swift */; };
 		D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */; };
 		D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3225DE9FD400D51519 /* AccountTopView.swift */; };
 		D1956C3525DEB15D00D51519 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */; };
@@ -44,6 +44,7 @@
 		D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */; };
 		D1A6276B2600B3D3009C27C2 /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276A2600B3D3009C27C2 /* TapGesture.swift */; };
 		D1A6276D2600D1F4009C27C2 /* HexToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */; };
+		D1A62820260E1918009C27C2 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6281F260E1918009C27C2 /* Elements.swift */; };
 		D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */; };
 		D1B58FB325E560E500C4D299 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB225E560E500C4D299 /* Color.swift */; };
 		D1B58FB625E67DC500C4D299 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */; };
@@ -52,12 +53,12 @@
 /* Begin PBXFileReference section */
 		76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.debug.xcconfig"; sourceTree = "<group>"; };
-		D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		D18912EE25ED364100AF1CFC /* FurnitureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureData.swift; sourceTree = "<group>"; };
-		D18912F025ED370700AF1CFC /* FurnitureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureManager.swift; sourceTree = "<group>"; };
 		D17BF97625EFC46100CDC9A5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D17BF97825EFD26800CDC9A5 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		D17BF97A25F0CF1700CDC9A5 /* Spaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaces.swift; sourceTree = "<group>"; };
+		D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		D18912EE25ED364100AF1CFC /* FurnitureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureData.swift; sourceTree = "<group>"; };
+		D18912F025ED370700AF1CFC /* FurnitureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureManager.swift; sourceTree = "<group>"; };
 		D1956C2E25DD497300D51519 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		D1956C3225DE9FD400D51519 /* AccountTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTopView.swift; sourceTree = "<group>"; };
 		D1956C3425DEB15D00D51519 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		D1A6276A2600B3D3009C27C2 /* TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesture.swift; sourceTree = "<group>"; };
 		D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToUIColor.swift; sourceTree = "<group>"; };
+		D1A6281F260E1918009C27C2 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 		D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtons.swift; sourceTree = "<group>"; };
 		D1B58FB225E560E500C4D299 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 				D17BF97625EFC46100CDC9A5 /* Colors.swift */,
 				D17BF97825EFD26800CDC9A5 /* UIDevice.swift */,
 				D17BF97A25F0CF1700CDC9A5 /* Spaces.swift */,
+				D1A6281F260E1918009C27C2 /* Elements.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */,
 				D1956C3F25DFF80600D51519 /* AddressView.swift in Sources */,
 				D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */,
+				D1A62820260E1918009C27C2 /* Elements.swift in Sources */,
 				D1956C4325E00A1800D51519 /* PaymentView.swift in Sources */,
 				D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */,
 				D1956C3D25DFF7AB00D51519 /* AddressViewController.swift in Sources */,

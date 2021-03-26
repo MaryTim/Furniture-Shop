@@ -28,9 +28,9 @@ class UserDetailsViewController: UIViewController {
         view.backgroundColor = .white
         self.title = "My Details"
         saveChangesButton.setTitle("SAVE CHANGES", for: .normal)
-        saveChangesButton.backgroundColor = MyColor.saveChangesButton.value
+        saveChangesButton.backgroundColor = MyColor.silverRust1.value
         saveChangesButton.addTarget(self, action: #selector(savePressed), for: .touchUpInside)
-        saveChangesButton.setBackgroundColor(color: MyColor.saveChangesTapped.value, forState: .highlighted)
+        saveChangesButton.setBackgroundColor(color: MyColor.fedora1.value, forState: .highlighted)
         view.addSubview(userDetails)
         view.addSubview(saveChangesButton)
     }

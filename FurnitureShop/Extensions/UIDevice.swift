@@ -18,16 +18,6 @@ public extension UIDevice {
         case big, small, extraSmall
     }
 
-//    static var isZoomed: Bool {
-//        if UIScreen.main.bounds.size.height == 667.0 {
-//            return !(UIScreen.main.nativeScale <= UIScreen.main.scale)
-//        }
-//        if  UIScreen.main.bounds.size.height == 568.0 {
-//            return UIScreen.main.nativeScale > UIScreen.main.scale
-//        }
-//        return false
-//    }
-
     static var currentDevice: DeviceRange {
         if UIDevice.current.userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {

@@ -29,8 +29,8 @@ class PaymentViewController: UIViewController {
         view.backgroundColor = .white
         saveCard.addTarget(self, action: #selector(saveCardPressed), for: .touchUpInside)
         saveCard.setTitle("SAVE CARD", for: .normal)
-        saveCard.backgroundColor = MyColor.saveChangesButton.value
-        saveCard.setBackgroundColor(color: MyColor.saveChangesTapped.value, forState: .highlighted)
+        saveCard.backgroundColor = MyColor.silverRust1.value
+        saveCard.setBackgroundColor(color: MyColor.fedora1.value, forState: .highlighted)
         view.addSubview(paymentV)
         view.addSubview(saveCard)
         view.addSubview(cardsView)
@@ -44,7 +44,7 @@ class PaymentViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-20)
         }
         saveCard.snp.makeConstraints { (make) in
-            make.bottom.equalTo(cardsView.snp.top).offset(-Spaces.huge.size)
+            make.bottom.equalTo(cardsView.snp.top).offset(-Elements.medium.size)
             make.height.equalTo(40)
             make.centerX.equalToSuperview()
             make.width.equalTo(180)

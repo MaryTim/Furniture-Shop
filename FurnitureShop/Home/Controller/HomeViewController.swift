@@ -48,7 +48,7 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
     
     func setUpConstraints() {
         greeting.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(Spaces.huge.size)
+            make.top.equalToSuperview().offset(Elements.medium.size)
             make.leading.equalToSuperview().offset(30)
             make.height.equalTo(70)
             make.width.equalToSuperview()

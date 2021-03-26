@@ -10,45 +10,26 @@ import Foundation
 import UIKit
 
 enum MyColor {
-    case greetingUser
-    case mainLabel
-    case categoryButton
-    case priceHomeVC
-    case cartLabel
-    case cartItemName
-    case cartPrice
-    case cartPlusMinusButtons
-    case totalPrice
-    case checkoutButtonBackground
-    case saveChangesButton
-    case saveChangesTapped
-    case itemLabelItemVC
-    case priceItemVC
-    case description
-    case cartButtonTappedBackground
-    case cancelSignoutBorders
-    case signoutCancelTapped
+    case fedora08
+    case fedora1
+    case silverRust09
+    case silverRust1
+    case fedora02
 }
 
 extension MyColor {
     var value: UIColor {
         get {
             switch self {
-            case .greetingUser, .priceHomeVC:
+            case .fedora08:
                 return UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 0.8)
-            case .mainLabel, .cartLabel, .cartPrice, .itemLabelItemVC, .description:
-                return UIColor.black
-            case .categoryButton, .cartItemName, .cartPlusMinusButtons, .totalPrice:
+            case .fedora1:
                 return UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1)
-            case .checkoutButtonBackground:
+            case .silverRust09:
                 return UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 0.9)
-            case .saveChangesButton:
+            case .silverRust1:
                 return UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 1)
-            case .saveChangesTapped, .priceItemVC, .cancelSignoutBorders:
-                return UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1)
-            case .cartButtonTappedBackground:
-                return UIColor.gray
-            case .signoutCancelTapped:
+            case .fedora02:
                 return UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 0.2)
             }
         }

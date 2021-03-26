@@ -29,7 +29,7 @@ class CustomTableViewCell: UITableViewCell {
         label.textAlignment = .center
         label.adjustsFontForContentSizeCategory = true
         label.adjustsFontSizeToFitWidth = true
-        label.textColor = MyColor.cartItemName.value
+        label.textColor = MyColor.fedora1.value
         label.backgroundColor = .clear
         label.textAlignment = .center
         return label
@@ -41,7 +41,7 @@ class CustomTableViewCell: UITableViewCell {
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 4.0
         button.layer.borderWidth = 1
-        button.layer.borderColor = MyColor.cartPlusMinusButtons.value.cgColor
+        button.layer.borderColor = MyColor.fedora1.value.cgColor
         return button
     }()
     
@@ -52,7 +52,7 @@ class CustomTableViewCell: UITableViewCell {
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 4.0
         button.layer.borderWidth = 1
-        button.layer.borderColor = MyColor.cartPlusMinusButtons.value.cgColor
+        button.layer.borderColor = MyColor.fedora1.value.cgColor
         return button
     }()
     
@@ -101,7 +101,7 @@ class CustomTableViewCell: UITableViewCell {
         descriptionLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview()
             make.leading.equalTo(itemPic.snp.trailing).offset(Spaces.tiny.size)
-            make.height.equalTo(Spaces.huge.size)
+            make.height.equalTo(Elements.medium.size)
             make.trailing.equalToSuperview().offset(-100)
         }
         sumLabel.snp.makeConstraints { (make) in

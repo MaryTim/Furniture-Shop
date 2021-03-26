@@ -29,8 +29,8 @@ class MainInfo: UIView {
         itemName.adjustsFontSizeToFitWidth = true
         itemName.numberOfLines = 0
         itemPrice.font = UIFont(name: "Al Nile", size: 28)
-        itemPrice.textColor = MyColor.priceItemVC.value
-        itemDescription.textColor = MyColor.description.value
+        itemPrice.textColor = MyColor.fedora1.value
+        itemDescription.textColor = .black
         itemDescription.textAlignment = .justified
         itemDescription.adjustsFontSizeToFitWidth = true
         itemDescription.numberOfLines = 0

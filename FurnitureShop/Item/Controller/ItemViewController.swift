@@ -106,7 +106,7 @@ class ItemViewController: UIViewController {
     }
     
     @objc func addToCart(sender: UIButton!) {
-        sender.setBackgroundColor(color: MyColor.cartButtonTappedBackground.value, forState: .highlighted)
+        sender.setBackgroundColor(color: .gray, forState: .highlighted)
         print("Add the item to a cart")
     }
 
@@ -115,15 +115,15 @@ class ItemViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         itemPic.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(Spaces.huge.size)
+            make.top.equalToSuperview().offset(Elements.medium.size)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(Spaces.info.size)
+            make.height.equalTo(Elements.big.size)
         }
         info.snp.makeConstraints { (make) in
             make.top.equalTo(itemPic.snp.bottom).offset(Spaces.tiny.size)
             make.leading.equalToSuperview().offset(Spaces.medium.size)
             make.trailing.equalToSuperview().offset(-Spaces.medium.size)
-            make.height.equalTo(Spaces.info.size)
+            make.height.equalTo(Elements.big.size)
         }
         colors.snp.makeConstraints { (make) in
             make.top.equalTo(info.snp.bottom).offset(Spaces.medium.size)

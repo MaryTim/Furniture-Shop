@@ -33,12 +33,12 @@ class CartViewController: UIViewController {
         checkoutButton.tag = 0
         checkoutButton.setTitle("CHECKOUT", for: .normal)
         checkoutButton.setTitleColor(.black, for: .normal)
-        checkoutButton.backgroundColor = MyColor.checkoutButtonBackground.value
+        checkoutButton.backgroundColor = MyColor.silverRust09.value
         checkoutButton.layer.cornerRadius = 4.0
         checkoutButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         totalLabel.text = "Total: $5347" //change this later (calculate sum of all items)
         totalLabel.backgroundColor = .clear
-        totalLabel.textColor = MyColor.totalPrice.value
+        totalLabel.textColor = MyColor.silverRust1.value
         view.addSubview(cartLabel)
         view.addSubview(tableV)
         view.addSubview(checkoutButton)
@@ -58,14 +58,14 @@ class CartViewController: UIViewController {
             make.bottom.equalTo(checkoutButton.snp.top).offset(-Spaces.small.size)
         }
         totalLabel.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview().offset(Spaces.huge.size)
+            make.leading.equalToSuperview().offset(Elements.medium.size)
             make.top.equalTo(tableV.snp.bottom).offset(Spaces.small.size + 5)
             make.height.equalTo(Spaces.big.size)
             make.width.equalTo(100)
         }
         checkoutButton.snp.makeConstraints { (make) in
             make.leading.equalTo(totalLabel.snp.trailing).offset(40)
-            make.bottom.equalToSuperview().offset(-(Spaces.huge.size + 20))
+            make.bottom.equalToSuperview().offset(-(Elements.medium.size + 20))
             make.width.equalTo(120)
             make.height.equalTo(40)
         }

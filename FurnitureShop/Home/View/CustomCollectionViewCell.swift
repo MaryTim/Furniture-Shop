@@ -24,7 +24,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     var priceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Al Nile", size: 20)
-        label.textColor = MyColor.priceHomeVC.value
+        label.textColor = MyColor.fedora08.value
         label.backgroundColor = .clear
         label.textAlignment = .center
         return label
