@@ -24,6 +24,7 @@ class CartViewController: UIViewController, ItemDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
         itemVC.delegate = self
         tableV.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.cellID)
         tableV.dataSource = self
@@ -31,6 +32,12 @@ class CartViewController: UIViewController, ItemDelegate {
        
         setupUI()
         setupConstraints()
+        //print(itemsInCart)
+    }
+    
+    @objc func didGetNotification(_ notification: Notification) {
+        let text = notification.object as! String
+        itemsInCart.append(text)
         print(itemsInCart)
     }
     

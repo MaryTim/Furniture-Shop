@@ -87,12 +87,13 @@ class ItemViewController: UIViewController {
     }
 
     func addItem() {
-        if let pic = itemPic.image {
+       // if let pic = itemPic.image {
              if let name = info.itemName.text {
-                 if let price = info.itemPrice.text {
-                    delegate?.itemWasChosen(name)
-                 }
-             }
+                // if let price = info.itemPrice.text {
+                    NotificationCenter.default.post(name: Notification.Name("text"), object: name)
+                    //delegate?.itemWasChosen(name)
+                 //}
+             //}
          }
     }
     
