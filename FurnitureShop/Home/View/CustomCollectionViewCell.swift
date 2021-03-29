@@ -49,7 +49,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     func setupConstraints() {
         furniturePic.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview().offset(-30)
         }
         priceLabel.snp.makeConstraints { (make) in
             make.bottom.leading.trailing.equalToSuperview()

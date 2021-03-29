@@ -8,14 +8,19 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
-    
+class SearchViewController: UIViewController, ReturnDataDelegate {
+
+    let manager = FurnitureManager()
     let searchBar = UISearchBar()
     var collectionView: UICollectionView?
-    let homeVC = HomeViewController()
+    var furnitureData: FurnitureData?
+    var categories = [Categories]()
+    var categoriesForSearch = [Categories]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        manager.delegate = self
+        manager.performRequest()
         searchBar.delegate = self
         setupUI()
         setupConstraints()
@@ -59,8 +64,16 @@ class SearchViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-20)
         }
     }
-}
 
+func returnData(data: FurnitureData) {
+    DispatchQueue.main.async {
+        self.furnitureData = data
+        self.categories = data.categories
+        self.categoriesForSearch = data.categories
+        self.collectionView?.reloadData()
+    }
+}
+}
 // MARK: - search bar delegate methods
 
 extension SearchViewController: UISearchBarDelegate {
@@ -75,14 +88,15 @@ extension SearchViewController: UISearchBarDelegate {
     }
 
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        print("The user is looking for \(searchBar.text ?? "nothing")")
+        categories.removeAll()
+        for item in categoriesForSearch {
+            if item.name.lowercased().contains(searchBar.text!.lowercased()) {
+                categories.append(item)
+            }
+        }
+        collectionView?.reloadData()
         searchBar.text = ""
         searchBar.endEditing(true)
-        print("end editing")
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("text has been changed to \(searchBar.text ?? "empty")")
     }
 }
 
@@ -90,19 +104,42 @@ extension SearchViewController: UISearchBarDelegate {
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
-        cell.backgroundColor = .blue
-//        cell.priceLabel.text = "$\(homeVC.categories[indexPath.row].price)"
-//        if let url = URL(string: (homeVC.categories[indexPath.row].colors[0].itemPic)) {
-//                if let picture = try? Data(contentsOf: url) {
-//                    cell.furniturePic.image = UIImage(data: picture)
-//                }
-//            }
-
+        cell.priceLabel.font = UIFont(name: "Al Nile", size: 13)
+        cell.priceLabel.numberOfLines = 0
+        cell.priceLabel.text = "\(categories[indexPath.row].name)"
+        if let url = URL(string: (categories[indexPath.row].colors[0].itemPic)) {
+                if let picture = try? Data(contentsOf: url) {
+                   cell.furniturePic.image = UIImage(data: picture)
+                }
+            }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let rootVC = ItemViewController()
+        rootVC.info.itemName.text = categories[indexPath.row].name
+        rootVC.info.itemDescription.text = categories[indexPath.row].description
+        rootVC.info.itemPrice.text = "$\(categories[indexPath.row].price)"
+        DispatchQueue.main.async {
+            if let buttonColor = self.categories[indexPath.row].colors[0].buttonColor {
+                for color in self.categories[indexPath.row].colors {
+                    rootVC.colors.colorsArray.append(color.buttonColor!)
+                }
+                for picture in self.categories[indexPath.row].colors {
+                    rootVC.picturesArray.append(picture.itemPic)
+                }
+            }
+        }
+        let url = URL(string: (categories[indexPath.row].colors[0].itemPic))
+        let picture = try? Data(contentsOf: url!)
+        rootVC.itemPic.image = UIImage(data: picture!)
+        let navVC = UINavigationController(rootViewController: rootVC)
+        navVC.modalPresentationStyle = .fullScreen
+        self.present(navVC, animated: true)
     }
 }
