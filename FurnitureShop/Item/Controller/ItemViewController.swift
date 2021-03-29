@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ItemDelegate: class {
+    func itemWasChosen(_ item: String)
+}
+
 class ItemViewController: UIViewController {
     
     var backgroundImage = UIImageView()
@@ -18,7 +22,8 @@ class ItemViewController: UIViewController {
     var rgbColors = [UIColor]()
     var picturesArray = [String]()
     var buttonColorPictureTuple = [(UIColor, String)]()
-    
+    weak var delegate: ItemDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -75,6 +80,23 @@ class ItemViewController: UIViewController {
         }
     }
     
+    @objc func addToCart(sender: UIButton!) {
+        sender.setBackgroundColor(color: .gray, forState: .highlighted)
+        addItem()
+        print("Add the item to a cart")
+    }
+
+    func addItem() {
+       // if let pic = itemPic.image {
+             if let name = info.itemName.text {
+                // if let price = info.itemPrice.text {
+                    NotificationCenter.default.post(name: Notification.Name("text"), object: name)
+                    //delegate?.itemWasChosen(name)
+                 //}
+             //}
+         }
+    }
+    
     func setupUI() {
         for color in colors.colorsArray {
             let colorUI = color.hexStringToUIColor(hex: color)
@@ -105,11 +127,6 @@ class ItemViewController: UIViewController {
         view.addSubview(colors)
     }
     
-    @objc func addToCart(sender: UIButton!) {
-        sender.setBackgroundColor(color: .gray, forState: .highlighted)
-        print("Add the item to a cart")
-    }
-
     func setupConstraints() {
         backgroundImage.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
