@@ -7,37 +7,31 @@
 //
 
 import UIKit
+import RealmSwift
 
-class CartViewController: UIViewController, ItemDelegate {
-    
-    func itemWasChosen(_ item: String) {
-        itemsInCart.append(item)
-    }
- 
+class CartViewController: UIViewController {
+
     let itemVC = ItemViewController()
-    
+    let realm = try! Realm()
     let cartLabel = UILabel()
     let tableV = UITableView()
     let checkoutButton = UIButton()
     let totalLabel = UILabel()
-    var itemsInCart = [String]()
+    var itemsInCart: Results<ItemModel>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
-        itemVC.delegate = self
+        loadItems()
         tableV.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.cellID)
         tableV.dataSource = self
         tableV.delegate = self
-       
         setupUI()
         setupConstraints()
-        //print(itemsInCart)
     }
     
-    @objc func didGetNotification(_ notification: Notification) {
-        let text = notification.object as! String
-        itemsInCart.append(text)
+    func loadItems() {
+        itemsInCart = realm.objects(ItemModel.self)
+        tableV.reloadData()
         print(itemsInCart)
     }
     
@@ -99,11 +93,14 @@ class CartViewController: UIViewController, ItemDelegate {
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return itemsInCart.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellID, for: indexPath) as! CustomTableViewCell
+        cell.descriptionLabel.text = itemsInCart[indexPath.row].name
+        cell.sumLabel.text = itemsInCart[indexPath.row].price
+        cell.itemPic.image = itemsInCart[indexPath.row].pic.toImage()
         return cell
     }
     

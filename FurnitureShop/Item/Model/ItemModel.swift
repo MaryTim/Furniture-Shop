@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import RealmSwift
+
+class ItemModel: Object {
+    @objc dynamic var name: String = ""
+    @objc dynamic var price: String = ""
+    @objc dynamic var pic: String = ""
+}
+

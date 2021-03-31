@@ -7,10 +7,7 @@
 //
 
 import UIKit
-
-protocol ItemDelegate: class {
-    func itemWasChosen(_ item: String)
-}
+import RealmSwift
 
 class ItemViewController: UIViewController {
     
@@ -22,7 +19,7 @@ class ItemViewController: UIViewController {
     var rgbColors = [UIColor]()
     var picturesArray = [String]()
     var buttonColorPictureTuple = [(UIColor, String)]()
-    weak var delegate: ItemDelegate?
+    let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,16 +82,32 @@ class ItemViewController: UIViewController {
         addItem()
         print("Add the item to a cart")
     }
-
+    
     func addItem() {
-       // if let pic = itemPic.image {
-             if let name = info.itemName.text {
-                // if let price = info.itemPrice.text {
-                    NotificationCenter.default.post(name: Notification.Name("text"), object: name)
-                    //delegate?.itemWasChosen(name)
-                 //}
-             //}
+        //itemPic.image
+        
+        if let pic = itemPic.image {
+            let stringImg = pic.toString()
+            if let name = info.itemName.text {
+                 if let price = info.itemPrice.text {
+                    let newItem = ItemModel()
+                    newItem.name = name
+                    newItem.pic = stringImg ?? ""
+                    newItem.price = price
+                    self.save(item: newItem)
+                 }
+             }
          }
+    }
+    
+    func save(item: ItemModel) {
+        do {
+            try realm.write {
+                realm.add(item)
+            }
+        } catch {
+            print("Error saving new item \(error)")
+        }
     }
     
     func setupUI() {

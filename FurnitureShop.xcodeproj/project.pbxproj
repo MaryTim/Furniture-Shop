@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */; };
+		380185582612041A0020E39A /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380185572612041A0020E39A /* ItemModel.swift */; };
+		3801855C26121AA80020E39A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3801855B26121AA80020E39A /* UIImage+Extension.swift */; };
+		3801856026121BB20020E39A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3801855F26121BB20020E39A /* String+Extension.swift */; };
 		D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */; };
 		D18912EF25ED364100AF1CFC /* FurnitureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912EE25ED364100AF1CFC /* FurnitureData.swift */; };
 		D18912F125ED370700AF1CFC /* FurnitureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18912F025ED370700AF1CFC /* FurnitureManager.swift */; };
@@ -58,6 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		380185572612041A0020E39A /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		3801855B26121AA80020E39A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		3801855F26121BB20020E39A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.debug.xcconfig"; sourceTree = "<group>"; };
 		D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -341,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				D1B58FB225E560E500C4D299 /* Color.swift */,
+				380185572612041A0020E39A /* ItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -449,6 +456,8 @@
 				D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */,
 				D1A6276A2600B3D3009C27C2 /* TapGesture.swift */,
 				D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */,
+				3801855B26121AA80020E39A /* UIImage+Extension.swift */,
+				3801855F26121BB20020E39A /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -625,6 +634,7 @@
 				D1A4158F25DBFD74005D2EF1 /* SearchViewController.swift in Sources */,
 				D1956C4B25E53E4100D51519 /* MainInfo.swift in Sources */,
 				D1956C3B25DFBACD00D51519 /* UserDetailsView.swift in Sources */,
+				3801856026121BB20020E39A /* String+Extension.swift in Sources */,
 				D1A4155225D52A5A005D2EF1 /* HomeViewController.swift in Sources */,
 				D18912F125ED370700AF1CFC /* FurnitureManager.swift in Sources */,
 				D1956C4125E009FF00D51519 /* PaymentViewController.swift in Sources */,
@@ -632,6 +642,7 @@
 				D1956C3F25DFF80600D51519 /* AddressView.swift in Sources */,
 				D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */,
 				D1956C4325E00A1800D51519 /* PaymentView.swift in Sources */,
+				380185582612041A0020E39A /* ItemModel.swift in Sources */,
 				D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */,
 				D1956C3D25DFF7AB00D51519 /* AddressViewController.swift in Sources */,
 				D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */,
@@ -645,6 +656,7 @@
 				D1A4158125DAA268005D2EF1 /* Hstack.swift in Sources */,
 				D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */,
 				D1A4159125DBFDB2005D2EF1 /* CartViewController.swift in Sources */,
+				3801855C26121AA80020E39A /* UIImage+Extension.swift in Sources */,
 				D18912EF25ED364100AF1CFC /* FurnitureData.swift in Sources */,
 				D1956C3925DFB91C00D51519 /* UserDetailsViewController.swift in Sources */,
 				D1B58FB625E67DC500C4D299 /* UIButtonExtension.swift in Sources */,
