@@ -40,7 +40,7 @@ class AccountTopView: UIView {
             make.top.leading.bottom.trailing.equalToSuperview()
         }
         userImage.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(200)
+            make.top.equalToSuperview().offset(Spaces.huge.size + 60)
             make.height.width.equalTo(160)
             make.centerX.equalToSuperview()
         }

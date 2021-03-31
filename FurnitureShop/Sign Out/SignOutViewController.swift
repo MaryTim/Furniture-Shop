@@ -71,13 +71,13 @@ class SignOutViewController: UIViewController {
         }
         yesButton.snp.makeConstraints { (make) in
             make.top.equalTo(questionLabel.snp.bottom).offset(50)
-            make.leading.equalToSuperview().offset(Elements.medium.size + 10)
+            make.leading.equalToSuperview().offset(Spaces.medium.size + 20)
             make.height.equalTo(50)
             make.width.equalTo(120)
         }
         cancelButton.snp.makeConstraints { (make) in
             make.top.equalTo(questionLabel.snp.bottom).offset(50)
-            make.leading.equalTo(yesButton.snp.trailing).offset(Spaces.medium.size)
+            make.trailing.equalToSuperview().offset(-(Spaces.medium.size + 20))
             make.height.equalTo(50)
             make.width.equalTo(120)
         }

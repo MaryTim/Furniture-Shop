@@ -34,7 +34,9 @@ class GreetingUserView: UIView {
         
         mainLabel.text = "For your house"
         mainLabel.textColor = .black
-        mainLabel.font = UIFont(name: "PlayfairDisplay-Bold", size: 35)
+        mainLabel.adjustsFontForContentSizeCategory = true
+        mainLabel.adjustsFontSizeToFitWidth = true
+        mainLabel.font = UIFont(name: "PlayfairDisplay-Bold", size: 30)
         mainLabel.adjustsFontSizeToFitWidth = true
         addSubview(mainLabel)
     }
@@ -47,7 +49,7 @@ class GreetingUserView: UIView {
         mainLabel.snp.makeConstraints { (make) in
             make.top.equalTo(greetingLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(45)
+            make.height.equalTo(Elements.label.size.height)
         }
     }
 }

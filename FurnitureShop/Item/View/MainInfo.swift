@@ -47,7 +47,7 @@ class MainInfo: UIView {
         itemPrice.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview()
             make.top.equalTo(itemName.snp.bottom).offset(Spaces.small.size)
-            make.bottom.equalTo(itemDescription.snp.top).offset(-3)
+            make.height.equalTo(25)
         }
         itemDescription.snp.makeConstraints { (make) in
             make.leading.trailing.bottom.equalToSuperview()

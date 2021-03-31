@@ -44,14 +44,14 @@ class PaymentViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-20)
         }
         saveCard.snp.makeConstraints { (make) in
-            make.bottom.equalTo(cardsView.snp.top).offset(-Elements.medium.size)
+            make.bottom.equalTo(cardsView.snp.top).offset(-Spaces.medium.size)
             make.height.equalTo(40)
             make.centerX.equalToSuperview()
             make.width.equalTo(180)
         }
         cardsView.snp.makeConstraints { (make) in
             make.bottom.equalToSuperview().offset(-60)
-            //make.top.equalTo(saveCard.snp.bottom).offset(50)
+            make.top.equalTo(saveCard.snp.bottom).offset(50)
             make.leading.equalToSuperview().offset(10)
             make.width.equalToSuperview()
             make.height.equalTo(40)

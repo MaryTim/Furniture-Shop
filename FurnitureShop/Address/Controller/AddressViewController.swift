@@ -43,9 +43,9 @@ class AddressViewController: UIViewController {
         }
         saveChangesButton.snp.makeConstraints { (make) in
             make.bottom.equalToSuperview().offset(-100)
-            make.height.equalTo(40)
+            make.height.equalTo(Elements.saveButton.size.height)
             make.centerX.equalToSuperview()
-            make.width.equalTo(180)
+            make.width.equalTo(Elements.saveButton.size.width)
         }
     }
 

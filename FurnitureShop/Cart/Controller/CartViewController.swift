@@ -30,6 +30,8 @@ class CartViewController: UIViewController {
         cartLabel.textAlignment = .center
         tableV.separatorStyle = .none
         tableV.allowsSelection = false
+        //tableV.estimatedRowHeight = 44.0
+        //tableV.rowHeight = UITableView.automaticDimension
         checkoutButton.tag = 0
         checkoutButton.setTitle("CHECKOUT", for: .normal)
         checkoutButton.setTitleColor(.black, for: .normal)
@@ -47,27 +49,27 @@ class CartViewController: UIViewController {
     
     func setupConstraints() {
         cartLabel.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(40)
+            make.top.equalToSuperview().offset(Spaces.big.size)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(50)
+            make.height.equalTo(Elements.label.size.height)
         }
         tableV.snp.makeConstraints { (make) in
-            make.top.equalTo(cartLabel.snp.bottom).offset(Spaces.medium.size)
+            make.top.equalTo(cartLabel.snp.bottom).offset(Spaces.small.size)
             make.leading.equalToSuperview().offset(Spaces.medium.size)
             make.trailing.equalToSuperview().offset(-Spaces.medium.size)
-            make.bottom.equalTo(checkoutButton.snp.top).offset(-Spaces.small.size)
+            make.bottom.equalToSuperview().offset(-Spaces.huge.size)
         }
         totalLabel.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview().offset(Elements.medium.size)
+            make.leading.equalToSuperview().offset(Spaces.medium.size)
             make.top.equalTo(tableV.snp.bottom).offset(Spaces.small.size + 5)
-            make.height.equalTo(Spaces.big.size)
+            make.height.equalTo(Elements.sumInACell.size.height)
             make.width.equalTo(100)
         }
         checkoutButton.snp.makeConstraints { (make) in
+            make.centerY.equalTo(totalLabel.snp.centerY)
             make.leading.equalTo(totalLabel.snp.trailing).offset(40)
-            make.bottom.equalToSuperview().offset(-(Elements.medium.size + 20))
-            make.width.equalTo(120)
-            make.height.equalTo(40)
+            make.width.equalTo(Elements.saveButton.size.width)
+            make.height.equalTo(Elements.saveButton.size.height)
         }
     }
 // MARK: - buttom action
@@ -91,6 +93,6 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        return Elements.cell.size.height
     }
 }

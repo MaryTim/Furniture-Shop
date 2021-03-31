@@ -115,15 +115,15 @@ class ItemViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         itemPic.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(Elements.medium.size)
+            make.top.equalToSuperview().offset(Spaces.veryBig.size)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(Elements.big.size)
+            make.height.equalTo(Elements.itemPic.size.height)
         }
         info.snp.makeConstraints { (make) in
             make.top.equalTo(itemPic.snp.bottom).offset(Spaces.tiny.size)
             make.leading.equalToSuperview().offset(Spaces.medium.size)
             make.trailing.equalToSuperview().offset(-Spaces.medium.size)
-            make.height.equalTo(Elements.big.size)
+            make.height.equalTo(Elements.info.size.height)
         }
         colors.snp.makeConstraints { (make) in
             make.top.equalTo(info.snp.bottom).offset(Spaces.medium.size)

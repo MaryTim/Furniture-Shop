@@ -61,7 +61,7 @@ class AddressView: UIView {
     func setupConstraints() {
         countryLabel.snp.makeConstraints { (make) in
             make.top.leading.width.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
         country.snp.makeConstraints { (make) in
             make.top.equalTo(countryLabel.snp.bottom).offset(Spaces.tiny.size)
@@ -71,32 +71,32 @@ class AddressView: UIView {
         cityLabel.snp.makeConstraints { (make) in
             make.top.equalTo(country.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
         city.snp.makeConstraints { (make) in
             make.top.equalTo(cityLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(30)
+            make.height.equalTo(Elements.textField.size.height)
         }
         addressLabel.snp.makeConstraints { (make) in
             make.top.equalTo(city.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
         addressTextField.snp.makeConstraints { (make) in
             make.top.equalTo(addressLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(30)
+            make.height.equalTo(Elements.textField.size.height)
         }
         postcodeLabel.snp.makeConstraints { (make) in
             make.top.equalTo(addressTextField.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
         postcodeTextField.snp.makeConstraints { (make) in
             make.top.equalTo(postcodeLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(30)
+            make.height.equalTo(Elements.textField.size.height)
         }
     }
 }

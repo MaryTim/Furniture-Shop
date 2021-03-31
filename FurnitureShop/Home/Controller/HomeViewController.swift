@@ -48,9 +48,9 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
     
     func setUpConstraints() {
         greeting.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(Elements.medium.size)
+            make.top.equalToSuperview().offset(Spaces.veryBig.size)
             make.leading.equalToSuperview().offset(30)
-            make.height.equalTo(70)
+            make.height.equalTo(Elements.label.size.height)
             make.width.equalToSuperview()
         }
         scrollableView.snp.makeConstraints { (make) in
@@ -60,7 +60,7 @@ class HomeViewController: UIViewController, ReturnDataDelegate {
             make.height.equalTo(40)
         }
         collectionView!.snp.makeConstraints { (make) in
-            make.top.equalTo(scrollableView.snp.bottom).offset(Spaces.medium.size)
+            make.top.equalTo(scrollableView.snp.bottom).offset(Spaces.small.size)
             make.leading.equalToSuperview().offset(Spaces.medium.size)
             make.bottom.equalToSuperview().offset(-Spaces.medium.size)
             make.trailing.equalToSuperview().offset(-Spaces.medium.size)

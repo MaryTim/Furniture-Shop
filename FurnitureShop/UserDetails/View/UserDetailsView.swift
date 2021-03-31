@@ -62,37 +62,37 @@ class UserDetailView: UIView {
     func setupConstraints() {
         nameLabel.snp.makeConstraints { (make) in
             make.top.leading.width.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
         nameTextField.snp.makeConstraints { (make) in
             make.top.equalTo(nameLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(30)
+            make.height.equalTo(Elements.textField.size.height)
         }
         surnameLabel.snp.makeConstraints { (make) in
             make.top.equalTo(nameTextField.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
         surnameTextField.snp.makeConstraints { (make) in
             make.top.equalTo(surnameLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(30)
+            make.height.equalTo(Elements.textField.size.height)
         }
         emailLabel.snp.makeConstraints { (make) in
             make.top.equalTo(surnameTextField.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
         email.snp.makeConstraints { (make) in
             make.top.equalTo(emailLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(30)
+            make.height.equalTo(Elements.textField.size.height)
         }
         birthDateLabel.snp.makeConstraints { (make) in
             make.top.equalTo(email.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
         birthDate.snp.makeConstraints { (make) in
             make.top.equalTo(birthDateLabel.snp.bottom).offset(Spaces.tiny.size)
