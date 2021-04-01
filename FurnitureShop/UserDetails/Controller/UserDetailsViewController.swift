@@ -28,9 +28,9 @@ class UserDetailsViewController: UIViewController {
         view.backgroundColor = .white
         self.title = "My Details"
         saveChangesButton.setTitle("SAVE CHANGES", for: .normal)
-        saveChangesButton.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 1)
+        saveChangesButton.backgroundColor = MyColor.silverRust1.value
         saveChangesButton.addTarget(self, action: #selector(savePressed), for: .touchUpInside)
-        saveChangesButton.setBackgroundColor(color: UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1), forState: .highlighted)
+        saveChangesButton.setBackgroundColor(color: MyColor.fedora1.value, forState: .highlighted)
         view.addSubview(userDetails)
         view.addSubview(saveChangesButton)
     }
@@ -39,14 +39,14 @@ class UserDetailsViewController: UIViewController {
         userDetails.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(68)
             make.bottom.equalToSuperview().offset(-100)
-            make.leading.equalToSuperview().offset(10)
+            make.leading.equalToSuperview().offset(Spaces.tiny.size)
             make.trailing.equalToSuperview().offset(-20)
         }
         saveChangesButton.snp.makeConstraints { (make) in
             make.bottom.equalToSuperview().offset(-100)
-            make.height.equalTo(40)
+            make.height.equalTo(Elements.saveButton.size.height)
             make.centerX.equalToSuperview()
-            make.width.equalTo(180)
+            make.width.equalTo(Elements.saveButton.size.width)
         }
     }
 }
