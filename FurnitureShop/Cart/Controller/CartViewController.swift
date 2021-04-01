@@ -17,7 +17,14 @@ class CartViewController: UIViewController {
     let tableV = UITableView()
     let checkoutButton = UIButton()
     let totalLabel = UILabel()
-    var itemsInCart: Results<ItemModel>!
+    var itemsInCart: Results<ItemModel>?
+    var priceArray = [Int]()
+    var itemPrice = 0
+    var totalSum: Int = 0 {
+        didSet {
+            totalLabel.text = "\(totalSum)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +34,28 @@ class CartViewController: UIViewController {
         tableV.delegate = self
         setupUI()
         setupConstraints()
+        calculateTotalSum()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadItems()
+        tableV.reloadData()
     }
     
     func loadItems() {
         itemsInCart = realm.objects(ItemModel.self)
         tableV.reloadData()
-        print(itemsInCart)
+        calculateTotalSum()
+        
+    }
+    
+    func calculateTotalSum() {
+     totalSum = 0
+        let arrayResults: [ItemModel] = (itemsInCart?.toArray())!
+        for item in arrayResults {
+            let priceString = item.price.dropFirst()
+            totalSum += Int(priceString) ?? 0
+        }
     }
     
     func setupUI() {
@@ -47,7 +70,7 @@ class CartViewController: UIViewController {
         checkoutButton.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 0.9)
         checkoutButton.layer.cornerRadius = 4.0
         checkoutButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        totalLabel.text = "Total: $5347" //change this later (calculate sum of all items)
+        totalLabel.text = "Total: $0"
         totalLabel.backgroundColor = .clear
         totalLabel.textColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1)
         view.addSubview(cartLabel)
@@ -93,14 +116,16 @@ class CartViewController: UIViewController {
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemsInCart.count
+        return itemsInCart?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellID, for: indexPath) as! CustomTableViewCell
-        cell.descriptionLabel.text = itemsInCart[indexPath.row].name
-        cell.sumLabel.text = itemsInCart[indexPath.row].price
-        cell.itemPic.image = itemsInCart[indexPath.row].pic.toImage()
+        cell.descriptionLabel.text = itemsInCart?[indexPath.row].name
+        cell.sumLabel.text = itemsInCart?[indexPath.row].price ?? ""
+        let priceString = itemsInCart?[indexPath.row].price.dropFirst() ?? "0"
+        let priceInt = Int(priceString) ?? 0
+        cell.itemPic.image = itemsInCart?[indexPath.row].pic.toImage()
         return cell
     }
     
@@ -108,3 +133,11 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         return 110
     }
 }
+
+extension Results {
+    func toArray() -> [Element] {
+      return compactMap {
+        $0
+      }
+    }
+ }

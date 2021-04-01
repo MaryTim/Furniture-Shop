@@ -84,8 +84,6 @@ class ItemViewController: UIViewController {
     }
     
     func addItem() {
-        //itemPic.image
-        
         if let pic = itemPic.image {
             let stringImg = pic.toString()
             if let name = info.itemName.text {
