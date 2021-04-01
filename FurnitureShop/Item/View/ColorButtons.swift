@@ -37,14 +37,14 @@ class ColorButtons: UIView {
     
     func setupConstraints() {
         colorLabel.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(Spaces.tiny.size)
             make.leading.equalToSuperview()
             make.height.equalTo(20)
             make.width.equalTo(50)
         }
         stack.snp.makeConstraints { (make) in
             make.top.equalToSuperview()
-            make.leading.equalTo(colorLabel.snp.trailing).offset(10)
+            make.leading.equalTo(colorLabel.snp.trailing).offset(Spaces.small.size)
             make.height.equalTo(30)
             make.trailing.lessThanOrEqualToSuperview()
         }

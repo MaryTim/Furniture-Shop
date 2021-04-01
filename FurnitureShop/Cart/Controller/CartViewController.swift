@@ -33,12 +33,12 @@ class CartViewController: UIViewController {
         checkoutButton.tag = 0
         checkoutButton.setTitle("CHECKOUT", for: .normal)
         checkoutButton.setTitleColor(.black, for: .normal)
-        checkoutButton.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 0.9)
+        checkoutButton.backgroundColor = MyColor.silverRust09.value
         checkoutButton.layer.cornerRadius = 4.0
         checkoutButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         totalLabel.text = "Total: $5347" //change this later (calculate sum of all items)
         totalLabel.backgroundColor = .clear
-        totalLabel.textColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1)
+        totalLabel.textColor = MyColor.fedora1.value
         view.addSubview(cartLabel)
         view.addSubview(tableV)
         view.addSubview(checkoutButton)
@@ -47,27 +47,27 @@ class CartViewController: UIViewController {
     
     func setupConstraints() {
         cartLabel.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(50)
+            make.top.equalToSuperview().offset(Spaces.big.size)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(70)
+            make.height.equalTo(Elements.label.size.height)
         }
         tableV.snp.makeConstraints { (make) in
-            make.top.equalTo(cartLabel.snp.bottom).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-            make.bottom.equalToSuperview().offset(-140)
+            make.top.equalTo(cartLabel.snp.bottom).offset(Spaces.small.size)
+            make.leading.equalToSuperview().offset(Spaces.medium.size)
+            make.trailing.equalToSuperview().offset(-Spaces.medium.size)
+            make.bottom.equalToSuperview().offset(-Spaces.huge.size)
         }
         totalLabel.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview().offset(80)
-            make.top.equalTo(tableV.snp.bottom).offset(15)
-            make.height.equalTo(30)
+            make.leading.equalToSuperview().offset(Spaces.medium.size)
+            make.top.equalTo(tableV.snp.bottom).offset(Spaces.small.size + 5)
+            make.height.equalTo(Elements.sumInACell.size.height)
             make.width.equalTo(100)
         }
         checkoutButton.snp.makeConstraints { (make) in
+            make.centerY.equalTo(totalLabel.snp.centerY)
             make.leading.equalTo(totalLabel.snp.trailing).offset(40)
-            make.bottom.equalToSuperview().offset(-93)
-            make.width.equalTo(120)
-            make.height.equalTo(40)
+            make.width.equalTo(Elements.saveButton.size.width)
+            make.height.equalTo(Elements.saveButton.size.height)
         }
     }
 // MARK: - buttom action
@@ -91,6 +91,6 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        return Elements.cell.size.height
     }
 }
