@@ -63,39 +63,39 @@ class PaymentView: UIView {
     func setupConstraints() {
         cardLabel.snp.makeConstraints { (make) in
             make.top.leading.width.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
         cardImage.snp.makeConstraints { (make) in
-            make.top.equalTo(cardLabel.snp.bottom).offset(10)
+            make.top.equalTo(cardLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.equalToSuperview()
             make.height.equalTo(30)
             make.width.equalTo(40)
         }
         cardTextField.snp.makeConstraints { (make) in
-            make.leading.equalTo(cardImage.snp.trailing).offset(15)
+            make.leading.equalTo(cardImage.snp.trailing).offset(Spaces.small.size)
             make.trailing.equalToSuperview()
-            make.top.equalTo(cardLabel.snp.bottom).offset(10)
-            make.height.equalTo(30)
+            make.top.equalTo(cardLabel.snp.bottom).offset(Spaces.tiny.size)
+            make.height.equalTo(Elements.textField.size.height)
         }
         dateLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(cardTextField.snp.bottom).offset(20)
+            make.top.equalTo(cardTextField.snp.bottom).offset(Spaces.medium.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
         datePicker.snp.makeConstraints { (make) in
-            make.top.equalTo(dateLabel.snp.bottom).offset(10)
+            make.top.equalTo(dateLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
             make.height.equalTo(150)
         }
         cardNameLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(datePicker.snp.bottom).offset(20)
+            make.top.equalTo(datePicker.snp.bottom).offset(Spaces.medium.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
         nameTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(cardNameLabel.snp.bottom).offset(10)
+            make.top.equalTo(cardNameLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.width.equalToSuperview()
-            make.height.equalTo(30)
+            make.height.equalTo(Elements.textFieldLabel.size.height)
         }
     }
 }

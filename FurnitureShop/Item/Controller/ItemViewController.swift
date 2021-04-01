@@ -115,24 +115,24 @@ class ItemViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         itemPic.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(80)
+            make.top.equalToSuperview().offset(Spaces.veryBig.size)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(250)
+            make.height.equalTo(Elements.itemPic.size.height)
         }
         info.snp.makeConstraints { (make) in
-            make.top.equalTo(itemPic.snp.bottom).offset(10)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-            make.height.equalTo(300)
+            make.top.equalTo(itemPic.snp.bottom).offset(Spaces.tiny.size)
+            make.leading.equalToSuperview().offset(Spaces.medium.size)
+            make.trailing.equalToSuperview().offset(-Spaces.medium.size)
+            make.height.equalTo(Elements.info.size.height)
         }
         colors.snp.makeConstraints { (make) in
-            make.top.equalTo(info.snp.bottom).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.top.equalTo(info.snp.bottom).offset(Spaces.medium.size)
+            make.leading.equalToSuperview().offset(Spaces.medium.size)
+            make.trailing.equalToSuperview().offset(-Spaces.medium.size)
             make.height.equalTo(40)
         }
         cartButton.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-50)
+            make.bottom.equalToSuperview().offset(-Spaces.big.size)
             make.height.equalTo(40)
             make.width.equalTo(50)
             make.centerX.equalToSuperview()

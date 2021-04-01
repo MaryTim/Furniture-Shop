@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol ReturnDataDelegate {
+protocol ReturnDataDelegate: class {
     func returnData(data: FurnitureData)
 }
 
