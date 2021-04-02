@@ -44,8 +44,9 @@
 		D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */; };
 		D1A6276B2600B3D3009C27C2 /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276A2600B3D3009C27C2 /* TapGesture.swift */; };
 		D1A6276D2600D1F4009C27C2 /* HexToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */; };
-		D1A62820260E1918009C27C2 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6281F260E1918009C27C2 /* Elements.swift */; };
 		D1A627E9260B874B009C27C2 /* FurnitureShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A627E8260B874B009C27C2 /* FurnitureShopTests.swift */; };
+		D1A62820260E1918009C27C2 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6281F260E1918009C27C2 /* Elements.swift */; };
+		D1A6282426176095009C27C2 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6282326176095009C27C2 /* ItemViewModel.swift */; };
 		D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */; };
 		D1B58FB325E560E500C4D299 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB225E560E500C4D299 /* Color.swift */; };
 		D1B58FB625E67DC500C4D299 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */; };
@@ -102,10 +103,11 @@
 		D1A4159425DBFE5B005D2EF1 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		D1A6276A2600B3D3009C27C2 /* TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesture.swift; sourceTree = "<group>"; };
 		D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToUIColor.swift; sourceTree = "<group>"; };
-		D1A6281F260E1918009C27C2 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 		D1A627E6260B874B009C27C2 /* FurnitureShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FurnitureShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A627E8260B874B009C27C2 /* FurnitureShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureShopTests.swift; sourceTree = "<group>"; };
 		D1A627EA260B874B009C27C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A6281F260E1918009C27C2 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
+		D1A6282326176095009C27C2 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtons.swift; sourceTree = "<group>"; };
 		D1B58FB225E560E500C4D299 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		D1B58F9725E55BCD00C4D299 /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				D1A6282326176095009C27C2 /* ItemViewModel.swift */,
 				D1B58FA525E55E8D00C4D299 /* Model */,
 				D1B58FA425E55E8100C4D299 /* View */,
 				D1B58FA325E55E7A00C4D299 /* Controller */,
@@ -643,6 +646,7 @@
 				D1A4159525DBFE5B005D2EF1 /* CustomTabBarController.swift in Sources */,
 				D1956C3F25DFF80600D51519 /* AddressView.swift in Sources */,
 				D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */,
+				D1A6282426176095009C27C2 /* ItemViewModel.swift in Sources */,
 				D1A62820260E1918009C27C2 /* Elements.swift in Sources */,
 				D1956C4325E00A1800D51519 /* PaymentView.swift in Sources */,
 				D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */,
