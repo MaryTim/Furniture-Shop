@@ -18,11 +18,9 @@ class CartViewController: UIViewController {
     let checkoutButton = UIButton()
     let totalLabel = UILabel()
     var itemsInCart: Results<ItemModel>?
-    var priceArray = [Int]()
-    var itemPrice = 0
     var totalSum: Int = 0 {
         didSet {
-            totalLabel.text = "\(totalSum)"
+            totalLabel.text = "Total: $\(totalSum)"
         }
     }
     
@@ -34,7 +32,6 @@ class CartViewController: UIViewController {
         tableV.delegate = self
         setupUI()
         setupConstraints()
-        calculateTotalSum()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +43,6 @@ class CartViewController: UIViewController {
         itemsInCart = realm.objects(ItemModel.self)
         tableV.reloadData()
         calculateTotalSum()
-        
     }
     
     func calculateTotalSum() {
@@ -107,7 +103,25 @@ class CartViewController: UIViewController {
 // MARK: - buttom action
 // Add actions to =/- buttons (update quantityLabel)
     
-    @objc func buttonAction(sender: UIButton!) {
+    @objc func buttonAction(sender: UIButton!, cell: CustomTableViewCell) {
+        //print(sender.tag)
+        if sender.currentTitle! == "-" {
+            let quantityInt = Int(cell.quantityLabel.text ?? "1")
+            if var quantityIntNotOptional = quantityInt {
+                quantityIntNotOptional -= 1
+                cell.quantityLabel.text = "\(quantityIntNotOptional)"
+                print(cell.quantityLabel.text)
+            }
+        }
+        if sender.titleLabel?.text == "+" {
+         let quantityInt = Int(cell.quantityLabel.text ?? "1")
+                  if var quantityIntNotOptional = quantityInt {
+                      quantityIntNotOptional += 1
+                      cell.quantityLabel.text = "\(quantityIntNotOptional)"
+                  }
+        }
+        tableV.reloadData()
+       
         print("Button \(sender.titleLabel?.text ?? "unknown") tapped")
     }
 }
@@ -123,9 +137,11 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellID, for: indexPath) as! CustomTableViewCell
         cell.descriptionLabel.text = itemsInCart?[indexPath.row].name
         cell.sumLabel.text = itemsInCart?[indexPath.row].price ?? ""
-        let priceString = itemsInCart?[indexPath.row].price.dropFirst() ?? "0"
-        let priceInt = Int(priceString) ?? 0
         cell.itemPic.image = itemsInCart?[indexPath.row].pic.toImage()
+        cell.minusButton.addTarget(self, action: #selector(buttonAction(sender:cell:)), for: .touchUpInside)
+        cell.plusButton.addTarget(self, action: #selector(buttonAction(sender:cell:)), for: .touchUpInside)
+        cell.minusButton.tag = indexPath.row
+        cell.plusButton.tag = indexPath.row
         return cell
     }
     
@@ -133,11 +149,3 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         return 110
     }
 }
-
-extension Results {
-    func toArray() -> [Element] {
-      return compactMap {
-        $0
-      }
-    }
- }

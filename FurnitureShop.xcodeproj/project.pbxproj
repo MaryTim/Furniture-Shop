@@ -45,6 +45,7 @@
 		D1A6276B2600B3D3009C27C2 /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276A2600B3D3009C27C2 /* TapGesture.swift */; };
 		D1A6276D2600D1F4009C27C2 /* HexToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */; };
 		D1A627E9260B874B009C27C2 /* FurnitureShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A627E8260B874B009C27C2 /* FurnitureShopTests.swift */; };
+		D1A6282226170CE8009C27C2 /* Results+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6282126170CE8009C27C2 /* Results+Extension.swift */; };
 		D1B58F9525E55A9F00C4D299 /* ColorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */; };
 		D1B58FB325E560E500C4D299 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB225E560E500C4D299 /* Color.swift */; };
 		D1B58FB625E67DC500C4D299 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */; };
@@ -104,6 +105,7 @@
 		D1A627E6260B874B009C27C2 /* FurnitureShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FurnitureShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A627E8260B874B009C27C2 /* FurnitureShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureShopTests.swift; sourceTree = "<group>"; };
 		D1A627EA260B874B009C27C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A6282126170CE8009C27C2 /* Results+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+Extension.swift"; sourceTree = "<group>"; };
 		D1B58F9425E55A9F00C4D299 /* ColorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtons.swift; sourceTree = "<group>"; };
 		D1B58FB225E560E500C4D299 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 				D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */,
 				3801855B26121AA80020E39A /* UIImage+Extension.swift */,
 				3801855F26121BB20020E39A /* String+Extension.swift */,
+				D1A6282126170CE8009C27C2 /* Results+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				D1A6276B2600B3D3009C27C2 /* TapGesture.swift in Sources */,
 				D1A4159325DBFDC2005D2EF1 /* UserViewController.swift in Sources */,
 				D1956C3525DEB15D00D51519 /* UserTableViewCell.swift in Sources */,
+				D1A6282226170CE8009C27C2 /* Results+Extension.swift in Sources */,
 				D1A4158B25DBE3B2005D2EF1 /* CustomCollectionViewCell.swift in Sources */,
 				D1A4158F25DBFD74005D2EF1 /* SearchViewController.swift in Sources */,
 				D1956C4B25E53E4100D51519 /* MainInfo.swift in Sources */,
