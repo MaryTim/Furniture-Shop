@@ -11,14 +11,18 @@ import Foundation
 class ItemViewModel: ReturnDataDelegate {
     
     let manager = FurnitureManager()
-    var furnitureData: FurnitureData?
+    var categories: [Categories]?
     
     init() {
         manager.delegate = self
     }
     
     func returnData(data: FurnitureData) {
-        furnitureData = data
+        categories = data.categories
+    }
+    
+    var itemName: String {
+        return categories?[0].name ?? ""
     }
     
     func dataForVC() {

@@ -7,8 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		088AB572261B4E210038D0DD /* AddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AB571261B4E210038D0DD /* AddressViewModel.swift */; };
+		088AB578261B5F040038D0DD /* AddressIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AB577261B5F040038D0DD /* AddressIntegrationTest.swift */; };
+		088AB57B261B5F8E0038D0DD /* AddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088AB571261B4E210038D0DD /* AddressViewModel.swift */; };
+		088AB57E261B5F950038D0DD /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3C25DFF7AB00D51519 /* AddressViewController.swift */; };
+		088AB598261B620B0038D0DD /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3E25DFF80600D51519 /* AddressView.swift */; };
+		088AB5A3261B62CE0038D0DD /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6281F260E1918009C27C2 /* Elements.swift */; };
+		088AB5A4261B62D00038D0DD /* Spaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97A25F0CF1700CDC9A5 /* Spaces.swift */; };
+		088AB5A7261B62D30038D0DD /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97825EFD26800CDC9A5 /* UIDevice.swift */; };
+		088AB5AA261B62D50038D0DD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97625EFC46100CDC9A5 /* Colors.swift */; };
+		088AB5AD261B62D60038D0DD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97625EFC46100CDC9A5 /* Colors.swift */; };
+		088AB5B0261B62D90038D0DD /* HexToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276C2600D1F4009C27C2 /* HexToUIColor.swift */; };
+		088AB5B1261B62DB0038D0DD /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6276A2600B3D3009C27C2 /* TapGesture.swift */; };
+		088AB5B4261B62DD0038D0DD /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */; };
+		088AB5B7261B62DF0038D0DD /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */; };
 		279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */; };
-		D17BF97725EFC46100CDC9A5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97625EFC46100CDC9A5 /* Colors.swift */; };
+		CF80FA4D341D511900AD9A7C /* libPods-FurnitureShopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9470BC13FE75733CDF57D /* libPods-FurnitureShopTests.a */; };
 		D17BF97925EFD26800CDC9A5 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97825EFD26800CDC9A5 /* UIDevice.swift */; };
 		D17BF97B25F0CF1700CDC9A5 /* Spaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97A25F0CF1700CDC9A5 /* Spaces.swift */; };
 		D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */; };
@@ -63,7 +77,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		088AB571261B4E210038D0DD /* AddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewModel.swift; sourceTree = "<group>"; };
+		088AB577261B5F040038D0DD /* AddressIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressIntegrationTest.swift; sourceTree = "<group>"; };
+		58A653A753252ADF8B1F2E99 /* Pods-FurnitureShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShopTests.release.xcconfig"; path = "Target Support Files/Pods-FurnitureShopTests/Pods-FurnitureShopTests.release.xcconfig"; sourceTree = "<group>"; };
 		76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC9470BC13FE75733CDF57D /* libPods-FurnitureShopTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FurnitureShopTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80AA5C3035DCDC004C8AFC98 /* Pods-FurnitureShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShopTests.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShopTests/Pods-FurnitureShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.debug.xcconfig"; sourceTree = "<group>"; };
 		D17BF97625EFC46100CDC9A5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D17BF97825EFD26800CDC9A5 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
@@ -127,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF80FA4D341D511900AD9A7C /* libPods-FurnitureShopTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +158,8 @@
 			children = (
 				8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */,
 				E0FDDBCDE8C36A00058A2718 /* Pods-FurnitureShop.release.xcconfig */,
+				80AA5C3035DCDC004C8AFC98 /* Pods-FurnitureShopTests.debug.xcconfig */,
+				58A653A753252ADF8B1F2E99 /* Pods-FurnitureShopTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -146,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */,
+				7BC9470BC13FE75733CDF57D /* libPods-FurnitureShopTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,6 +231,7 @@
 			children = (
 				D1A627E8260B874B009C27C2 /* FurnitureShopTests.swift */,
 				D1A627EA260B874B009C27C2 /* Info.plist */,
+				088AB577261B5F040038D0DD /* AddressIntegrationTest.swift */,
 			);
 			path = FurnitureShopTests;
 			sourceTree = "<group>";
@@ -273,6 +297,7 @@
 		D1B58F9C25E55D6400C4D299 /* Address */ = {
 			isa = PBXGroup;
 			children = (
+				088AB571261B4E210038D0DD /* AddressViewModel.swift */,
 				D1B58FAF25E55F7000C4D299 /* View */,
 				D1B58FAE25E55F6600C4D299 /* Controller */,
 			);
@@ -495,6 +520,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1A627EF260B874B009C27C2 /* Build configuration list for PBXNativeTarget "FurnitureShopTests" */;
 			buildPhases = (
+				B14593EED0C94C12A9A72504 /* [CP] Check Pods Manifest.lock */,
 				D1A627E2260B874B009C27C2 /* Sources */,
 				D1A627E3260B874B009C27C2 /* Frameworks */,
 				D1A627E4260B874B009C27C2 /* Resources */,
@@ -608,6 +634,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B14593EED0C94C12A9A72504 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FurnitureShopTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D18912E525E9385100AF1CFC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -653,16 +701,17 @@
 				D1956C3D25DFF7AB00D51519 /* AddressViewController.swift in Sources */,
 				D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */,
 				D1A6276D2600D1F4009C27C2 /* HexToUIColor.swift in Sources */,
+				088AB572261B4E210038D0DD /* AddressViewModel.swift in Sources */,
 				D1956C4725E01A8700D51519 /* SignOutViewController.swift in Sources */,
 				D1B58FB325E560E500C4D299 /* Color.swift in Sources */,
 				D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */,
 				D17BF97B25F0CF1700CDC9A5 /* Spaces.swift in Sources */,
 				D1956C3725DFA20700D51519 /* UserInfoCategory.swift in Sources */,
-				D17BF97725EFC46100CDC9A5 /* Colors.swift in Sources */,
 				D1956C4925E4E28F00D51519 /* ItemViewController.swift in Sources */,
 				D1A4155025D52A5A005D2EF1 /* SceneDelegate.swift in Sources */,
 				D1A4158125DAA268005D2EF1 /* Hstack.swift in Sources */,
 				D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */,
+				088AB5AD261B62D60038D0DD /* Colors.swift in Sources */,
 				D1A4159125DBFDB2005D2EF1 /* CartViewController.swift in Sources */,
 				D18912EF25ED364100AF1CFC /* FurnitureData.swift in Sources */,
 				D17BF97925EFD26800CDC9A5 /* UIDevice.swift in Sources */,
@@ -676,7 +725,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088AB5B1261B62DB0038D0DD /* TapGesture.swift in Sources */,
+				088AB5A4261B62D00038D0DD /* Spaces.swift in Sources */,
+				088AB5AA261B62D50038D0DD /* Colors.swift in Sources */,
 				D1A627E9260B874B009C27C2 /* FurnitureShopTests.swift in Sources */,
+				088AB5B4261B62DD0038D0DD /* ActivityIndicator.swift in Sources */,
+				088AB578261B5F040038D0DD /* AddressIntegrationTest.swift in Sources */,
+				088AB5B0261B62D90038D0DD /* HexToUIColor.swift in Sources */,
+				088AB5A3261B62CE0038D0DD /* Elements.swift in Sources */,
+				088AB5B7261B62DF0038D0DD /* UIButtonExtension.swift in Sources */,
+				088AB57B261B5F8E0038D0DD /* AddressViewModel.swift in Sources */,
+				088AB57E261B5F950038D0DD /* AddressViewController.swift in Sources */,
+				088AB598261B620B0038D0DD /* AddressView.swift in Sources */,
+				088AB5A7261B62D30038D0DD /* UIDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +917,7 @@
 		};
 		D1A627ED260B874B009C27C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80AA5C3035DCDC004C8AFC98 /* Pods-FurnitureShopTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -876,6 +938,7 @@
 		};
 		D1A627EE260B874B009C27C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58A653A753252ADF8B1F2E99 /* Pods-FurnitureShopTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

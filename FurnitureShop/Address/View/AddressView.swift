@@ -20,15 +20,9 @@ class AddressView: UIView {
     let addressTextField = UITextField()
     let postcodeLabel = UILabel()
     let postcodeTextField = UITextField()
-    let countriesArray = ["🇦🇺 Australia", "🤍❤️🤍 Belarus", "🇫🇷 France", "🇩🇪 Germany", "🇮🇹 Italy", "🇵🇱 Poland", "🇷🇺 Russia", "🇪🇸 Spain", "🇸🇪 Sweden", "🇬🇧 UK", "🇺🇸 United States"]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        city.delegate = self
-        addressTextField.delegate = self
-        postcodeTextField.delegate = self
-        country.delegate = self
-        country.dataSource = self
         setupUI()
         setupConstraints()
     }
@@ -38,10 +32,6 @@ class AddressView: UIView {
     }
     
     func setupUI() {
-        countryLabel.text = "COUNTRY"
-        cityLabel.text = "CITY/TOWN"
-        addressLabel.text = "ADDRESS"
-        postcodeLabel.text = "POSTCODE"
         city.returnKeyType = .done
         addressTextField.returnKeyType = .done
         postcodeTextField.returnKeyType = .done
@@ -99,37 +89,4 @@ class AddressView: UIView {
             make.height.equalTo(Elements.textField.size.height)
         }
     }
-}
-
-extension AddressView: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return countriesArray.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return countriesArray[row]
-    }
-}
-
-extension AddressView: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-           print("User's info is \(textField.text!)")
-           textField.endEditing(true)
-           return true
-       }
-       
-       func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-           if textField.text != "" {
-               return true
-           } else {
-            textField.placeholder = "You need to enter your data"
-               return false
-           }
-       }
-    // use realm to save data?
 }

@@ -16,26 +16,27 @@ class ItemViewController: UIViewController {
     let info = MainInfo()
     let cartButton = UIButton()
     var colors = ColorButtons()
-//    var rgbColors = [UIColor]()
-//    var picturesArray = [String]()
-//    var buttonColorPictureTuple = [(UIColor, String)]()
+    var rgbColors = [UIColor]()
+    var picturesArray = [String]()
+    var buttonColorPictureTuple = [(UIColor, String)]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        itemVM.dataForVC()
         setupUI()
         setupConstraints()
-        itemVM.dataForVC()
+        
         //makeTuple()
         createButton()
     }
     
-//    @objc func back() {
+    @objc func back() {
 //        dismiss(animated: true, completion: nil)
-//    }
+    }
     
-//    func makeTuple() {
+    func makeTuple() {
 //        buttonColorPictureTuple = zip(rgbColors, picturesArray).map { ($0, $1) }
-//    }
+    }
     
     func createButton() {
         for pair in buttonColorPictureTuple {
@@ -55,34 +56,34 @@ class ItemViewController: UIViewController {
         }
     }
     
-//    @objc func colorPressed(sender: UIButton!) {
-//        for b in colors.buttonsArray {
-//            if b == sender {
-//                b.isSelected = true
-//                b.changeButtonAppearance()
-//                for pair in buttonColorPictureTuple {
-//                    if b.backgroundColor! == pair.0 {
-//                        let pic = pair.1
-//                        if let url = URL(string: pic) {
-//                            if let picture = try? Data(contentsOf: url) {
-//                                itemPic.image = UIImage(data: picture)
-//                            }
-//                        }
-//                    }
-//                }
-//            } else {
-//                b.isSelected = false
-//                b.changeButtonAppearance()
-//            }
-//        }
-//    }
+    @objc func colorPressed(sender: UIButton!) {
+        for b in colors.buttonsArray {
+            if b == sender {
+                b.isSelected = true
+                b.changeButtonAppearance()
+                for pair in buttonColorPictureTuple {
+                    if b.backgroundColor! == pair.0 {
+                        let pic = pair.1
+                        if let url = URL(string: pic) {
+                            if let picture = try? Data(contentsOf: url) {
+                                itemPic.image = UIImage(data: picture)
+                            }
+                        }
+                    }
+                }
+            } else {
+                b.isSelected = false
+                b.changeButtonAppearance()
+            }
+        }
+    }
     
     func setupUI() {
 //        for color in colors.colorsArray {
 //            let colorUI = color.hexStringToUIColor(hex: color)
 //            rgbColors.append(colorUI)
 //        }
-        
+        info.itemName.text = itemVM.itemName
         itemPic.contentMode = .scaleAspectFit
 //        if rgbColors.isEmpty {
 //            colors.colorLabel.text = ""
@@ -107,10 +108,10 @@ class ItemViewController: UIViewController {
         view.addSubview(colors)
     }
     
-//    @objc func addToCart(sender: UIButton!) {
-//        sender.setBackgroundColor(color: .gray, forState: .highlighted)
-//        print("Add the item to a cart")
-//    }
+    @objc func addToCart(sender: UIButton!) {
+        sender.setBackgroundColor(color: .gray, forState: .highlighted)
+        print("Add the item to a cart")
+    }
 
     func setupConstraints() {
         backgroundImage.snp.makeConstraints { (make) in
