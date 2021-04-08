@@ -318,7 +318,6 @@
 			children = (
 				D197EA6C261DD98600BE07B1 /* PaymentViewModel.swift */,
 				D1B58FB125E55F8B00C4D299 /* View */,
-				D1B58FB025E55F8400C4D299 /* Controller */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -471,19 +470,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		D1B58FB025E55F8400C4D299 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D1956C4025E009FF00D51519 /* PaymentViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		D1B58FB125E55F8B00C4D299 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D1956C4425E00E7000D51519 /* AcceptedCards.swift */,
 				D1956C4225E00A1800D51519 /* PaymentView.swift */,
+				D1956C4025E009FF00D51519 /* PaymentViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

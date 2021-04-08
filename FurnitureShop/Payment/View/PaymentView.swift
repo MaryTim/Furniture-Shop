@@ -22,10 +22,6 @@ class PaymentView: UIView {
   
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        datePicker.delegate = self
-//        datePicker.dataSource = self
-//        cardTextField.delegate = self
-//        nameTextField.delegate = self
         setupUI()
         setupConstraints()
     }
@@ -35,16 +31,10 @@ class PaymentView: UIView {
     }
     
     func setupUI() {
-       // cardLabel.text = "CARD NUMBER"
-       // cardImage.image = UIImage(systemName: "creditcard")
         cardImage.tintColor = .black
         cardTextField.borderStyle = .roundedRect
         cardTextField.returnKeyType = .done
         cardTextField.keyboardType = .numberPad // add done button
-//        datePicker.selectRow(5, inComponent: 0, animated: false)
-//        datePicker.selectRow(10, inComponent: 1, animated: false)
-        //dateLabel.text = "EXPIRY DATE"
-       // cardNameLabel.text = "NAME ON CARD"
         nameTextField.borderStyle = .roundedRect
         nameTextField.returnKeyType = .done
         
@@ -96,4 +86,3 @@ class PaymentView: UIView {
         }
     }
 }
-

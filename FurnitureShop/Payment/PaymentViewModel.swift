@@ -26,4 +26,3 @@ class PaymentViewModel {
            print("User saved payment details")
        }
 }
-

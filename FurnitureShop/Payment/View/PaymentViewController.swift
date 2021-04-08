@@ -21,10 +21,6 @@ class PaymentViewController: UIViewController {
         setupConstraints()
     }
     
-//    @objc func saveCardPressed(sender: UIButton!) {
-//        print("User's card is saved")
-//    }
-    
     func setupUI() {
         self.title = "Credit Card"
         paymentInfo.cardTextField.delegate = self
@@ -32,7 +28,6 @@ class PaymentViewController: UIViewController {
         paymentInfo.datePicker.delegate = self
         paymentInfo.datePicker.dataSource = self
         view.backgroundColor = .white
-      //  saveCard.addTarget(self, action: #selector(saveCardPressed), for: .touchUpInside)
         saveCard.setTitle(paymentVM.saveCardButtonText.uppercased(), for: .normal)
         saveCard.backgroundColor = MyColor.silverRust1.value
         saveCard.setBackgroundColor(color: MyColor.fedora1.value, forState: .highlighted)
@@ -44,6 +39,8 @@ class PaymentViewController: UIViewController {
     
     func bind() {
         // Outputs
+        paymentInfo.datePicker.selectRow(5, inComponent: 0, animated: false)
+        paymentInfo.datePicker.selectRow(10, inComponent: 1, animated: false)
         paymentInfo.cardLabel.text = paymentVM.cardNumberLabelText.uppercased()
         paymentInfo.cardImage.image = UIImage(systemName: paymentVM.cardPicName)
         paymentInfo.dateLabel.text = paymentVM.expiryDateLabelText.uppercased()
@@ -100,7 +97,6 @@ extension PaymentViewController: UITextFieldDelegate {
                return false
            }
        }
-    
     // use Realm to save data?
 }
 

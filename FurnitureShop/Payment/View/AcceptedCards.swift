@@ -27,11 +27,6 @@ class AcceptedCards: UIView {
        }
     
     func setupUI() {
-       // acceptLabel.text = "WE ACCEPT"
-       // acceptLabel.font = acceptLabel.font.withSize(13)
-       // visa.image = UIImage(named: "visa")
-       // mastercard.image = UIImage(named: "mastercard")
-       // paypal.image = UIImage(named: "paypal")
         addSubview(acceptLabel)
         addSubview(visa)
         addSubview(mastercard)
