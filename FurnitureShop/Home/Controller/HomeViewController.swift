@@ -149,7 +149,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                     rootVC.colors.colorsArray.append(color.buttonColor!)
                 }
                 for picture in self.categories[indexPath.row].colors {
-                    rootVC.picturesArray.append(picture.itemPic)
+                   // rootVC.picturesArray.append(picture.itemPic)
                 }
             }
         }

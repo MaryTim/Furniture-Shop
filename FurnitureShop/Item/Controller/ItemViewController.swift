@@ -27,7 +27,7 @@ class ItemViewController: UIViewController {
         setupConstraints()
         
         //makeTuple()
-        createButton()
+     //   createButton()
     }
     
     @objc func back() {
@@ -38,23 +38,23 @@ class ItemViewController: UIViewController {
 //        buttonColorPictureTuple = zip(rgbColors, picturesArray).map { ($0, $1) }
     }
     
-    func createButton() {
-        for pair in buttonColorPictureTuple {
-            let newButton = UIButton()
-            newButton.backgroundColor = pair.0
-            newButton.layer.cornerRadius = 15
-            newButton.layer.borderWidth = 1
-            newButton.layer.borderColor = UIColor.black.cgColor
-            newButton.clipsToBounds = true
-            newButton.snp.makeConstraints { (make) in
-                make.height.width.equalTo(30)
-            }
-            newButton.isSelected = false
-            colors.buttonsArray.append(newButton)
-            colors.stack.addArrangedSubview(newButton)
-            newButton.addTarget(self, action: #selector(colorPressed), for: .touchUpInside)
-        }
-    }
+//    func createButton() {
+//        for pair in buttonColorPictureTuple {
+//            let newButton = UIButton()
+//            newButton.backgroundColor = pair.0
+//            newButton.layer.cornerRadius = 15
+//            newButton.layer.borderWidth = 1
+//            newButton.layer.borderColor = UIColor.black.cgColor
+//            newButton.clipsToBounds = true
+//            newButton.snp.makeConstraints { (make) in
+//                make.height.width.equalTo(30)
+//            }
+//            newButton.isSelected = false
+//            colors.buttonsArray.append(newButton)
+//            colors.stack.addArrangedSubview(newButton)
+//            newButton.addTarget(self, action: #selector(colorPressed), for: .touchUpInside)
+//        }
+//    }
     
     @objc func colorPressed(sender: UIButton!) {
         for b in colors.buttonsArray {
@@ -89,16 +89,16 @@ class ItemViewController: UIViewController {
 //            colors.colorLabel.text = ""
 //        }
         backgroundImage.backgroundColor = .white
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back",
-                                                           style: .plain,
-                                                           target: self,
-                                                           action: #selector(back))
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back",
+//                                                           style: .plain,
+//                                                           target: self,
+//                                                           action: #selector(back))
         navigationItem.leftBarButtonItem?.tintColor = .black
         cartButton.setImage(UIImage(systemName: "cart"), for: .normal)
         cartButton.tintColor = .black
         cartButton.layer.cornerRadius = 4.0
         cartButton.layer.borderWidth = 1
-        cartButton.layer.borderColor = UIColor.black.cgColor
+    //    cartButton.layer.borderColor = UIColor.black.cgColor
         cartButton.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
         
         view.addSubview(backgroundImage)

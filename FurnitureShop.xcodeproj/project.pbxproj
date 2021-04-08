@@ -42,6 +42,12 @@
 		D1956C4725E01A8700D51519 /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4625E01A8700D51519 /* SignOutViewController.swift */; };
 		D1956C4925E4E28F00D51519 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4825E4E28F00D51519 /* ItemViewController.swift */; };
 		D1956C4B25E53E4100D51519 /* MainInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4A25E53E4100D51519 /* MainInfo.swift */; };
+		D197EA6D261DD98600BE07B1 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197EA6C261DD98600BE07B1 /* PaymentViewModel.swift */; };
+		D197EA6E261DD98600BE07B1 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197EA6C261DD98600BE07B1 /* PaymentViewModel.swift */; };
+		D197EA73261DF14400BE07B1 /* PaymentIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197EA72261DF14400BE07B1 /* PaymentIntegrationTest.swift */; };
+		D197EA74261DF18A00BE07B1 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4025E009FF00D51519 /* PaymentViewController.swift */; };
+		D197EA75261DF18D00BE07B1 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4225E00A1800D51519 /* PaymentView.swift */; };
+		D197EA76261DF18F00BE07B1 /* AcceptedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4425E00E7000D51519 /* AcceptedCards.swift */; };
 		D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */; };
 		D1A4155025D52A5A005D2EF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */; };
 		D1A4155225D52A5A005D2EF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4155125D52A5A005D2EF1 /* HomeViewController.swift */; };
@@ -104,6 +110,8 @@
 		D1956C4625E01A8700D51519 /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
 		D1956C4825E4E28F00D51519 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		D1956C4A25E53E4100D51519 /* MainInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfo.swift; sourceTree = "<group>"; };
+		D197EA6C261DD98600BE07B1 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		D197EA72261DF14400BE07B1 /* PaymentIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentIntegrationTest.swift; sourceTree = "<group>"; };
 		D1A4154A25D52A5A005D2EF1 /* FurnitureShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A4154D25D52A5A005D2EF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A4154F25D52A5A005D2EF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +240,7 @@
 				D1A627E8260B874B009C27C2 /* FurnitureShopTests.swift */,
 				D1A627EA260B874B009C27C2 /* Info.plist */,
 				088AB577261B5F040038D0DD /* AddressIntegrationTest.swift */,
+				D197EA72261DF14400BE07B1 /* PaymentIntegrationTest.swift */,
 			);
 			path = FurnitureShopTests;
 			sourceTree = "<group>";
@@ -307,6 +316,7 @@
 		D1B58F9D25E55D7B00C4D299 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				D197EA6C261DD98600BE07B1 /* PaymentViewModel.swift */,
 				D1B58FB125E55F8B00C4D299 /* View */,
 				D1B58FB025E55F8400C4D299 /* Controller */,
 			);
@@ -711,6 +721,7 @@
 				D1A4155025D52A5A005D2EF1 /* SceneDelegate.swift in Sources */,
 				D1A4158125DAA268005D2EF1 /* Hstack.swift in Sources */,
 				D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */,
+				D197EA6D261DD98600BE07B1 /* PaymentViewModel.swift in Sources */,
 				088AB5AD261B62D60038D0DD /* Colors.swift in Sources */,
 				D1A4159125DBFDB2005D2EF1 /* CartViewController.swift in Sources */,
 				D18912EF25ED364100AF1CFC /* FurnitureData.swift in Sources */,
@@ -728,11 +739,16 @@
 				088AB5B1261B62DB0038D0DD /* TapGesture.swift in Sources */,
 				088AB5A4261B62D00038D0DD /* Spaces.swift in Sources */,
 				088AB5AA261B62D50038D0DD /* Colors.swift in Sources */,
+				D197EA74261DF18A00BE07B1 /* PaymentViewController.swift in Sources */,
 				D1A627E9260B874B009C27C2 /* FurnitureShopTests.swift in Sources */,
 				088AB5B4261B62DD0038D0DD /* ActivityIndicator.swift in Sources */,
+				D197EA6E261DD98600BE07B1 /* PaymentViewModel.swift in Sources */,
 				088AB578261B5F040038D0DD /* AddressIntegrationTest.swift in Sources */,
+				D197EA76261DF18F00BE07B1 /* AcceptedCards.swift in Sources */,
 				088AB5B0261B62D90038D0DD /* HexToUIColor.swift in Sources */,
+				D197EA75261DF18D00BE07B1 /* PaymentView.swift in Sources */,
 				088AB5A3261B62CE0038D0DD /* Elements.swift in Sources */,
+				D197EA73261DF14400BE07B1 /* PaymentIntegrationTest.swift in Sources */,
 				088AB5B7261B62DF0038D0DD /* UIButtonExtension.swift in Sources */,
 				088AB57B261B5F8E0038D0DD /* AddressViewModel.swift in Sources */,
 				088AB57E261B5F950038D0DD /* AddressViewController.swift in Sources */,
