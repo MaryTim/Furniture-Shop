@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class UserDetailView: UIView {
+class UserDetailsView: UIView {
     
     let nameLabel = UILabel()
     let nameTextField = UITextField()
@@ -23,9 +23,6 @@ class UserDetailView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        nameTextField.delegate = self
-        surnameTextField.delegate = self
-        email.delegate = self
         setupUI()
         setupConstraints()
     }
@@ -35,10 +32,6 @@ class UserDetailView: UIView {
     }
     
     func setupUI() {
-        nameLabel.text = "FIRST NAME"
-        surnameLabel.text = "LAST NAME"
-        emailLabel.text = "EMAIL ADDRESS"
-        birthDateLabel.text = "DATE OF BIRTH"
         nameTextField.borderStyle = .roundedRect
         nameTextField.returnKeyType = .done
         surnameTextField.borderStyle = .roundedRect
@@ -100,23 +93,4 @@ class UserDetailView: UIView {
             make.height.equalTo(150)
         }
     }
-}
-
-extension UserDetailView: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-           print("User's name is \(textField.text!)")
-           textField.endEditing(true)
-           return true
-       }
-       
-       func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-           if textField.text != "" {
-               return true
-           } else {
-            textField.placeholder = "You need to enter your data"
-               return false
-           }
-       }
-    // use Realm to save data?
 }

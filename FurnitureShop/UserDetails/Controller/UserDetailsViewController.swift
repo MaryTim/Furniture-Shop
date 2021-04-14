@@ -11,23 +11,35 @@ import SnapKit
 
 class UserDetailsViewController: UIViewController {
     
-    let userDetails = UserDetailView()
+    let userDetails = UserDetailsView()
     let saveChangesButton = UIButton()
+    let userDetailsVM = UserDetailsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userDetails.nameTextField.delegate = self
+        userDetails.surnameTextField.delegate = self
+        userDetails.email.delegate = self
         setupUI()
         setupConstraints()
+        bind()
+    }
+    
+    func bind() {
+        userDetails.nameLabel.text = userDetailsVM.firstNameLabelText.uppercased()
+        userDetails.surnameLabel.text = userDetailsVM.surnameLabelText.uppercased()
+        userDetails.emailLabel.text = userDetailsVM.emailLabelText.uppercased()
+        userDetails.birthDateLabel.text = userDetailsVM.birthDateLabelText.uppercased()
     }
     
     @objc func savePressed(sender: UIButton!) {
-        print("User's info is saved")
+        userDetailsVM.saveButtonPressed()
     }
     
     func setupUI() {
         view.backgroundColor = .white
         self.title = "My Details"
-        saveChangesButton.setTitle("SAVE CHANGES", for: .normal)
+        saveChangesButton.setTitle(userDetailsVM.buttonLabel.uppercased(), for: .normal)
         saveChangesButton.backgroundColor = MyColor.silverRust1.value
         saveChangesButton.addTarget(self, action: #selector(savePressed), for: .touchUpInside)
         saveChangesButton.setBackgroundColor(color: MyColor.fedora1.value, forState: .highlighted)
@@ -49,4 +61,23 @@ class UserDetailsViewController: UIViewController {
             make.width.equalTo(Elements.saveButton.size.width)
         }
     }
+}
+
+extension UserDetailsViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           print("User's name is \(textField.text!)")
+           textField.endEditing(true)
+           return true
+       }
+       
+       func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+           if textField.text != "" {
+               return true
+           } else {
+            textField.placeholder = "You need to enter your data"
+               return false
+           }
+       }
+    // use Realm to save data?
 }
