@@ -11,3 +11,8 @@ pod 'SnapKit'
 pod 'SwiftLint'
 
 end
+
+target 'FurnitureShopTests' do 
+pod 'SnapKit'
+
+end
