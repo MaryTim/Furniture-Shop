@@ -23,6 +23,11 @@
 		088AB5B7261B62DF0038D0DD /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B58FB525E67DC500C4D299 /* UIButtonExtension.swift */; };
 		279B8C0C043161010E6561D4 /* Pods_FurnitureShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76759FC93D15808FC47C01FE /* Pods_FurnitureShop.framework */; };
 		CF80FA4D341D511900AD9A7C /* libPods-FurnitureShopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9470BC13FE75733CDF57D /* libPods-FurnitureShopTests.a */; };
+		D12FD3E72625C12700C0E09C /* SignoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3E62625C12700C0E09C /* SignoutViewModel.swift */; };
+		D12FD3E82625C12700C0E09C /* SignoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3E62625C12700C0E09C /* SignoutViewModel.swift */; };
+		D12FD3E92625C3D500C0E09C /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4625E01A8700D51519 /* SignOutViewController.swift */; };
+		D12FD3EB2625C3FB00C0E09C /* SignOutIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3EA2625C3FB00C0E09C /* SignOutIntegrationTests.swift */; };
+		CF80FA4D341D511900AD9A7C /* libPods-FurnitureShopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9470BC13FE75733CDF57D /* libPods-FurnitureShopTests.a */; };
 		D17BF97925EFD26800CDC9A5 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97825EFD26800CDC9A5 /* UIDevice.swift */; };
 		D17BF97B25F0CF1700CDC9A5 /* Spaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97A25F0CF1700CDC9A5 /* Spaces.swift */; };
 		D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */; };
@@ -90,6 +95,8 @@
 		7BC9470BC13FE75733CDF57D /* libPods-FurnitureShopTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FurnitureShopTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AA5C3035DCDC004C8AFC98 /* Pods-FurnitureShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShopTests.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShopTests/Pods-FurnitureShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.debug.xcconfig"; sourceTree = "<group>"; };
+		D12FD3E62625C12700C0E09C /* SignoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignoutViewModel.swift; sourceTree = "<group>"; };
+		D12FD3EA2625C3FB00C0E09C /* SignOutIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutIntegrationTests.swift; sourceTree = "<group>"; };
 		D17BF97625EFC46100CDC9A5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D17BF97825EFD26800CDC9A5 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		D17BF97A25F0CF1700CDC9A5 /* Spaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaces.swift; sourceTree = "<group>"; };
@@ -237,10 +244,11 @@
 		D1A627E7260B874B009C27C2 /* FurnitureShopTests */ = {
 			isa = PBXGroup;
 			children = (
-				D1A627E8260B874B009C27C2 /* FurnitureShopTests.swift */,
 				D1A627EA260B874B009C27C2 /* Info.plist */,
+				D1A627E8260B874B009C27C2 /* FurnitureShopTests.swift */,
 				088AB577261B5F040038D0DD /* AddressIntegrationTest.swift */,
 				D197EA72261DF14400BE07B1 /* PaymentIntegrationTest.swift */,
+				D12FD3EA2625C3FB00C0E09C /* SignOutIntegrationTests.swift */,
 			);
 			path = FurnitureShopTests;
 			sourceTree = "<group>";
@@ -326,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				D1956C4625E01A8700D51519 /* SignOutViewController.swift */,
+				D12FD3E62625C12700C0E09C /* SignoutViewModel.swift */,
 			);
 			path = "Sign Out";
 			sourceTree = "<group>";
@@ -704,6 +713,7 @@
 				D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */,
 				D1A6276D2600D1F4009C27C2 /* HexToUIColor.swift in Sources */,
 				088AB572261B4E210038D0DD /* AddressViewModel.swift in Sources */,
+				D12FD3E72625C12700C0E09C /* SignoutViewModel.swift in Sources */,
 				D1956C4725E01A8700D51519 /* SignOutViewController.swift in Sources */,
 				D1B58FB325E560E500C4D299 /* Color.swift in Sources */,
 				D1A4154E25D52A5A005D2EF1 /* AppDelegate.swift in Sources */,
@@ -730,8 +740,10 @@
 			files = (
 				088AB5B1261B62DB0038D0DD /* TapGesture.swift in Sources */,
 				088AB5A4261B62D00038D0DD /* Spaces.swift in Sources */,
+				D12FD3E92625C3D500C0E09C /* SignOutViewController.swift in Sources */,
 				088AB5AA261B62D50038D0DD /* Colors.swift in Sources */,
 				D197EA74261DF18A00BE07B1 /* PaymentViewController.swift in Sources */,
+				D12FD3EB2625C3FB00C0E09C /* SignOutIntegrationTests.swift in Sources */,
 				D1A627E9260B874B009C27C2 /* FurnitureShopTests.swift in Sources */,
 				088AB5B4261B62DD0038D0DD /* ActivityIndicator.swift in Sources */,
 				D197EA6E261DD98600BE07B1 /* PaymentViewModel.swift in Sources */,
@@ -740,6 +752,7 @@
 				088AB5B0261B62D90038D0DD /* HexToUIColor.swift in Sources */,
 				D197EA75261DF18D00BE07B1 /* PaymentView.swift in Sources */,
 				088AB5A3261B62CE0038D0DD /* Elements.swift in Sources */,
+				D12FD3E82625C12700C0E09C /* SignoutViewModel.swift in Sources */,
 				D197EA73261DF14400BE07B1 /* PaymentIntegrationTest.swift in Sources */,
 				088AB5B7261B62DF0038D0DD /* UIButtonExtension.swift in Sources */,
 				088AB57B261B5F8E0038D0DD /* AddressViewModel.swift in Sources */,
