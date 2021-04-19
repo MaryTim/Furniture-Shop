@@ -35,6 +35,7 @@ class UserViewController: UIViewController {
     }
     
     func setupUI() {
+        
         self.accountView.userImage.addTapGesture(tapNumber: 1, target: self, action: #selector(handleTap))
         view.addSubview(accountView)
         view.addSubview(tableView)
@@ -43,13 +44,13 @@ class UserViewController: UIViewController {
     func setupConstraints() {
         accountView.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
-            make.height.equalTo(280)
+            make.height.equalTo(Elements.itemPic.size.height)
         }
         tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(accountView.snp.bottom).offset(130)
+            make.top.equalTo(accountView.userImage.snp.bottom).offset(Spaces.big.size)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-100)
+            make.bottom.equalToSuperview().offset(-(Spaces.medium.size + 30))
         }
     }
 
@@ -89,7 +90,7 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return Elements.cell.size.height
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

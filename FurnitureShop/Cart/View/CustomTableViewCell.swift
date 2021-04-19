@@ -29,7 +29,7 @@ class CustomTableViewCell: UITableViewCell {
         label.textAlignment = .center
         label.adjustsFontForContentSizeCategory = true
         label.adjustsFontSizeToFitWidth = true
-        label.textColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1)
+        label.textColor = MyColor.fedora1.value
         label.backgroundColor = .clear
         label.textAlignment = .center
         return label
@@ -41,7 +41,7 @@ class CustomTableViewCell: UITableViewCell {
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 4.0
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1).cgColor
+        button.layer.borderColor = MyColor.fedora1.value.cgColor
         return button
     }()
     
@@ -52,7 +52,7 @@ class CustomTableViewCell: UITableViewCell {
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 4.0
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1).cgColor
+        button.layer.borderColor = MyColor.fedora1.value.cgColor
         return button
     }()
     
@@ -96,37 +96,38 @@ class CustomTableViewCell: UITableViewCell {
     func setupConstraints() {
         itemPic.snp.makeConstraints { (make) in
             make.top.leading.equalToSuperview()
-            make.height.width.equalTo(100)
+            make.height.equalTo(Elements.pictureInACell.size.height)
+            make.width.equalTo(Elements.pictureInACell.size.width)
         }
         descriptionLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview()
-            make.leading.equalTo(itemPic.snp.trailing).offset(8)
-            make.height.equalTo(70)
-            make.width.equalTo(170)
+            make.leading.equalTo(itemPic.snp.trailing).offset(Spaces.tiny.size)
+            make.height.equalTo(Elements.nameInACell.size.height)
+            make.trailing.equalToSuperview().offset(-100)
         }
         sumLabel.snp.makeConstraints { (make) in
             make.top.equalTo(descriptionLabel.snp.bottom)
-            make.leading.equalTo(itemPic.snp.trailing).offset(8)
-            make.width.equalTo(150)
-            make.height.equalTo(35)
+            make.centerX.equalTo(descriptionLabel.snp.centerX)
+            make.width.equalTo(Elements.sumInACell.size.width)
+            make.height.equalTo(Elements.sumInACell.size.height)
         }
         minusButton.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
-            make.leading.equalTo(descriptionLabel.snp.trailing).offset(8)
-            make.height.equalTo(35)
-            make.width.equalTo(25)
+            make.leading.equalTo(descriptionLabel.snp.trailing).offset(Spaces.tiny.size)
+            make.height.equalTo(Elements.plusMinusButton.size.height)
+            make.width.equalTo(Elements.plusMinusButton.size.width)
         }
         quantityLabel.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.leading.equalTo(minusButton.snp.trailing).offset(1)
-            make.height.equalTo(35)
-            make.width.equalTo(30)
+            make.height.equalTo(Elements.plusMinusButton.size.height)
+            make.width.equalTo(Elements.plusMinusButton.size.width)
         }
         plusButton.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.leading.equalTo(quantityLabel.snp.trailing).offset(1)
-            make.height.equalTo(35)
-            make.width.equalTo(minusButton.snp.width)
+            make.height.equalTo(Elements.plusMinusButton.size.height)
+            make.width.equalTo(Elements.plusMinusButton.size.width)
         }
     }
 }

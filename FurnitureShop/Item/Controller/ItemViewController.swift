@@ -11,6 +11,7 @@ import RealmSwift
 
 class ItemViewController: UIViewController {
     
+    let itemVM = ItemViewModel()
     var backgroundImage = UIImageView()
     let itemPic = UIImageView()
     let info = MainInfo()
@@ -23,37 +24,39 @@ class ItemViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        itemVM.dataForVC()
         setupUI()
         setupConstraints()
-        makeTuple()
-        createButton()
+        
+        //makeTuple()
+     //   createButton()
     }
     
     @objc func back() {
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
     }
     
     func makeTuple() {
-        buttonColorPictureTuple = zip(rgbColors, picturesArray).map { ($0, $1) }
+//        buttonColorPictureTuple = zip(rgbColors, picturesArray).map { ($0, $1) }
     }
     
-    func createButton() {
-        for pair in buttonColorPictureTuple {
-            let newButton = UIButton()
-            newButton.backgroundColor = pair.0
-            newButton.layer.cornerRadius = 15
-            newButton.layer.borderWidth = 1
-            newButton.layer.borderColor = UIColor.black.cgColor
-            newButton.clipsToBounds = true
-            newButton.snp.makeConstraints { (make) in
-                make.height.width.equalTo(30)
-            }
-            newButton.isSelected = false
-            colors.buttonsArray.append(newButton)
-            colors.stack.addArrangedSubview(newButton)
-            newButton.addTarget(self, action: #selector(colorPressed), for: .touchUpInside)
-        }
-    }
+//    func createButton() {
+//        for pair in buttonColorPictureTuple {
+//            let newButton = UIButton()
+//            newButton.backgroundColor = pair.0
+//            newButton.layer.cornerRadius = 15
+//            newButton.layer.borderWidth = 1
+//            newButton.layer.borderColor = UIColor.black.cgColor
+//            newButton.clipsToBounds = true
+//            newButton.snp.makeConstraints { (make) in
+//                make.height.width.equalTo(30)
+//            }
+//            newButton.isSelected = false
+//            colors.buttonsArray.append(newButton)
+//            colors.stack.addArrangedSubview(newButton)
+//            newButton.addTarget(self, action: #selector(colorPressed), for: .touchUpInside)
+//        }
+//    }
     
     @objc func colorPressed(sender: UIButton!) {
         for b in colors.buttonsArray {
@@ -109,26 +112,26 @@ class ItemViewController: UIViewController {
     }
     
     func setupUI() {
-        for color in colors.colorsArray {
-            let colorUI = color.hexStringToUIColor(hex: color)
-            rgbColors.append(colorUI)
-        }
-        
+//        for color in colors.colorsArray {
+//            let colorUI = color.hexStringToUIColor(hex: color)
+//            rgbColors.append(colorUI)
+//        }
+        info.itemName.text = itemVM.itemName
         itemPic.contentMode = .scaleAspectFit
-        if rgbColors.isEmpty {
-            colors.colorLabel.text = ""
-        }
+//        if rgbColors.isEmpty {
+//            colors.colorLabel.text = ""
+//        }
         backgroundImage.backgroundColor = .white
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back",
-                                                           style: .plain,
-                                                           target: self,
-                                                           action: #selector(back))
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back",
+//                                                           style: .plain,
+//                                                           target: self,
+//                                                           action: #selector(back))
         navigationItem.leftBarButtonItem?.tintColor = .black
         cartButton.setImage(UIImage(systemName: "cart"), for: .normal)
         cartButton.tintColor = .black
         cartButton.layer.cornerRadius = 4.0
         cartButton.layer.borderWidth = 1
-        cartButton.layer.borderColor = UIColor.black.cgColor
+    //    cartButton.layer.borderColor = UIColor.black.cgColor
         cartButton.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
         
         view.addSubview(backgroundImage)
@@ -143,24 +146,24 @@ class ItemViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         itemPic.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(80)
+            make.top.equalToSuperview().offset(Spaces.veryBig.size)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(250)
+            make.height.equalTo(Elements.itemPic.size.height)
         }
         info.snp.makeConstraints { (make) in
-            make.top.equalTo(itemPic.snp.bottom).offset(10)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-            make.height.equalTo(300)
+            make.top.equalTo(itemPic.snp.bottom).offset(Spaces.tiny.size)
+            make.leading.equalToSuperview().offset(Spaces.medium.size)
+            make.trailing.equalToSuperview().offset(-Spaces.medium.size)
+            make.height.equalTo(Elements.info.size.height)
         }
         colors.snp.makeConstraints { (make) in
-            make.top.equalTo(info.snp.bottom).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.top.equalTo(info.snp.bottom).offset(Spaces.medium.size)
+            make.leading.equalToSuperview().offset(Spaces.medium.size)
+            make.trailing.equalToSuperview().offset(-Spaces.medium.size)
             make.height.equalTo(40)
         }
         cartButton.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-50)
+            make.bottom.equalToSuperview().offset(-Spaces.big.size)
             make.height.equalTo(40)
             make.width.equalTo(50)
             make.centerX.equalToSuperview()
@@ -168,15 +171,15 @@ class ItemViewController: UIViewController {
     }
 }
 
-extension ItemViewController: ReturnDataDelegate {
-    func returnData(data: FurnitureData) {
-        let url = URL(string: data.categories[0].colors[0].itemPic)
-        let dataM = try? Data(contentsOf: url!)
-        DispatchQueue.main.async {
-            self.itemPic.image = UIImage(data: dataM!)
-            self.info.itemName.text = data.categories[0].name
-            self.info.itemPrice.text = "$\(data.categories[0].price)"
-            self.info.itemDescription.text = data.categories[0].description
-        }
-    }
-}
+//extension ItemViewController: ReturnDataDelegate {
+//    func returnData(data: FurnitureData) {
+//        let url = URL(string: data.categories[0].colors[0].itemPic)
+//        let dataM = try? Data(contentsOf: url!)
+//        DispatchQueue.main.async {
+//            self.itemPic.image = UIImage(data: dataM!)
+//            self.info.itemName.text = data.categories[0].name
+//            self.info.itemPrice.text = "$\(data.categories[0].price)"
+//            self.info.itemDescription.text = data.categories[0].description
+//        }
+//    }
+//}

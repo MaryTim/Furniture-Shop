@@ -12,3 +12,8 @@ pod 'SwiftLint'
 pod 'RealmSwift'
 
 end
+
+target 'FurnitureShopTests' do 
+pod 'SnapKit'
+
+end

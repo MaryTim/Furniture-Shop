@@ -29,7 +29,8 @@ class MainInfo: UIView {
         itemName.adjustsFontSizeToFitWidth = true
         itemName.numberOfLines = 0
         itemPrice.font = UIFont(name: "Al Nile", size: 28)
-        itemPrice.textColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1)
+        itemPrice.textColor = MyColor.fedora1.value
+        itemDescription.textColor = .black
         itemDescription.textAlignment = .justified
         itemDescription.adjustsFontSizeToFitWidth = true
         itemDescription.numberOfLines = 0
@@ -45,8 +46,8 @@ class MainInfo: UIView {
         }
         itemPrice.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview()
-            make.top.equalTo(itemName.snp.bottom).offset(15)
-            make.height.equalTo(20)
+            make.top.equalTo(itemName.snp.bottom).offset(Spaces.small.size)
+            make.height.equalTo(25)
         }
         itemDescription.snp.makeConstraints { (make) in
             make.leading.trailing.bottom.equalToSuperview()

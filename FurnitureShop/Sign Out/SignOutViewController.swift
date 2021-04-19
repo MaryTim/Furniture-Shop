@@ -14,6 +14,7 @@ class SignOutViewController: UIViewController {
     let questionLabel = UILabel()
     let yesButton = UIButton()
     let cancelButton = UIButton()
+    let signoutVM = SignoutViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,24 +25,24 @@ class SignOutViewController: UIViewController {
     func setupUI() {
         self.title = "Sign Out"
         view.backgroundColor = .white
-        questionLabel.text = "Are you sure you want to sign out?"
+        questionLabel.text = signoutVM.qustionLabelText
         questionLabel.font = questionLabel.font.withSize(23)
         questionLabel.textAlignment = .center
-        yesButton.setTitle("Sign Out", for: .normal)
+        yesButton.setTitle(signoutVM.signOutButtonLabel, for: .normal)
         yesButton.titleLabel?.font = yesButton.titleLabel?.font.withSize(22)
         yesButton.setTitleColor(.black, for: .normal)
         yesButton.layer.cornerRadius = 10.0
         yesButton.layer.borderWidth = 2
-        yesButton.layer.borderColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1).cgColor
-        cancelButton.setTitle("Cancel", for: .normal)
+        yesButton.layer.borderColor = MyColor.fedora1.value.cgColor
+        cancelButton.setTitle(signoutVM.cancelButtonLabel, for: .normal)
         cancelButton.setTitleColor(.black, for: .normal)
         cancelButton.layer.cornerRadius = 10.0
         cancelButton.layer.borderWidth = 2
-        cancelButton.layer.borderColor = UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1).cgColor
+        cancelButton.layer.borderColor = MyColor.fedora1.value.cgColor
         cancelButton.titleLabel?.font = cancelButton.titleLabel?.font.withSize(22)
         yesButton.addTarget(self, action: #selector (yesPressed), for: .touchUpInside)
-        yesButton.setBackgroundColor(color: UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 0.2), forState: .highlighted)
-        cancelButton.setBackgroundColor(color: UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 0.2), forState: .highlighted)
+        yesButton.setBackgroundColor(color: MyColor.fedora02.value, forState: .highlighted)
+        cancelButton.setBackgroundColor(color: MyColor.fedora02.value, forState: .highlighted)
         cancelButton.addTarget(self, action: #selector(cancelPressed), for: .touchUpInside)
         view.addSubview(questionLabel)
         view.addSubview(yesButton)
@@ -49,7 +50,7 @@ class SignOutViewController: UIViewController {
     }
     
     @objc func yesPressed(sender: UIButton!) {
-        print("User wants to sign out! Do smth with it")
+        signoutVM.signOutButtonPressed()
     }
     
     @objc func holdDown(sender: UIButton!) {
@@ -60,7 +61,7 @@ class SignOutViewController: UIViewController {
     @objc func cancelPressed(sender: UIButton!) {
         dismiss(animated: true) {
         }
-        print("User wants to stay signed in")
+        signoutVM.cancelButtonPressed()
     }
     
     func setupConstraints() {
@@ -71,13 +72,13 @@ class SignOutViewController: UIViewController {
         }
         yesButton.snp.makeConstraints { (make) in
             make.top.equalTo(questionLabel.snp.bottom).offset(50)
-            make.leading.equalToSuperview().offset(80)
+            make.leading.equalToSuperview().offset(Spaces.medium.size + 20)
             make.height.equalTo(50)
             make.width.equalTo(120)
         }
         cancelButton.snp.makeConstraints { (make) in
             make.top.equalTo(questionLabel.snp.bottom).offset(50)
-            make.leading.equalTo(yesButton.snp.trailing).offset(20)
+            make.trailing.equalToSuperview().offset(-(Spaces.medium.size + 20))
             make.height.equalTo(50)
             make.width.equalTo(120)
         }

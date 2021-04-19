@@ -27,11 +27,6 @@ class AcceptedCards: UIView {
        }
     
     func setupUI() {
-        acceptLabel.text = "WE ACCEPT"
-        acceptLabel.font = acceptLabel.font.withSize(13)
-        visa.image = UIImage(named: "visa")
-        mastercard.image = UIImage(named: "mastercard")
-        paypal.image = UIImage(named: "paypal")
         addSubview(acceptLabel)
         addSubview(visa)
         addSubview(mastercard)
@@ -44,20 +39,20 @@ class AcceptedCards: UIView {
             make.height.equalTo(15)
         }
         visa.snp.makeConstraints { (make) in
-            make.top.equalTo(acceptLabel.snp.bottom).offset(10)
+            make.top.equalTo(acceptLabel.snp.bottom).offset(Spaces.tiny.size)
             make.leading.equalToSuperview()
             make.height.equalTo(20)
             make.width.equalTo(35)
         }
         mastercard.snp.makeConstraints { (make) in
-            make.top.equalTo(acceptLabel.snp.bottom).offset(10)
-            make.leading.equalTo(visa.snp.trailing).offset(10)
+            make.top.equalTo(acceptLabel.snp.bottom).offset(Spaces.tiny.size)
+            make.leading.equalTo(visa.snp.trailing).offset(Spaces.tiny.size)
             make.height.equalTo(20)
             make.width.equalTo(30)
         }
         paypal.snp.makeConstraints { (make) in
-            make.top.equalTo(acceptLabel.snp.bottom).offset(10)
-            make.leading.equalTo(mastercard.snp.trailing).offset(10)
+            make.top.equalTo(acceptLabel.snp.bottom).offset(Spaces.tiny.size)
+            make.leading.equalTo(mastercard.snp.trailing).offset(Spaces.tiny.size)
             make.height.equalTo(20)
             make.width.equalTo(30)
         }

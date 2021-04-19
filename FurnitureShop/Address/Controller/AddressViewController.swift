@@ -10,6 +10,7 @@ import UIKit
 
 class AddressViewController: UIViewController {
 
+    let addressVM = AddressViewModel()
     let addressInfo = AddressView()
     let saveChangesButton = UIButton()
     
@@ -21,17 +22,29 @@ class AddressViewController: UIViewController {
     
     func setupUI() {
         self.title = "My Address"
+        addressInfo.city.delegate = self
+        addressInfo.addressTextField.delegate = self
+        addressInfo.postcodeTextField.delegate = self
+        addressInfo.country.delegate = self
+        addressInfo.country.dataSource = self
         view.backgroundColor = .white
-        saveChangesButton.setTitle("SAVE CHANGES", for: .normal)
-        saveChangesButton.backgroundColor = UIColor(red: 204/255, green: 197/255, blue: 188/255, alpha: 1)
-        saveChangesButton.addTarget(self, action: #selector(savePressed), for: .touchUpInside)
-        saveChangesButton.setBackgroundColor(color: UIColor(red: 111/255, green: 108/255, blue: 110/255, alpha: 1), forState: .highlighted)
+        saveChangesButton.setTitle("Save changes".uppercased(), for: .normal)
+        saveChangesButton.backgroundColor = MyColor.silverRust1.value
+        saveChangesButton.setBackgroundColor(color: MyColor.fedora1.value, forState: .highlighted)
         view.addSubview(addressInfo)
         view.addSubview(saveChangesButton)
+        bind()
     }
     
-    @objc func savePressed(sender: UIButton!) {
-        print("user's address is saved")
+    func bind() {
+        // Outputs
+        addressInfo.countryLabel.text = addressVM.countryLabelText.uppercased()
+        addressInfo.cityLabel.text = addressVM.cityLabelText.uppercased()
+        addressInfo.addressLabel.text = addressVM.addressLabelText.uppercased()
+        addressInfo.postcodeLabel.text = addressVM.postcodeLabelText.uppercased()
+        
+        // Inputs
+        saveChangesButton.addTarget(self, action: #selector(savePressed), for: .touchUpInside)
     }
     
     func setupConstraints() {
@@ -43,10 +56,43 @@ class AddressViewController: UIViewController {
         }
         saveChangesButton.snp.makeConstraints { (make) in
             make.bottom.equalToSuperview().offset(-100)
-            make.height.equalTo(40)
+            make.height.equalTo(Elements.saveButton.size.height)
             make.centerX.equalToSuperview()
-            make.width.equalTo(180)
+            make.width.equalTo(Elements.saveButton.size.width)
         }
     }
+    
+    @objc func savePressed(sender: UIButton!) {
+        addressVM.saveButtonPressed()
+    }
+}
 
+extension AddressViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return addressVM.countriesArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return addressVM.countriesArray[row]
+    }
+}
+
+extension AddressViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           print("User's info is \(textField.text!)")
+           textField.endEditing(true)
+           return true
+       }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        let tuple = addressVM.isEndEditing(text: textField.text ?? "")
+        textField.placeholder = tuple.placeholder
+        return tuple.shouldEndEditing
+    }
+    // use realm to save data?
 }
