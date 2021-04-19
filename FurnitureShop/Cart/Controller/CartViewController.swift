@@ -105,23 +105,28 @@ class CartViewController: UIViewController {
     
     @objc func buttonAction(sender: UIButton!, cell: CustomTableViewCell) {
         //print(sender.tag)
+        
         if sender.currentTitle! == "-" {
             let quantityInt = Int(cell.quantityLabel.text ?? "1")
             if var quantityIntNotOptional = quantityInt {
                 quantityIntNotOptional -= 1
-                cell.quantityLabel.text = "\(quantityIntNotOptional)"
-                print(cell.quantityLabel.text)
+                DispatchQueue.main.async {
+                    cell.quantityLabel.text = "\(quantityIntNotOptional)"
+                    print(cell.quantityLabel.text)
+                }
             }
         }
         if sender.titleLabel?.text == "+" {
-         let quantityInt = Int(cell.quantityLabel.text ?? "1")
-                  if var quantityIntNotOptional = quantityInt {
-                      quantityIntNotOptional += 1
-                      cell.quantityLabel.text = "\(quantityIntNotOptional)"
-                  }
+            let quantityInt = Int(cell.quantityLabel.text ?? "1")
+            if var quantityIntNotOptional = quantityInt {
+                quantityIntNotOptional += 1
+                DispatchQueue.main.async {
+                    cell.quantityLabel.text = "\(quantityIntNotOptional)"
+                    print(cell.quantityLabel.text)
+                }
+            }
         }
         tableV.reloadData()
-       
         print("Button \(sender.titleLabel?.text ?? "unknown") tapped")
     }
 }
