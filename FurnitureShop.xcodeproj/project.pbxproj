@@ -27,6 +27,16 @@
 		D12FD3E82625C12700C0E09C /* SignoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3E62625C12700C0E09C /* SignoutViewModel.swift */; };
 		D12FD3E92625C3D500C0E09C /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4625E01A8700D51519 /* SignOutViewController.swift */; };
 		D12FD3EB2625C3FB00C0E09C /* SignOutIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3EA2625C3FB00C0E09C /* SignOutIntegrationTests.swift */; };
+		D12FD3ED2626DF8000C0E09C /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3EC2626DF8000C0E09C /* UserDetailsViewModel.swift */; };
+		D12FD3EE2626DF8000C0E09C /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3EC2626DF8000C0E09C /* UserDetailsViewModel.swift */; };
+		D12FD3EF2626E27A00C0E09C /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3825DFB91C00D51519 /* UserDetailsViewController.swift */; };
+		D12FD3F12626E29C00C0E09C /* UserDetailsIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3F02626E29C00C0E09C /* UserDetailsIntegrationTest.swift */; };
+		D12FD3F22626E49900C0E09C /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3A25DFBACD00D51519 /* UserDetailsView.swift */; };
+		CF80FA4D341D511900AD9A7C /* libPods-FurnitureShopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9470BC13FE75733CDF57D /* libPods-FurnitureShopTests.a */; };
+		D12FD3E72625C12700C0E09C /* SignoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3E62625C12700C0E09C /* SignoutViewModel.swift */; };
+		D12FD3E82625C12700C0E09C /* SignoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3E62625C12700C0E09C /* SignoutViewModel.swift */; };
+		D12FD3E92625C3D500C0E09C /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4625E01A8700D51519 /* SignOutViewController.swift */; };
+		D12FD3EB2625C3FB00C0E09C /* SignOutIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3EA2625C3FB00C0E09C /* SignOutIntegrationTests.swift */; };
 		CF80FA4D341D511900AD9A7C /* libPods-FurnitureShopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9470BC13FE75733CDF57D /* libPods-FurnitureShopTests.a */; };
 		D17BF97925EFD26800CDC9A5 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97825EFD26800CDC9A5 /* UIDevice.swift */; };
 		D17BF97B25F0CF1700CDC9A5 /* Spaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97A25F0CF1700CDC9A5 /* Spaces.swift */; };
@@ -97,6 +107,8 @@
 		8DB8B21EF0528FEC12793DE3 /* Pods-FurnitureShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureShop.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureShop/Pods-FurnitureShop.debug.xcconfig"; sourceTree = "<group>"; };
 		D12FD3E62625C12700C0E09C /* SignoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignoutViewModel.swift; sourceTree = "<group>"; };
 		D12FD3EA2625C3FB00C0E09C /* SignOutIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutIntegrationTests.swift; sourceTree = "<group>"; };
+		D12FD3EC2626DF8000C0E09C /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		D12FD3F02626E29C00C0E09C /* UserDetailsIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsIntegrationTest.swift; sourceTree = "<group>"; };
 		D17BF97625EFC46100CDC9A5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D17BF97825EFD26800CDC9A5 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		D17BF97A25F0CF1700CDC9A5 /* Spaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaces.swift; sourceTree = "<group>"; };
@@ -249,6 +261,7 @@
 				088AB577261B5F040038D0DD /* AddressIntegrationTest.swift */,
 				D197EA72261DF14400BE07B1 /* PaymentIntegrationTest.swift */,
 				D12FD3EA2625C3FB00C0E09C /* SignOutIntegrationTests.swift */,
+				D12FD3F02626E29C00C0E09C /* UserDetailsIntegrationTest.swift */,
 			);
 			path = FurnitureShopTests;
 			sourceTree = "<group>";
@@ -305,6 +318,7 @@
 		D1B58F9B25E55D4500C4D299 /* UserDetails */ = {
 			isa = PBXGroup;
 			children = (
+				D12FD3EC2626DF8000C0E09C /* UserDetailsViewModel.swift */,
 				D1B58FAD25E55F5400C4D299 /* View */,
 				D1B58FAC25E55F4E00C4D299 /* Controller */,
 			);
@@ -711,6 +725,7 @@
 				D1956C3325DE9FD400D51519 /* AccountTopView.swift in Sources */,
 				D1956C3D25DFF7AB00D51519 /* AddressViewController.swift in Sources */,
 				D1956C2F25DD497300D51519 /* CustomTableViewCell.swift in Sources */,
+				D12FD3ED2626DF8000C0E09C /* UserDetailsViewModel.swift in Sources */,
 				D1A6276D2600D1F4009C27C2 /* HexToUIColor.swift in Sources */,
 				088AB572261B4E210038D0DD /* AddressViewModel.swift in Sources */,
 				D12FD3E72625C12700C0E09C /* SignoutViewModel.swift in Sources */,
@@ -738,17 +753,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12FD3F12626E29C00C0E09C /* UserDetailsIntegrationTest.swift in Sources */,
 				088AB5B1261B62DB0038D0DD /* TapGesture.swift in Sources */,
 				088AB5A4261B62D00038D0DD /* Spaces.swift in Sources */,
 				D12FD3E92625C3D500C0E09C /* SignOutViewController.swift in Sources */,
 				088AB5AA261B62D50038D0DD /* Colors.swift in Sources */,
+				D12FD3F22626E49900C0E09C /* UserDetailsView.swift in Sources */,
 				D197EA74261DF18A00BE07B1 /* PaymentViewController.swift in Sources */,
 				D12FD3EB2625C3FB00C0E09C /* SignOutIntegrationTests.swift in Sources */,
 				D1A627E9260B874B009C27C2 /* FurnitureShopTests.swift in Sources */,
 				088AB5B4261B62DD0038D0DD /* ActivityIndicator.swift in Sources */,
+				D12FD3EE2626DF8000C0E09C /* UserDetailsViewModel.swift in Sources */,
 				D197EA6E261DD98600BE07B1 /* PaymentViewModel.swift in Sources */,
 				088AB578261B5F040038D0DD /* AddressIntegrationTest.swift in Sources */,
 				D197EA76261DF18F00BE07B1 /* AcceptedCards.swift in Sources */,
+				D12FD3EF2626E27A00C0E09C /* UserDetailsViewController.swift in Sources */,
 				088AB5B0261B62D90038D0DD /* HexToUIColor.swift in Sources */,
 				D197EA75261DF18D00BE07B1 /* PaymentView.swift in Sources */,
 				088AB5A3261B62CE0038D0DD /* Elements.swift in Sources */,
