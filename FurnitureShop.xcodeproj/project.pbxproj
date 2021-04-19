@@ -32,6 +32,12 @@
 		D12FD3EF2626E27A00C0E09C /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3825DFB91C00D51519 /* UserDetailsViewController.swift */; };
 		D12FD3F12626E29C00C0E09C /* UserDetailsIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3F02626E29C00C0E09C /* UserDetailsIntegrationTest.swift */; };
 		D12FD3F22626E49900C0E09C /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C3A25DFBACD00D51519 /* UserDetailsView.swift */; };
+		CF80FA4D341D511900AD9A7C /* libPods-FurnitureShopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9470BC13FE75733CDF57D /* libPods-FurnitureShopTests.a */; };
+		D12FD3E72625C12700C0E09C /* SignoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3E62625C12700C0E09C /* SignoutViewModel.swift */; };
+		D12FD3E82625C12700C0E09C /* SignoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3E62625C12700C0E09C /* SignoutViewModel.swift */; };
+		D12FD3E92625C3D500C0E09C /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1956C4625E01A8700D51519 /* SignOutViewController.swift */; };
+		D12FD3EB2625C3FB00C0E09C /* SignOutIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FD3EA2625C3FB00C0E09C /* SignOutIntegrationTests.swift */; };
+		CF80FA4D341D511900AD9A7C /* libPods-FurnitureShopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9470BC13FE75733CDF57D /* libPods-FurnitureShopTests.a */; };
 		D17BF97925EFD26800CDC9A5 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97825EFD26800CDC9A5 /* UIDevice.swift */; };
 		D17BF97B25F0CF1700CDC9A5 /* Spaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97A25F0CF1700CDC9A5 /* Spaces.swift */; };
 		D17BF97D25F77C6100CDC9A5 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BF97C25F77C6100CDC9A5 /* ActivityIndicator.swift */; };
