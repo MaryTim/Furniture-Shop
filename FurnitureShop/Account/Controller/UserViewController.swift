@@ -12,16 +12,10 @@ import Photos
 
 class UserViewController: UIViewController {
     
+    let accountVM = AccountViewModel()
     let accountView = AccountTopView()
     let tableView = UITableView()
-    let categoriesArray = [
-        UserInfoCategory(name: "My details", categoryIcon: UIImage(systemName: "person.crop.rectangle")!),
-           UserInfoCategory(name: "Address", categoryIcon: UIImage(systemName: "house")!),
-           UserInfoCategory(name: "Payment", categoryIcon: UIImage(systemName: "creditcard")!),
-           UserInfoCategory(name: "Sign out", categoryIcon: UIImage(systemName: "arrow.down.to.line.alt")!)
-       ]
     let vcArray = [UserDetailsViewController(), AddressViewController(), PaymentViewController(), SignOutViewController()]
-    
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -35,7 +29,6 @@ class UserViewController: UIViewController {
     }
     
     func setupUI() {
-        
         self.accountView.userImage.addTapGesture(tapNumber: 1, target: self, action: #selector(handleTap))
         view.addSubview(accountView)
         view.addSubview(tableView)
@@ -84,8 +77,8 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.cellID, for: indexPath) as! UserTableViewCell
-        cell.icon.image = categoriesArray[indexPath.row].categoryIcon
-        cell.section.text = categoriesArray[indexPath.row].name
+        cell.icon.image = accountVM.categoriesArray[indexPath.row].categoryIcon
+        cell.section.text = accountVM.categoriesArray[indexPath.row].name
         return cell
     }
     
