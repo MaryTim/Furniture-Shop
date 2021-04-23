@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ItemViewController: UIViewController {
     
@@ -19,7 +20,8 @@ class ItemViewController: UIViewController {
     var rgbColors = [UIColor]()
     var picturesArray = [String]()
     var buttonColorPictureTuple = [(UIColor, String)]()
-    
+    let realm = try! Realm()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         itemVM.dataForVC()
@@ -78,6 +80,35 @@ class ItemViewController: UIViewController {
         }
     }
     
+    @objc func addToCart(sender: UIButton!) {
+        sender.setBackgroundColor(color: .gray, forState: .highlighted)
+        addItem()
+    }
+    
+    func addItem() {
+        guard let pic = itemPic.image,
+            let stringImg = pic.toString(),
+            let name = info.itemName.text,
+            let price = info.itemPrice.text  else {
+                return
+        }
+        let newItem = ItemModel()
+        newItem.name = name
+        newItem.pic = stringImg
+        newItem.price = price
+        self.save(item: newItem)
+    }
+    
+    func save(item: ItemModel) {
+        do {
+            try realm.write {
+                realm.add(item)
+            }
+        } catch {
+            print("Error saving new item \(error)")
+        }
+    }
+    
     func setupUI() {
 //        for color in colors.colorsArray {
 //            let colorUI = color.hexStringToUIColor(hex: color)
@@ -108,11 +139,6 @@ class ItemViewController: UIViewController {
         view.addSubview(colors)
     }
     
-    @objc func addToCart(sender: UIButton!) {
-        sender.setBackgroundColor(color: .gray, forState: .highlighted)
-        print("Add the item to a cart")
-    }
-
     func setupConstraints() {
         backgroundImage.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()

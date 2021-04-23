@@ -93,3 +93,6 @@ iOSInjectionProject/
 .DS_Store
 Playfair_Display
 Newsreader
+
+pull_request_template.md
+xcschememanagement.plist

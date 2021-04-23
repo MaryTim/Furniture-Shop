@@ -7,21 +7,55 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CartViewController: UIViewController {
-    
+
+    let itemVC = ItemViewController()
+    let realm = try! Realm()
     let cartLabel = UILabel()
     let tableV = UITableView()
     let checkoutButton = UIButton()
     let totalLabel = UILabel()
+    var itemsInCart: Results<ItemModel>?
+    var totalSum: Int = 0 {
+        didSet {
+            totalLabel.text = "Total: $\(totalSum)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadItems()
         tableV.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.cellID)
         tableV.dataSource = self
         tableV.delegate = self
         setupUI()
         setupConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadItems()
+        tableV.reloadData()
+    }
+    
+    func loadItems() {
+        itemsInCart = realm.objects(ItemModel.self)
+        tableV.reloadData()
+        calculateTotalSum()
+    }
+    
+    func calculateTotalSum() {
+     totalSum = 0
+        let arrayResults: [ItemModel] = (itemsInCart?.toArray())!
+        for item in arrayResults {
+            let priceString = item.price.dropFirst()
+            guard let priceInt = Int(priceString) else {
+                assertionFailure("Price of an item can't be nil or 0")
+                return
+            }
+            totalSum += priceInt
+        }
     }
     
     func setupUI() {
@@ -36,7 +70,7 @@ class CartViewController: UIViewController {
         checkoutButton.backgroundColor = MyColor.silverRust09.value
         checkoutButton.layer.cornerRadius = 4.0
         checkoutButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        totalLabel.text = "Total: $5347" //change this later (calculate sum of all items)
+        totalLabel.text = "Total: $0"
         totalLabel.backgroundColor = .clear
         totalLabel.textColor = MyColor.fedora1.value
         view.addSubview(cartLabel)
@@ -71,9 +105,30 @@ class CartViewController: UIViewController {
         }
     }
 // MARK: - buttom action
-// Add actions to =/- buttons (update quantityLabel)
     
-    @objc func buttonAction(sender: UIButton!) {
+    @objc func buttonAction(sender: UIButton!, cell: CustomTableViewCell) {
+        
+        if sender.currentTitle! == "-" {
+            let quantityInt = Int(cell.quantityLabel.text ?? "1")
+            if var quantityIntNotOptional = quantityInt {
+                quantityIntNotOptional -= 1
+                DispatchQueue.main.async {
+                    cell.quantityLabel.text = "\(quantityIntNotOptional)"
+                    print(cell.quantityLabel.text)
+                }
+            }
+        }
+        if sender.titleLabel?.text == "+" {
+            let quantityInt = Int(cell.quantityLabel.text ?? "1")
+            if var quantityIntNotOptional = quantityInt {
+                quantityIntNotOptional += 1
+                DispatchQueue.main.async {
+                    cell.quantityLabel.text = "\(quantityIntNotOptional)"
+                    print(cell.quantityLabel.text)
+                }
+            }
+        }
+        tableV.reloadData()
         print("Button \(sender.titleLabel?.text ?? "unknown") tapped")
     }
 }
@@ -82,11 +137,18 @@ class CartViewController: UIViewController {
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return itemsInCart?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellID, for: indexPath) as! CustomTableViewCell
+        cell.descriptionLabel.text = itemsInCart?[indexPath.row].name
+        cell.sumLabel.text = itemsInCart?[indexPath.row].price ?? ""
+        cell.itemPic.image = itemsInCart?[indexPath.row].pic.toImage()
+        cell.minusButton.addTarget(self, action: #selector(buttonAction(sender:cell:)), for: .touchUpInside)
+        cell.plusButton.addTarget(self, action: #selector(buttonAction(sender:cell:)), for: .touchUpInside)
+        cell.minusButton.tag = indexPath.row
+        cell.plusButton.tag = indexPath.row
         return cell
     }
     

@@ -26,6 +26,10 @@ class SearchViewController: UIViewController, ReturnDataDelegate {
         setupConstraints()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView?.isHidden = true
+    }
+    
     func setupUI() {
         searchBar.showsCancelButton = true
         searchBar.searchBarStyle = UISearchBar.Style.minimal
@@ -85,6 +89,7 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        collectionView?.isHidden = false
     }
 
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {

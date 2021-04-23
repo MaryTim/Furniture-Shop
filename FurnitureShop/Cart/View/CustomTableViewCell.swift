@@ -24,7 +24,7 @@ class CustomTableViewCell: UITableViewCell {
     
     let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Rivet Canton Deep Mid-Century Modern Loveseat Sofa Couch, 76.7W"
+        label.text = ""
         label.numberOfLines = 0
         label.textAlignment = .center
         label.adjustsFontForContentSizeCategory = true
@@ -59,14 +59,14 @@ class CustomTableViewCell: UITableViewCell {
     let quantityLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
-        label.text = "0"
+        label.text = "1"
         label.textAlignment = .center
         return label
     }()
     
     let sumLabel: UILabel = {
         let label = UILabel()
-        label.text = "$1210"
+        label.text = ""
         label.textColor = .black
         label.textAlignment = .center
         label.font = label.font.withSize(20)
