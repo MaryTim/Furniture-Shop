@@ -83,22 +83,20 @@ class ItemViewController: UIViewController {
     @objc func addToCart(sender: UIButton!) {
         sender.setBackgroundColor(color: .gray, forState: .highlighted)
         addItem()
-        print("Add the item to a cart")
     }
     
     func addItem() {
-        if let pic = itemPic.image {
-            let stringImg = pic.toString()
-            if let name = info.itemName.text {
-                 if let price = info.itemPrice.text {
-                    let newItem = ItemModel()
-                    newItem.name = name
-                    newItem.pic = stringImg ?? ""
-                    newItem.price = price
-                    self.save(item: newItem)
-                 }
-             }
-         }
+        guard let pic = itemPic.image,
+            let stringImg = pic.toString(),
+            let name = info.itemName.text,
+            let price = info.itemPrice.text  else {
+                return
+        }
+        let newItem = ItemModel()
+        newItem.name = name
+        newItem.pic = stringImg
+        newItem.price = price
+        self.save(item: newItem)
     }
     
     func save(item: ItemModel) {

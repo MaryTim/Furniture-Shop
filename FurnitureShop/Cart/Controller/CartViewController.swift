@@ -50,7 +50,11 @@ class CartViewController: UIViewController {
         let arrayResults: [ItemModel] = (itemsInCart?.toArray())!
         for item in arrayResults {
             let priceString = item.price.dropFirst()
-            totalSum += Int(priceString) ?? 0
+            guard let priceInt = Int(priceString) else {
+                assertionFailure("Price of an item can't be nil or 0")
+                return
+            }
+            totalSum += priceInt
         }
     }
     
@@ -101,10 +105,8 @@ class CartViewController: UIViewController {
         }
     }
 // MARK: - buttom action
-// Add actions to =/- buttons (update quantityLabel)
     
     @objc func buttonAction(sender: UIButton!, cell: CustomTableViewCell) {
-        //print(sender.tag)
         
         if sender.currentTitle! == "-" {
             let quantityInt = Int(cell.quantityLabel.text ?? "1")
